@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-06-28T13:13:57.913Z</updated>
+  <updated>2021-06-28T13:16:28.637Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wuliwuxin.github.io/2021/06/28/alexnet/"/>
     <id>http://wuliwuxin.github.io/2021/06/28/alexnet/</id>
     <published>2021-06-28T12:23:38.000Z</published>
-    <updated>2021-06-28T13:13:57.913Z</updated>
+    <updated>2021-06-28T13:16:28.637Z</updated>
     
     
       
@@ -36,6 +36,8 @@
     
     <category term="Markdown" scheme="http://wuliwuxin.github.io/categories/Markdown/"/>
     
+    
+    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
