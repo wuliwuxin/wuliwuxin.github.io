@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-06-28T15:41:09.665Z</updated>
+  <updated>2021-06-28T16:11:24.600Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JAVA WEB环境搭建教程</title>
+    <link href="http://wuliwuxin.github.io/2021/06/29/javaweb/"/>
+    <id>http://wuliwuxin.github.io/2021/06/29/javaweb/</id>
+    <published>2021-06-28T16:11:59.000Z</published>
+    <updated>2021-06-28T16:11:24.600Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JAVA-WEB环境搭建教程&quot;&gt;&lt;a href=&quot;#JAVA-WEB环境搭建教程&quot; class=&quot;headerlink&quot; title=&quot;JAVA WEB环境搭建教程&quot;&gt;&lt;/a&gt;JAVA WEB环境搭建教程&lt;/h1&gt;&lt;p&gt;需要的软件安装包下载地址：链接：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="http://wuliwuxin.github.io/categories/JAVA/"/>
+    
+    
+    <category term="JAVA WEB" scheme="http://wuliwuxin.github.io/tags/JAVA-WEB/"/>
+    
+  </entry>
   
   <entry>
     <title>AlexNet</title>
