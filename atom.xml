@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-06-28T09:00:30.516Z</updated>
+  <updated>2021-06-28T15:41:09.665Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AlexNet</title>
+    <link href="http://wuliwuxin.github.io/2021/06/28/alexnet/"/>
+    <id>http://wuliwuxin.github.io/2021/06/28/alexnet/</id>
+    <published>2021-06-28T14:19:59.000Z</published>
+    <updated>2021-06-28T15:41:09.665Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–AlexNet&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–AlexNet&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
