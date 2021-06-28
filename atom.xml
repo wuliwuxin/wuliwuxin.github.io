@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-06-28T09:00:30.516Z</updated>
+  <updated>2021-06-28T12:36:26.890Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://wuliwuxin.github.io/2021/06/28/dai-ni-du-lun-wen-xi-lie-zhi-ji-suan-ji-shi-jue-alexnet/"/>
+    <id>http://wuliwuxin.github.io/2021/06/28/dai-ni-du-lun-wen-xi-lie-zhi-ji-suan-ji-shi-jue-alexnet/</id>
+    <published>2021-06-28T12:35:57.351Z</published>
+    <updated>2021-06-28T12:36:26.890Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–AlexNet&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–AlexNet&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
