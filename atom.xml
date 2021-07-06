@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-06-29T01:22:34.026Z</updated>
+  <updated>2021-07-06T05:05:17.917Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VGG</title>
+    <link href="http://wuliwuxin.github.io/2021/07/06/vgg/"/>
+    <id>http://wuliwuxin.github.io/2021/07/06/vgg/</id>
+    <published>2021-07-06T04:48:06.000Z</published>
+    <updated>2021-07-06T05:05:17.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–VGG&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–VGG&quot; class=&quot;headerlink&quot; title=&quot;带你读论文系列之计算机视觉–VGG&quot;&gt;&lt;/a&gt;带你读论文系列之计算机视觉–VGG&lt;/h1&gt;&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>信息系统项目管理师备考经验</title>
