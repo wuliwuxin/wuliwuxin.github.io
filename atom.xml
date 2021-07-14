@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-07-06T05:05:17.917Z</updated>
+  <updated>2021-07-14T11:10:58.252Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GoogLeNet</title>
+    <link href="http://wuliwuxin.github.io/2021/07/14/googlenet/"/>
+    <id>http://wuliwuxin.github.io/2021/07/14/googlenet/</id>
+    <published>2021-07-14T11:08:48.000Z</published>
+    <updated>2021-07-14T11:10:58.252Z</updated>
+    
+    
+    <summary type="html">为ILSVRC14提交的文件中使用的网络，叫做GoogLeNet，这是一个22 层（如果我们也计算池化，则有27层）的深度网络，其质量是在分类和检测的背景下评估的。</summary>
+    
+    
+    
+    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>VGG</title>
