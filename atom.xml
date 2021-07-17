@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-07-14T11:10:58.252Z</updated>
+  <updated>2021-07-17T09:15:39.959Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机视觉入门</title>
+    <link href="http://wuliwuxin.github.io/2021/07/17/ji-suan-ji-shi-jue-ru-men/"/>
+    <id>http://wuliwuxin.github.io/2021/07/17/ji-suan-ji-shi-jue-ru-men/</id>
+    <published>2021-07-17T08:26:20.000Z</published>
+    <updated>2021-07-17T09:15:39.959Z</updated>
+    
+    
+    <summary type="html">描希望大家早日从“调参侠”的包袱中脱离出来，成为一名真正合格的算法工程师。</summary>
+    
+    
+    
+    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="入门" scheme="http://wuliwuxin.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>GoogLeNet</title>
