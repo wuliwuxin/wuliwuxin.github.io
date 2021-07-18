@@ -510,13 +510,13 @@
 <p>回忆以前学过的单位元的方程：</p>
 <p><img src="https://latex.codecogs.com/gif.latex?x%5E2+y%5E2=1"></p>
 <p>正和L2正则化项一样，此时我们的任务变成在L约束下求出J取最小值的解。求解J0的过程可以画出等值线。同时L2正则化的函数L也可以在w1w2的二维平面上画出来。如下图：</p>
-<p><img src="https://wx4.sinaimg.cn/large/00630Defgy1g4ns9qha1nj308u089aav.jpg" alt="image"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210718150029340.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>L表示为图中的黑色圆形，随着梯度下降法的不断逼近，与圆第一次产生交点，而这个交点很难出现在坐标轴上。这就说明了L2正则化不容易得到稀疏矩阵，同时为了求出损失函数的最小值，使得w1和w2无限接近于0，达到防止过拟合的问题。</p>
 <h3 id="5-2-什么场景下用L2正则化"><a href="#5-2-什么场景下用L2正则化" class="headerlink" title="5.2 什么场景下用L2正则化"></a>5.2 什么场景下用L2正则化</h3><p>只要数据线性相关，用LinearRegression拟合的不是很好，<strong>需要正则化</strong>，可以考虑使用岭回归(L2), 如何输入特征的维度很高,而且是稀疏线性关系的话， 岭回归就不太合适,考虑使用Lasso回归。</p>
 <h3 id="5-3-什么是L1正则化-Lasso回归"><a href="#5-3-什么是L1正则化-Lasso回归" class="headerlink" title="5.3 什么是L1正则化(Lasso回归)"></a>5.3 什么是L1正则化(Lasso回归)</h3><p>L1正则化与L2正则化的区别在于惩罚项的不同：</p>
 <p><img src="https://latex.codecogs.com/gif.latex?J=J_0+%5Clambda(%7Cw_1%7C+%7Cw_2%7C)"></p>
 <p>求解J0的过程可以画出等值线。同时L1正则化的函数也可以在w1w2的二维平面上画出来。如下图：</p>
-<p><img src="https://ws2.sinaimg.cn/large/00630Defgy1g4nse7rf9xj308u089gme.jpg" alt="image"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210718150255507.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>惩罚项表示为图中的黑色棱形，随着梯度下降法的不断逼近，与棱形第一次产生交点，而这个交点很容易出现在坐标轴上。<strong>这就说明了L1正则化容易得到稀疏矩阵。</strong></p>
 <h3 id="5-4-什么场景下使用L1正则化"><a href="#5-4-什么场景下使用L1正则化" class="headerlink" title="5.4 什么场景下使用L1正则化"></a>5.4 什么场景下使用L1正则化</h3><p><strong>L1正则化(Lasso回归)可以使得一些特征的系数变小,甚至还使一些绝对值较小的系数直接变为0</strong>，从而增强模型的泛化能力 。对于高的特征数据,尤其是线性关系是稀疏的，就采用L1正则化(Lasso回归),或者是要在一堆特征里面找出主要的特征，那么L1正则化(Lasso回归)更是首选了。</p>
 <h3 id="5-5-什么是ElasticNet回归"><a href="#5-5-什么是ElasticNet回归" class="headerlink" title="5.5 什么是ElasticNet回归"></a>5.5 什么是ElasticNet回归</h3><p><strong>ElasticNet综合了L1正则化项和L2正则化项</strong>，以下是它的公式：</p>
