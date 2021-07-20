@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="逻辑回归, W&amp;X">
+    <meta name="keywords" content="决策树, W&amp;X">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>逻辑回归 | W&amp;X</title>
+    <title>决策树 | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">逻辑回归</h1>
+                    <h1 class="description center-align post-title">决策树</h1>
                 </div>
             </div>
         </div>
@@ -463,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-18
+                    2021-07-20
                 </div>
                 
 
@@ -487,110 +487,126 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-什么是逻辑回归"><a href="#1-什么是逻辑回归" class="headerlink" title="1. 什么是逻辑回归"></a>1. 什么是逻辑回归</h2><p>逻辑回归是用来做分类算法的，大家都熟悉线性回归，一般形式是Y=aX+b，y的取值范围是[-∞, +∞]，有这么多取值，怎么进行分类呢？不用担心，伟大的数学家已经为我们找到了一个方法。</p>
-<p>也就是把Y的结果带入一个非线性变换的<strong>Sigmoid函数</strong>中，即可得到[0,1]之间取值范围的数S，S可以把它看成是一个概率值，如果我们设置概率阈值为0.5，那么S大于0.5可以看成是正样本，小于0.5看成是负样本，就可以进行分类了。</p>
-<h2 id="2-什么是Sigmoid函数"><a href="#2-什么是Sigmoid函数" class="headerlink" title="2. 什么是Sigmoid函数"></a>2. 什么是Sigmoid函数</h2><p>函数公式如下：</p>
-<p><img src="https://wx4.sinaimg.cn/large/00630Defly1g4pvk2ctatj30cw0b63yq.jpg" alt="image"></p>
-<p>函数中t无论取什么值，其结果都在[0,-1]的区间内，回想一下，一个分类问题就有两种答案，一种是“是”，一种是“否”，那0对应着“否”，1对应着“是”，那又有人问了，你这不是[0,1]的区间吗，怎么会只有0和1呢？这个问题问得好，我们假设分类的<strong>阈值</strong>是0.5，那么超过0.5的归为1分类，低于0.5的归为0分类，阈值是可以自己设定的。</p>
-<p>好了，接下来我们把aX+b带入t中就得到了我们的逻辑回归的一般模型方程：</p>
-<p><img src="https://latex.codecogs.com/gif.latex?H(a,b)=%5Cfrac%7B1%7D%7B1+e%5E%7B(aX+b)%7D%7D"></p>
-<p>结果P也可以理解为概率，换句话说概率大于0.5的属于1分类，概率小于0.5的属于0分类，这就达到了分类的目的。</p>
-<h2 id="3-损失函数是什么"><a href="#3-损失函数是什么" class="headerlink" title="3. 损失函数是什么"></a>3. 损失函数是什么</h2><p>逻辑回归的损失函数是 <strong>log loss</strong>，也就是<strong>对数似然函数</strong>，函数公式如下：</p>
-<p><img src="https://wx1.sinaimg.cn/large/00630Defly1g4pvtz3tw9j30et04v0sw.jpg" alt="image"></p>
-<p>公式中的 y=1 表示的是真实值为1时用第一个公式，真实 y=0 用第二个公式计算损失。为什么要加上log函数呢？可以试想一下，当真实样本为1是，但h=0概率，那么log0=∞，这就对模型最大的惩罚力度；当h=1时，那么log1=0，相当于没有惩罚，也就是没有损失，达到最优结果。所以数学家就想出了用log函数来表示损失函数。</p>
-<p>最后按照梯度下降法一样，求解极小值点，得到想要的模型效果。</p>
-<h2 id="4-可以进行多分类吗？"><a href="#4-可以进行多分类吗？" class="headerlink" title="4.可以进行多分类吗？"></a>4.可以进行多分类吗？</h2><p>可以的，其实我们可以从二分类问题过度到多分类问题(one vs rest)，思路步骤如下：</p>
-<p>1.将类型class1看作正样本，其他类型全部看作负样本，然后我们就可以得到样本标记类型为该类型的概率p1。</p>
-<p>2.然后再将另外类型class2看作正样本，其他类型全部看作负样本，同理得到p2。</p>
-<p>3.以此循环，我们可以得到该待预测样本的标记类型分别为类型class i时的概率pi，最后我们取pi中最大的那个概率对应的样本标记类型作为我们的待预测样本类型。</p>
-<p><img src="https://wx2.sinaimg.cn/large/00630Defly1g4pw11fo1tj30cv0c50tj.jpg" alt="image"></p>
-<p>总之还是以二分类来依次划分，并求出最大概率结果。</p>
-<h2 id="5-逻辑回归有什么优点"><a href="#5-逻辑回归有什么优点" class="headerlink" title="5.逻辑回归有什么优点"></a>5.逻辑回归有什么优点</h2><ul>
-<li>LR能以概率的形式输出结果，而非只是0,1判定。</li>
-<li>LR的可解释性强，可控度高(你要给老板讲的嘛…)。</li>
-<li>训练快，feature engineering之后效果赞。</li>
-<li>因为结果是概率，可以做ranking model。</li>
+                <h2 id="1-什么是决策树"><a href="#1-什么是决策树" class="headerlink" title="1. 什么是决策树"></a>1. 什么是决策树</h2><h3 id="1-1-决策树的基本思想"><a href="#1-1-决策树的基本思想" class="headerlink" title="1.1 决策树的基本思想"></a>1.1 决策树的基本思想</h3><p>其实用一下图片能更好的理解LR模型和决策树模型算法的根本区别，我们可以思考一下一个决策问题：是否去相亲，一个女孩的母亲要给这个女海介绍对象。</p>
+<p><img src="https://wx2.sinaimg.cn/large/00630Defly1g4q286viibj30pk0pfk09.jpg" alt="image"></p>
+<p>大家都看得很明白了吧！LR模型是一股脑儿的把所有特征塞入学习，而决策树更像是编程语言中的if-else一样，去做条件判断，这就是根本性的区别。</p>
+<h3 id="1-2-“树”的成长过程"><a href="#1-2-“树”的成长过程" class="headerlink" title="1.2 “树”的成长过程"></a>1.2 “树”的成长过程</h3><p>决策树基于“树”结构进行决策的，这时我们就要面临两个问题 ：</p>
+<ul>
+<li>“树”怎么长。</li>
+<li>这颗“树”长到什么时候停。</li>
 </ul>
-<h2 id="6-逻辑回归有哪些应用"><a href="#6-逻辑回归有哪些应用" class="headerlink" title="6. 逻辑回归有哪些应用"></a>6. 逻辑回归有哪些应用</h2><ul>
-<li>CTR预估/推荐系统的learning to rank/各种分类场景。</li>
-<li>某搜索引擎厂的广告CTR预估基线版是LR。</li>
-<li>某电商搜索排序/广告CTR预估基线版是LR。</li>
-<li>某电商的购物搭配推荐用了大量LR。</li>
-<li>某现在一天广告赚1000w+的新闻app排序基线是LR。</li>
+<p>弄懂了这两个问题，那么这个模型就已经建立起来了，决策树的总体流程是“分而治之”的思想，一是自根至叶的递归过程，一是在每个中间节点寻找一个“划分”属性，相当于就是一个特征属性了。接下来我们来逐个解决以上两个问题。</p>
+<h4 id="这颗“树”长到什么时候停"><a href="#这颗“树”长到什么时候停" class="headerlink" title="这颗“树”长到什么时候停"></a>这颗“树”长到什么时候停</h4><ul>
+<li>当前结点包含的样本全属于同一类别，无需划分；例如：样本当中都是决定去相亲的，属于同一类别，就是不管特征如何改变都不会影响结果，这种就不需要划分了。</li>
+<li>当前属性集为空，或是所有样本在所有属性上取值相同，无法划分；例如：所有的样本特征都是一样的，就造成无法划分了，训练集太单一。</li>
+<li>当前结点包含的样本集合为空，不能划分。</li>
 </ul>
-<h2 id="7-逻辑回归常用的优化方法有哪些"><a href="#7-逻辑回归常用的优化方法有哪些" class="headerlink" title="7. 逻辑回归常用的优化方法有哪些"></a>7. 逻辑回归常用的优化方法有哪些</h2><h3 id="7-1-一阶方法"><a href="#7-1-一阶方法" class="headerlink" title="7.1 一阶方法"></a>7.1 一阶方法</h3><p>梯度下降、随机梯度下降、mini 随机梯度下降降法。随机梯度下降不但速度上比原始梯度下降要快，局部最优化问题时可以一定程度上抑制局部最优解的发生。 </p>
-<h3 id="7-2-二阶方法：牛顿法、拟牛顿法："><a href="#7-2-二阶方法：牛顿法、拟牛顿法：" class="headerlink" title="7.2 二阶方法：牛顿法、拟牛顿法："></a>7.2 二阶方法：牛顿法、拟牛顿法：</h3><p>这里详细说一下牛顿法的基本原理和牛顿法的应用方式。牛顿法其实就是通过切线与x轴的交点不断更新切线的位置，直到达到曲线与x轴的交点得到方程解。在实际应用中我们因为常常要求解凸优化问题，也就是要求解函数一阶导数为0的位置，而牛顿法恰好可以给这种问题提供解决方法。实际应用中牛顿法首先选择一个点作为起始点，并进行一次二阶泰勒展开得到导数为0的点进行一个更新，直到达到要求，这时牛顿法也就成了二阶求解问题，比一阶方法更快。我们常常看到的x通常为一个多维向量，这也就引出了Hessian矩阵的概念（就是x的二阶导数矩阵）。</p>
-<p>缺点：牛顿法是定长迭代，没有步长因子，所以不能保证函数值稳定的下降，严重时甚至会失败。还有就是牛顿法要求函数一定是二阶可导的。而且计算Hessian矩阵的逆复杂度很大。</p>
-<p>拟牛顿法： 不用二阶偏导而是构造出Hessian矩阵的近似正定对称矩阵的方法称为拟牛顿法。拟牛顿法的思路就是用一个特别的表达形式来模拟Hessian矩阵或者是他的逆使得表达式满足拟牛顿条件。主要有DFP法（逼近Hession的逆）、BFGS（直接逼近Hession矩阵）、 L-BFGS（可以减少BFGS所需的存储空间）。</p>
-<h2 id="8-逻辑斯特回归为什么要对特征进行离散化。"><a href="#8-逻辑斯特回归为什么要对特征进行离散化。" class="headerlink" title="8. 逻辑斯特回归为什么要对特征进行离散化。"></a>8. 逻辑斯特回归为什么要对特征进行离散化。</h2><ol>
-<li>非线性！非线性！非线性！逻辑回归属于广义线性模型，表达能力受限；单变量离散化为N个后，每个变量有单独的权重，相当于为模型引入了非线性，能够提升模型表达能力，加大拟合； 离散特征的增加和减少都很容易，易于模型的快速迭代； </li>
-<li>速度快！速度快！速度快！稀疏向量内积乘法运算速度快，计算结果方便存储，容易扩展； </li>
-<li>鲁棒性！鲁棒性！鲁棒性！离散化后的特征对异常数据有很强的鲁棒性：比如一个特征是年龄&gt;30是1，否则0。如果特征没有离散化，一个异常数据“年龄300岁”会给模型造成很大的干扰； </li>
-<li>方便交叉与特征组合：离散化后可以进行特征交叉，由M+N个变量变为M*N个变量，进一步引入非线性，提升表达能力； </li>
-<li>稳定性：特征离散化后，模型会更稳定，比如如果对用户年龄离散化，20-30作为一个区间，不会因为一个用户年龄长了一岁就变成一个完全不同的人。当然处于区间相邻处的样本会刚好相反，所以怎么划分区间是门学问； </li>
-<li>简化模型：特征离散化以后，起到了简化了逻辑回归模型的作用，降低了模型过拟合的风险。</li>
-</ol>
-<h2 id="9-逻辑回归的目标函数中增大L1正则化会是什么结果。"><a href="#9-逻辑回归的目标函数中增大L1正则化会是什么结果。" class="headerlink" title="9. 逻辑回归的目标函数中增大L1正则化会是什么结果。"></a>9. 逻辑回归的目标函数中增大L1正则化会是什么结果。</h2><p>所有的参数w都会变成0。</p>
-<h2 id="10-代码实现"><a href="#10-代码实现" class="headerlink" title="10. 代码实现"></a>10. 代码实现</h2><h3 id="10-1-数据"><a href="#10-1-数据" class="headerlink" title="10.1 数据"></a>10.1 数据</h3><p><strong>用于信用评分的机器学习</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;银行在市场经济中发挥着至关重要的作用。他们决定谁可以获得资金以及以什么条件获得资金，并且可以做出或破坏投资决策。为了让市场和社会发挥作用，个人和公司需要获得信贷。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信用评分算法对违约概率进行猜测，是银行用来确定是否应授予贷款的方法。这项比赛要求参与者通过预测某人在未来两年内遇到财务困境的可能性来提高信用评分的最新水平。<a target="_blank" rel="noopener" href="https://www.kaggle.com/c/GiveMeSomeCredit">数据集</a></p>
-<p>属性信息：<br><img src="https://img-blog.csdnimg.cn/20210718152357421.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h3 id="10-2-数据处理"><a href="#10-2-数据处理" class="headerlink" title="10.2 数据处理"></a>10.2 数据处理</h3><p>将数据读入 Pandas</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">
+<h3 id="1-3-“树”怎么长"><a href="#1-3-“树”怎么长" class="headerlink" title="1.3 “树”怎么长"></a>1.3 “树”怎么长</h3><p>在生活当中，我们都会碰到很多需要做出决策的地方，例如：吃饭地点、数码产品购买、旅游地区等，你会发现在这些选择当中都是依赖于大部分人做出的选择，也就是跟随大众的选择。其实在决策树当中也是一样的，当大部分的样本都是同一类的时候，那么就已经做出了决策。</p>
+<p>我们可以把大众的选择抽象化，这就引入了一个概念就是纯度，想想也是如此，大众选择就意味着纯度越高。好，在深入一点，就涉及到一句话：<strong>信息熵越低，纯度越高</strong>。我相信大家或多或少都听说过“熵”这个概念，信息熵通俗来说就是用来度量包含的“信息量”，如果样本的属性都是一样的，就会让人觉得这包含的信息很单一，没有差异化，相反样本的属性都不一样，那么包含的信息量就很多了。</p>
+<p>一到这里就头疼了，因为马上要引入信息熵的公式，其实也很简单：</p>
+<p><img src="https://latex.codecogs.com/gif.latex?Ent(D)=-%5Csum_%7Bk=1%7D%5E%7B%7Cy%7C%7Dp_klog_2p_k"></p>
+<p>Pk表示的是：当前样本集合D中第k类样本所占的比例为Pk。</p>
+<p><strong>信息增益</strong></p>
+<p>废话不多说直接上公式：</p>
+<p><img src="https://wx3.sinaimg.cn/large/00630Defly1g4q5h6oby7j30he08tdh5.jpg" alt="image"></p>
+<p>看不懂的先不管，简单一句话就是：划分前的信息熵–划分后的信息熵。表示的是向纯度方向迈出的“步长”。</p>
+<p>好了，有了前面的知识，我们就可以开始“树”的生长了。</p>
+<h4 id="1-3-1-ID3算法"><a href="#1-3-1-ID3算法" class="headerlink" title="1.3.1 ID3算法"></a>1.3.1 ID3算法</h4><p>解释：在根节点处计算信息熵，然后根据属性依次划分并计算其节点的信息熵，用根节点信息熵–属性节点的信息熵=信息增益，根据信息增益进行降序排列，排在前面的就是第一个划分属性，其后依次类推，这就得到了决策树的形状，也就是怎么“长”了。</p>
+<p>如果不理解的，可以查看我分享的图片示例，结合我说的，包你看懂：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210720124641339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="第一张图"><br><img src="https://img-blog.csdnimg.cn/2021072012465192.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="第二张图"><br><img src="https://img-blog.csdnimg.cn/20210720124747106.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="第三张图"><br><img src="https://img-blog.csdnimg.cn/20210720124710420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="第四张图"></p>
+<p>不过，信息增益有一个问题：对可取值数目较多的属性有所偏好，例如：考虑将“编号”作为一个属性。为了解决这个问题，引出了另一个 算法C4.5。</p>
+<h4 id="1-3-2-C4-5"><a href="#1-3-2-C4-5" class="headerlink" title="1.3.2 C4.5"></a>1.3.2 C4.5</h4><p>为了解决信息增益的问题，引入一个信息增益率：</p>
+<p><img src="https://latex.codecogs.com/gif.latex?Gain_ratio(D,a)=%5Cfrac%7BGain(D,a)%7D%7BIV(a)%7D"></p>
+<p>其中：</p>
+<p><img src="https://latex.codecogs.com/gif.latex?IV(a)=-%5Csum_%7Bv=1%7D%5E%7BV%7D%5Cfrac%7B%7CD%5Ev%7C%7D%7B%7CD%7C%7Dlog_2%5Cfrac%7B%7CD%5Ev%7C%7D%7B%7CD%7C%7D"></p>
+<p>属性a的可能取值数目越多(即V越大)，则IV(a)的值通常就越大。<strong>信息增益比本质： 是在信息增益的基础之上乘上一个惩罚参数。特征个数较多时，惩罚参数较小；特征个数较少时，惩罚参数较大。</strong>不过有一个缺点：</p>
+<ul>
+<li>缺点：信息增益率偏向取值较少的特征。</li>
+</ul>
+<p>使用信息增益率：基于以上缺点，并不是直接选择信息增益率最大的特征，而是现在候选特征中找出信息增益高于平均水平的特征，然后在这些特征中再选择信息增益率最高的特征。</p>
+<h4 id="1-3-3-CART算法"><a href="#1-3-3-CART算法" class="headerlink" title="1.3.3 CART算法"></a>1.3.3 CART算法</h4><p>数学家真实聪明，想到了另外一个表示纯度的方法，叫做基尼指数(讨厌的公式)：</p>
+<p><img src="https://wx1.sinaimg.cn/large/00630Defly1g4q5dmvyykj30eb01edfs.jpg" alt="image"></p>
+<p>表示在样本集合中一个随机选中的样本被分错的概率。举例来说，现在一个袋子里有3种颜色的球若干个，伸手进去掏出2个球，颜色不一样的概率，这下明白了吧。<strong>Gini(D)越小，数据集D的纯度越高。</strong></p>
+<h5 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h5><p>假设现在有特征 “学历”，此特征有三个特征取值： “本科”，“硕士”， “博士”，</p>
+<p>当使用“学历”这个特征对样本集合D进行划分时，划分值分别有三个，因而有三种划分的可能集合，划分后的子集如下：</p>
+<p>1.划分点： “本科”，划分后的子集合 ： {本科}，{硕士，博士}</p>
+<p>2.划分点： “硕士”，划分后的子集合 ： {硕士}，{本科，博士}</p>
+<p>3.划分点： “硕士”，划分后的子集合 ： {博士}，{本科，硕士}}</p>
+<p>对于上述的每一种划分，都可以计算出基于 <strong>划分特征= 某个特征值</strong> 将样本集合D划分为两个子集的纯度：</p>
+<p><img src="https://latex.codecogs.com/gif.latex?Gini(D,A)=%5Cfrac%7B%7CD_1%7C%7D%7B%7CD%7C%7DGini(D_1)+%5Cfrac%7B%7CD_2%7C%7D%7B%7CD%7C%7DGini(D_2)"></p>
+<p>因而<strong>对于一个具有多个取值（超过2个）的特征，需要计算以每一个取值作为划分点，对样本D划分之后子集的纯度Gini(D,Ai)，(其中Ai 表示特征A的可能取值)</strong></p>
+<p>然后从所有的可能划分的Gini(D,Ai)中找出Gini指数最小的划分，这个划分的划分点，便是使用特征A对样本集合D进行划分的最佳划分点。到此就可以长成一棵“大树”了。</p>
+<h4 id="1-3-4-三种不同的决策树"><a href="#1-3-4-三种不同的决策树" class="headerlink" title="1.3.4 三种不同的决策树"></a>1.3.4 三种不同的决策树</h4><ul>
+<li><p><strong>ID3</strong>：取值多的属性，更容易使数据更纯，其信息增益更大。</p>
+<p>训练得到的是一棵庞大且深度浅的树：不合理。</p>
+</li>
+<li><p><strong>C4.5</strong>：采用信息增益率替代信息增益。</p>
+</li>
+<li><p><strong>CART</strong>：以基尼系数替代熵，最小化不纯度，而不是最大化信息增益。</p>
+</li>
+</ul>
+<h2 id="2-树形结构为什么不需要归一化"><a href="#2-树形结构为什么不需要归一化" class="headerlink" title="2. 树形结构为什么不需要归一化?"></a>2. 树形结构为什么不需要归一化?</h2><p>因为数值缩放不影响分裂点位置，对树模型的结构不造成影响。<br>按照特征值进行排序的，排序的顺序不变，那么所属的分支以及分裂点就不会有不同。而且，树模型是不能进行梯度下降的，因为构建树模型（回归树）寻找最优点时是通过寻找最优分裂点完成的，因此树模型是阶跃的，阶跃点是不可导的，并且求导没意义，也就不需要归一化。</p>
+<p>既然树形结构（如决策树、RF）不需要归一化，那为何非树形结构比如Adaboost、SVM、LR、Knn、KMeans之类则需要归一化。</p>
+<p>对于线性模型，特征值差别很大时，运用梯度下降的时候，损失等高线是椭圆形，需要进行多次迭代才能到达最优点。<br>但是如果进行了归一化，那么等高线就是圆形的，促使SGD往原点迭代，从而导致需要的迭代次数较少。</p>
+<h2 id="3-分类决策树和回归决策树的区别"><a href="#3-分类决策树和回归决策树的区别" class="headerlink" title="3. 分类决策树和回归决策树的区别"></a>3. 分类决策树和回归决策树的区别</h2><p>Classification And Regression Tree(CART)是决策树的一种，CART算法既可以用于创建分类树（Classification Tree），也可以用于创建回归树（Regression Tree），两者在建树的过程稍有差异。</p>
+<p><strong>回归树</strong>：</p>
+<p>CART回归树是假设树为二叉树，通过不断将特征进行分裂。比如当前树结点是基于第j个特征值进行分裂的，设该特征值小于s的样本划分为左子树，大于s的样本划分为右子树。 </p>
+<p><img src="https://julyedu-img.oss-cn-beijing.aliyuncs.com/quesbase6415343854853617715.png"></p>
+<p>而CART回归树实质上就是在该特征维度对样本空间进行划分，而这种空间划分的优化是一种NP难问题，因此，在决策树模型中是使用启发式方法解决。典型CART回归树产生的目标函数为：</p>
+<p><img src="https://julyedu-img.oss-cn-beijing.aliyuncs.com/quesbase64153438551488112806.png"></p>
+<p>因此，当我们为了求解最优的切分特征j和最优的切分点s，就转化为求解这么一个目标函数：</p>
+<p><img src="https://julyedu-img.oss-cn-beijing.aliyuncs.com/quesbase6415343855213970444.png"></p>
+<p>所以我们只要遍历所有特征的的所有切分点，就能找到最优的切分特征和切分点。最终得到一棵回归树。</p>
+<p>参考文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/jiede1/article/details/76034328">经典算法详解–CART分类决策树、回归树和模型树</a></p>
+<h2 id="4-决策树如何剪枝"><a href="#4-决策树如何剪枝" class="headerlink" title="4. 决策树如何剪枝"></a>4. 决策树如何剪枝</h2><p>决策树的剪枝基本策略有 预剪枝 (Pre-Pruning) 和 后剪枝 (Post-Pruning)。</p>
+<ul>
+<li><strong>预剪枝</strong>：其中的核心思想就是，在每一次实际对结点进行进一步划分之前，先采用验证集的数据来验证如果划分是否能提高划分的准确性。如果不能，就把结点标记为叶结点并退出进一步划分；如果可以就继续递归生成节点。</li>
+<li><strong>后剪枝</strong>：后剪枝则是先从训练集生成一颗完整的决策树，然后自底向上地对非叶结点进行考察，若将该结点对应的子树替换为叶结点能带来泛化性能提升，则将该子树替换为叶结点。</li>
+</ul>
+<p>参考文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/am290333566/article/details/81187562">决策树及决策树生成与剪枝</a></p>
+<h2 id="5-代码实现"><a href="#5-代码实现" class="headerlink" title="5. 代码实现"></a>5. 代码实现</h2><h3 id="用决策树模型完成分类问题"><a href="#用决策树模型完成分类问题" class="headerlink" title="用决策树模型完成分类问题"></a>用决策树模型完成分类问题</h3><h4 id="把需要的工具库import进来"><a href="#把需要的工具库import进来" class="headerlink" title="把需要的工具库import进来"></a>把需要的工具库import进来</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#用于数据处理和分析的工具包</span>
 <span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-pd<span class="token punctuation">.</span>set_option<span class="token punctuation">(</span><span class="token string">'display.max_columns'</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
-<span class="token keyword">import</span> zipfile
-<span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span><span class="token string">'KaggleCredit2.csv.zip'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> z<span class="token punctuation">:</span>   <span class="token comment">#读取zip里的文件</span>
-    f <span class="token operator">=</span> z<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'KaggleCredit2.csv'</span><span class="token punctuation">)</span>
-    data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>f<span class="token punctuation">,</span> index_col<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
-data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#引入用于数据预处理/特征工程的工具包</span>
+<span class="token keyword">from</span> sklearn <span class="token keyword">import</span> preprocessing
+<span class="token comment">#import决策树建模包</span>
+<span class="token keyword">from</span> sklearn <span class="token keyword">import</span> tree<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="读数据"><a href="#读数据" class="headerlink" title="读数据"></a>读数据</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">adult_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'./DecisionTree.csv'</span><span class="token punctuation">)</span>
+<span class="token comment">#读取前5行，了解一下数据</span>
+adult_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210720125416550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">adult_data<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+adult_data<span class="token punctuation">.</span>shape<span class="token comment">#(32561, 9)</span>
+adult_data<span class="token punctuation">.</span>columns<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="区分一下特征-属性-和目标"><a href="#区分一下特征-属性-和目标" class="headerlink" title="区分一下特征(属性)和目标"></a>区分一下特征(属性)和目标</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">feature_columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">u'workclass'</span><span class="token punctuation">,</span> <span class="token string">u'education'</span><span class="token punctuation">,</span> <span class="token string">u'marital-status'</span><span class="token punctuation">,</span> <span class="token string">u'occupation'</span><span class="token punctuation">,</span> <span class="token string">u'relationship'</span><span class="token punctuation">,</span> <span class="token string">u'race'</span><span class="token punctuation">,</span> <span class="token string">u'gender'</span><span class="token punctuation">,</span> <span class="token string">u'native-country'</span><span class="token punctuation">]</span>
+label_column <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'income'</span><span class="token punctuation">]</span>
+<span class="token comment">#区分特征和目标列</span>
+features <span class="token operator">=</span> adult_data<span class="token punctuation">[</span>feature_columns<span class="token punctuation">]</span>
+label <span class="token operator">=</span> adult_data<span class="token punctuation">[</span>label_column<span class="token punctuation">]</span>
+features<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210720125627697.png"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">label<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210720125718973.png"></p>
+<h4 id="特征处理-特征工程"><a href="#特征处理-特征工程" class="headerlink" title="特征处理/特征工程"></a>特征处理/特征工程</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">features <span class="token operator">=</span> pd<span class="token punctuation">.</span>get_dummies<span class="token punctuation">(</span>features<span class="token punctuation">)</span>
+features<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token comment">#2 rows × 102 columns</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="构建模型"><a href="#构建模型" class="headerlink" title="构建模型"></a>构建模型</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#初始化一个决策树分类器</span>
+clf <span class="token operator">=</span> tree<span class="token punctuation">.</span>DecisionTreeClassifier<span class="token punctuation">(</span>criterion<span class="token operator">=</span><span class="token string">'entropy'</span><span class="token punctuation">,</span> max_depth<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token comment">#用决策树分类器拟合数据</span>
+clf <span class="token operator">=</span> clf<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>features<span class="token punctuation">.</span>values<span class="token punctuation">,</span> label<span class="token punctuation">.</span>values<span class="token punctuation">)</span>
 
-data<span class="token punctuation">.</span>shape <span class="token comment">##(112915, 11)</span>
+clf<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>features<span class="token punctuation">.</span>values<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="可视化一下这颗决策树"><a href="#可视化一下这颗决策树" class="headerlink" title="可视化一下这颗决策树"></a>可视化一下这颗决策树</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pydotplus
+<span class="token keyword">from</span> IPython<span class="token punctuation">.</span>display <span class="token keyword">import</span> display<span class="token punctuation">,</span> Image
+dot_data <span class="token operator">=</span> tree<span class="token punctuation">.</span>export_graphviz<span class="token punctuation">(</span>clf<span class="token punctuation">,</span> 
+                                out_file<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
+                                feature_names<span class="token operator">=</span>features<span class="token punctuation">.</span>columns<span class="token punctuation">,</span>
+                                class_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'&lt;=50k'</span><span class="token punctuation">,</span> <span class="token string">'&gt;50k'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                filled <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
+                                rounded <span class="token operator">=</span><span class="token boolean">True</span>
+                               <span class="token punctuation">)</span>
 
-data<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
-
-data<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>   <span class="token comment">#去掉为空的数据</span>
-data<span class="token punctuation">.</span>shape <span class="token comment">##(108648, 11)</span>
-
-y <span class="token operator">=</span> data<span class="token punctuation">[</span><span class="token string">'SeriousDlqin2yrs'</span><span class="token punctuation">]</span>
-X <span class="token operator">=</span> data<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token string">'SeriousDlqin2yrs'</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
-
-y<span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#求取均值：0.06742876076872101</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="10-3-练习"><a href="#10-3-练习" class="headerlink" title="10.3 练习"></a>10.3 练习</h3><p>1、把数据切分成训练集和测试集</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sklearn <span class="token keyword">import</span> model_selection
-x_tran<span class="token punctuation">,</span>x_test<span class="token punctuation">,</span>y_tran<span class="token punctuation">,</span>y_test<span class="token operator">=</span>model_selection<span class="token punctuation">.</span>train_test_split<span class="token punctuation">(</span>X<span class="token punctuation">,</span>y<span class="token punctuation">,</span>test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>x_test<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token comment">##(21730, 10)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>2、使用logistic regression/决策树/SVM/KNN…等sklearn分类算法进行分类，尝试查sklearn API了解模型参数含义，调整不同的参数。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> LogisticRegression
-<span class="token comment">## https://blog.csdn.net/sun_shengyun/article/details/53811483</span>
-lr<span class="token operator">=</span>LogisticRegression<span class="token punctuation">(</span>multi_class<span class="token operator">=</span><span class="token string">'ovr'</span><span class="token punctuation">,</span>solver<span class="token operator">=</span><span class="token string">'sag'</span><span class="token punctuation">,</span>class_weight<span class="token operator">=</span><span class="token string">'balanced'</span><span class="token punctuation">)</span>
-lr<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_tran<span class="token punctuation">,</span>y_tran<span class="token punctuation">)</span>
-score<span class="token operator">=</span>lr<span class="token punctuation">.</span>score<span class="token punctuation">(</span>x_tran<span class="token punctuation">,</span>y_tran<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token comment">#最好的分数是1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>3、在测试集上进行预测，计算准确度</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> accuracy_score
-train_score<span class="token operator">=</span>accuracy_score<span class="token punctuation">(</span>y_tran<span class="token punctuation">,</span>lr<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_tran<span class="token punctuation">)</span><span class="token punctuation">)</span>
-test_score<span class="token operator">=</span>lr<span class="token punctuation">.</span>score<span class="token punctuation">(</span>x_test<span class="token punctuation">,</span>y_test<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'训练集准确率：'</span><span class="token punctuation">,</span>train_score<span class="token punctuation">)</span> <span class="token comment">#训练集准确率： 0.9323730412572769</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'测试集准确率：'</span><span class="token punctuation">,</span>test_score<span class="token punctuation">)</span>  <span class="token comment">#测试集准确率： 0.9332719742291763</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>4、查看sklearn的官方说明，了解分类问题的评估标准，并对此例进行评估。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#召回率</span>
-<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> recall_score
-train_recall<span class="token operator">=</span>recall_score<span class="token punctuation">(</span>y_tran<span class="token punctuation">,</span>lr<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_tran<span class="token punctuation">)</span><span class="token punctuation">,</span>average<span class="token operator">=</span><span class="token string">'macro'</span><span class="token punctuation">)</span>
-test_recall<span class="token operator">=</span>recall_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span>lr<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_test<span class="token punctuation">)</span><span class="token punctuation">,</span>average<span class="token operator">=</span><span class="token string">'macro'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'训练集召回率：'</span><span class="token punctuation">,</span>train_recall<span class="token punctuation">)</span> <span class="token comment">#训练集召回率： 0.4999938302834368</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'测试集召回率：'</span><span class="token punctuation">,</span>test_recall<span class="token punctuation">)</span> <span class="token comment">#测试集召回率： 0.4999753463833144</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>5、银行通常会有更严格的要求，因为fraud带来的后果通常比较严重，一般我们会调整模型的标准。<br>比如在logistic regression当中，一般我们的概率判定边界为0.5，但是我们可以把阈值设定低一些，来提高模型的“敏感度”，试试看把阈值设定为0.3，再看看这时的评估指标(主要是准确率和召回率)。</p>
-<p>tips:sklearn的很多分类模型，predict_prob可以拿到预估的概率，可以根据它和设定的阈值大小去判断最终结果(分类类别)</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-y_pro<span class="token operator">=</span>lr<span class="token punctuation">.</span>predict_proba<span class="token punctuation">(</span>x_test<span class="token punctuation">)</span> <span class="token comment">#获取预测概率值</span>
-y_prd2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">list</span><span class="token punctuation">(</span>p<span class="token operator">&gt;=</span><span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i<span class="token punctuation">,</span>p <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>y_pro<span class="token punctuation">)</span><span class="token punctuation">]</span>   <span class="token comment">#设定0.3阈值，把大于0.3的看成1分类。</span>
-train_score<span class="token operator">=</span>accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span>y_prd2<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>train_score<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+graph <span class="token operator">=</span> pydotplus<span class="token punctuation">.</span>graph_from_dot_data<span class="token punctuation">(</span>dot_data<span class="token punctuation">)</span>
+display<span class="token punctuation">(</span>Image<span class="token punctuation">(</span>graph<span class="token punctuation">.</span>create_png<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210720130011942.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 
                 
             </div>
@@ -617,7 +633,7 @@ train_score<span class="token operator">=</span>accuracy_score<span class="token
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wuliwuxin.github.io/2021/07/18/luo-ji-hui-gui/">http://wuliwuxin.github.io/2021/07/18/luo-ji-hui-gui/</a>
+                    <a href="http://wuliwuxin.github.io/2021/07/20/jue-ce-shu/">http://wuliwuxin.github.io/2021/07/20/jue-ce-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -826,9 +842,10 @@ train_score<span class="token operator">=</span>accuracy_score<span class="token
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/07/20/jue-ce-shu/">
                     <div class="card-image">
@@ -846,9 +863,9 @@ train_score<span class="token operator">=</span>accuracy_score<span class="token
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -865,6 +882,7 @@ train_score<span class="token operator">=</span>accuracy_score<span class="token
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -883,13 +901,13 @@ train_score<span class="token operator">=</span>accuracy_score<span class="token
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/18/xian-xing-hui-gui/">
+                <a href="/2021/07/18/luo-ji-hui-gui/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="线性回归">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="逻辑回归">
                         
-                        <span class="card-title">线性回归</span>
+                        <span class="card-title">逻辑回归</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
