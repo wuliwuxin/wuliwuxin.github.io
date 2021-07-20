@@ -487,8 +487,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-什么是决策树"><a href="#1-什么是决策树" class="headerlink" title="1. 什么是决策树"></a>1. 什么是决策树</h2><h3 id="1-1-决策树的基本思想"><a href="#1-1-决策树的基本思想" class="headerlink" title="1.1 决策树的基本思想"></a>1.1 决策树的基本思想</h3><p>其实用一下图片能更好的理解LR模型和决策树模型算法的根本区别，我们可以思考一下一个决策问题：是否去相亲，一个女孩的母亲要给这个女海介绍对象。</p>
-<p><img src="https://wx2.sinaimg.cn/large/00630Defly1g4q286viibj30pk0pfk09.jpg" alt="image"></p>
+                <h2 id="1-什么是决策树"><a href="#1-什么是决策树" class="headerlink" title="1. 什么是决策树"></a>1. 什么是决策树</h2><h3 id="1-1-决策树的基本思想"><a href="#1-1-决策树的基本思想" class="headerlink" title="1.1 决策树的基本思想"></a>1.1 决策树的基本思想</h3><p>其实用一下图片能更好的理解LR模型和决策树模型算法的根本区别，我们可以思考一下一个决策问题：是否去相亲，一个女孩的母亲要给这个女孩介绍对象。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210720130343601.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>大家都看得很明白了吧！LR模型是一股脑儿的把所有特征塞入学习，而决策树更像是编程语言中的if-else一样，去做条件判断，这就是根本性的区别。</p>
 <h3 id="1-2-“树”的成长过程"><a href="#1-2-“树”的成长过程" class="headerlink" title="1.2 “树”的成长过程"></a>1.2 “树”的成长过程</h3><p>决策树基于“树”结构进行决策的，这时我们就要面临两个问题 ：</p>
 <ul>
@@ -508,7 +508,7 @@
 <p>Pk表示的是：当前样本集合D中第k类样本所占的比例为Pk。</p>
 <p><strong>信息增益</strong></p>
 <p>废话不多说直接上公式：</p>
-<p><img src="https://wx3.sinaimg.cn/large/00630Defly1g4q5h6oby7j30he08tdh5.jpg" alt="image"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210720130402746.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>看不懂的先不管，简单一句话就是：划分前的信息熵–划分后的信息熵。表示的是向纯度方向迈出的“步长”。</p>
 <p>好了，有了前面的知识，我们就可以开始“树”的生长了。</p>
 <h4 id="1-3-1-ID3算法"><a href="#1-3-1-ID3算法" class="headerlink" title="1.3.1 ID3算法"></a>1.3.1 ID3算法</h4><p>解释：在根节点处计算信息熵，然后根据属性依次划分并计算其节点的信息熵，用根节点信息熵–属性节点的信息熵=信息增益，根据信息增益进行降序排列，排在前面的就是第一个划分属性，其后依次类推，这就得到了决策树的形状，也就是怎么“长”了。</p>
@@ -525,7 +525,7 @@
 </ul>
 <p>使用信息增益率：基于以上缺点，并不是直接选择信息增益率最大的特征，而是现在候选特征中找出信息增益高于平均水平的特征，然后在这些特征中再选择信息增益率最高的特征。</p>
 <h4 id="1-3-3-CART算法"><a href="#1-3-3-CART算法" class="headerlink" title="1.3.3 CART算法"></a>1.3.3 CART算法</h4><p>数学家真实聪明，想到了另外一个表示纯度的方法，叫做基尼指数(讨厌的公式)：</p>
-<p><img src="https://wx1.sinaimg.cn/large/00630Defly1g4q5dmvyykj30eb01edfs.jpg" alt="image"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210720130427569.jpg"></p>
 <p>表示在样本集合中一个随机选中的样本被分错的概率。举例来说，现在一个袋子里有3种颜色的球若干个，伸手进去掏出2个球，颜色不一样的概率，这下明白了吧。<strong>Gini(D)越小，数据集D的纯度越高。</strong></p>
 <h5 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h5><p>假设现在有特征 “学历”，此特征有三个特征取值： “本科”，“硕士”， “博士”，</p>
 <p>当使用“学历”这个特征对样本集合D进行划分时，划分值分别有三个，因而有三种划分的可能集合，划分后的子集如下：</p>
