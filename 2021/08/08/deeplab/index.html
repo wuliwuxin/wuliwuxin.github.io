@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DeepLab, W&amp;X">
+    <meta name="keywords" content="DeepLab系列, W&amp;X">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DeepLab | W&amp;X</title>
+    <title>DeepLab系列 | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="W&X" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="W&X" type="application/atom+xml">
 </head>
 
 
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DeepLab</h1>
+                    <h1 class="description center-align post-title">DeepLab系列</h1>
                 </div>
             </div>
         </div>
@@ -515,7 +515,7 @@
 <h3 id="实验设置-1"><a href="#实验设置-1" class="headerlink" title="实验设置"></a>实验设置</h3><p>损失函数：交叉熵 + softmax<br>优化器：SGD + momentum 0.9<br>Batchsize：20<br>学习率策略：step：10^−3（每经过2000个epoch，学习率 * 0.1）<br>poly：<br><img src="https://img-blog.csdnimg.cn/22a9897753804089839eb9c42ca6d1e5.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>网络变形：<br>LargeFOV：3×3卷积 + rate=12(DeepLab v1最好结果)<br>ASPP-S：r = 2, 4, 8, 12<br>ASPP-L：r = 6, 12, 18, 24<br><img src="https://img-blog.csdnimg.cn/892a2d8ff7de4c868abeefc1ee873650.png"><img src="https://img-blog.csdnimg.cn/4f8af814fad5448ba65d2d83cde09262.png"></p>
 <h2 id="3-DeepLab-V3"><a href="#3-DeepLab-V3" class="headerlink" title="3 DeepLab V3"></a>3 DeepLab V3</h2><p><img src="https://img-blog.csdnimg.cn/db29db5edd9a49bc886c88d673509bee.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="请"><br>Deeplab v3：ResNet+改进后的并行ASPP模块。随着采样率的增大，有效滤波器权重的数量（应用于有效特征的权重而不是padding补充的0）变少，在空洞率接近特征映射大小的极端情况下，3×3滤波器不是捕获整个图像上下文，而是退化为简单的1×1卷积（只有中心滤波器权重是有效的）。因此，v3使用了并行ASPP模块，最后一个分支拼接全局池化模块来捕获全局上下文信息。</p>
 <p><strong>语义分割常用特征提取框架</strong><br>1.图像金字塔：从输入图像入手，将不同尺度的图像分别送入网络进行特征提取，后期再融合。<br>2.编解码结构：编码器部分利用下采样进行特征提取，解码器部分利用上采样还原特征图尺寸。<br>3.深度网络vs空洞卷积：经典分类算法利用连续下采样提取特征，而空洞卷积是利用不同的采样率。<br>4.空间金字塔结构：除ASPP外，仍有其他网络使用了该思想，如SPPNet、PSPNet等。<br><img src="https://img-blog.csdnimg.cn/5c2621c7e62c433cb2d955fde3babed4.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h3 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h3><p>经典分类算法网络架构，如ResNet  ——&gt;  DeepLab v3空洞卷积串行网络结构  ——&gt;  DeepLab v3空洞卷积并行网络结构（调整了ASPP模块）<br><img src="https://img-blog.csdnimg.cn/8a8614ad97e441d3941bf2e14a69c68e.png"><br><img src="https://img-blog.csdnimg.cn/b90c7a3e5d704250813cda1bfe7647bd.png" alt="请添加图片描述"><br><img src="https://img-blog.csdnimg.cn/6de7fa641b194aef9cb714c9e0545635.png" alt="请添加图片描述"></p>
+<h3 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h3><p>经典分类算法网络架构，如ResNet  ——&gt;  DeepLab v3空洞卷积串行网络结构  ——&gt;  DeepLab v3空洞卷积并行网络结构（调整了ASPP模块）<br><img src="https://img-blog.csdnimg.cn/8a8614ad97e441d3941bf2e14a69c68e.png"><br><img src="https://img-blog.csdnimg.cn/b90c7a3e5d704250813cda1bfe7647bd.png"><br><img src="https://img-blog.csdnimg.cn/6de7fa641b194aef9cb714c9e0545635.png"></p>
 <h3 id="实验设置-2"><a href="#实验设置-2" class="headerlink" title="实验设置"></a>实验设置</h3><p><strong>裁剪尺寸：</strong>裁剪图片至513x513（为了更好的拟合空洞率）<br>学习率策略：采用poly策略，原理同v2</p>
 <p><strong>BN层策略</strong>：当output_stride=16时，batchsize=16，同时BN层做参数衰减decay=0.9997。在增强的数据集上，以初始学习率0.007训练30K后，冻结BN层参数。当output_stride=8时，batchsize=8，使用初始学习率0.001训练30K。</p>
 <h2 id="4-DeepLab-V3"><a href="#4-DeepLab-V3" class="headerlink" title="4 DeepLab V3+"></a>4 DeepLab V3+</h2><p><img src="https://img-blog.csdnimg.cn/3fce4d09fb3b4e269eea88763b02c23d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>Deeplab v3+：DeepLabv3+的核心是通过添加一个简单而有效的解码器模块来恢复对象边界（沿着对象边界来细化分割结果），扩展了DeepLab v3。以Xcepition/ResNet为骨架，采用深度可分离卷积进行编码，在多尺度特征提取ASPP模块后再接一个简单的解码器模块。</p>
@@ -534,7 +534,7 @@
 <li>先把encoder的结果上采样4倍（双线性插值），然后与编码器中相对应尺寸的特征图进行拼接融合，再进行3x3的卷积， 最后上采样4倍得到最终结果</li>
 <li>融合低层次信息前，先进行1x1的卷积， 目的是降低通道数。</li>
 </ol>
-<p><img src="https://img-blog.csdnimg.cn/1da65cd0dc424bd6909775d7fb95481c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="请"><br>DeepLab v3+对Xception进行了微调：<br><img src="https://img-blog.csdnimg.cn/3c2a712dda4747999a01a4b8a821a00e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/464b22aff4be4d0baab40e86d8807878.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/312255e342ef4d718f1c594f88c1518a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>1.更深的Xception结构，原始middle flow迭代8次，微调后迭代16次。<br>2.所有max pooling结构被stride=2的深度可分离卷积替代。<br>3.每个3x3的depthwise convolution（结合了空洞卷积）后都跟BN和Relu。</p>
+<p><img src="https://img-blog.csdnimg.cn/1da65cd0dc424bd6909775d7fb95481c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>DeepLab v3+对Xception进行了微调：<br><img src="https://img-blog.csdnimg.cn/3c2a712dda4747999a01a4b8a821a00e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/464b22aff4be4d0baab40e86d8807878.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/312255e342ef4d718f1c594f88c1518a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>1.更深的Xception结构，原始middle flow迭代8次，微调后迭代16次。<br>2.所有max pooling结构被stride=2的深度可分离卷积替代。<br>3.每个3x3的depthwise convolution（结合了空洞卷积）后都跟BN和Relu。</p>
 <h3 id="实验设置-3"><a href="#实验设置-3" class="headerlink" title="实验设置"></a>实验设置</h3><p>剪尺寸：裁剪图片至513*513<br>学习率策略：采用poly策略，原理同v2 v3<br><img src="https://img-blog.csdnimg.cn/8cdd6315658b41bdbfd6991e1d0bde7e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/d6b6db83db33440f83c2ee466866ed94.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <h2 id="论文总结"><a href="#论文总结" class="headerlink" title="论文总结"></a>论文总结</h2><p><strong>DeepLab系列发展历程</strong></p>
 <p>v1：修改经典分类网络(VGG16)，将空洞卷积应用于模型中，试图解决分辨率过低及提取多尺度特征问题，用CRF做后处理（VGG16+空洞卷积+CRF对边缘分割结果进行后处理）</p>
@@ -789,9 +789,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="DeepLab">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="DeepLab系列">
                         
-                        <span class="card-title">DeepLab</span>
+                        <span class="card-title">DeepLab系列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
