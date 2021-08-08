@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="决策树, W&amp;X">
+    <meta name="keywords" content="DeepLab, W&amp;X">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>决策树 | W&amp;X</title>
+    <title>DeepLab | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">决策树</h1>
+                    <h1 class="description center-align post-title">DeepLab</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                                <span class="chip bg-color">基础知识</span>
+                            <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">论文</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/">
+                                <span class="chip bg-color">图像分割</span>
                             </a>
                         
                     </div>
@@ -446,12 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                机器学习
-                            </a>
-                        
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9D%A2%E8%AF%95/" class="post-category">
-                                面试
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
+                                计算机视觉
                             </a>
                         
                     </div>
@@ -463,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-20
+                    2021-08-08
                 </div>
                 
 
@@ -487,127 +487,61 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-什么是决策树"><a href="#1-什么是决策树" class="headerlink" title="1. 什么是决策树"></a>1. 什么是决策树</h2><h3 id="1-1-决策树的基本思想"><a href="#1-1-决策树的基本思想" class="headerlink" title="1.1 决策树的基本思想"></a>1.1 决策树的基本思想</h3><p>其实用一下图片能更好的理解LR模型和决策树模型算法的根本区别，我们可以思考一下一个决策问题：是否去相亲，一个女孩的母亲要给这个女孩介绍对象。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210720130343601.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p>大家都看得很明白了吧！LR模型是一股脑儿的把所有特征塞入学习，而决策树更像是编程语言中的if-else一样，去做条件判断，这就是根本性的区别。</p>
-<h3 id="1-2-“树”的成长过程"><a href="#1-2-“树”的成长过程" class="headerlink" title="1.2 “树”的成长过程"></a>1.2 “树”的成长过程</h3><p>决策树基于“树”结构进行决策的，这时我们就要面临两个问题 ：</p>
-<ul>
-<li>“树”怎么长。</li>
-<li>这颗“树”长到什么时候停。</li>
-</ul>
-<p>弄懂了这两个问题，那么这个模型就已经建立起来了，决策树的总体流程是“分而治之”的思想，一是自根至叶的递归过程，一是在每个中间节点寻找一个“划分”属性，相当于就是一个特征属性了。接下来我们来逐个解决以上两个问题。</p>
-<h4 id="这颗“树”长到什么时候停"><a href="#这颗“树”长到什么时候停" class="headerlink" title="这颗“树”长到什么时候停"></a>这颗“树”长到什么时候停</h4><ul>
-<li>当前结点包含的样本全属于同一类别，无需划分；例如：样本当中都是决定去相亲的，属于同一类别，就是不管特征如何改变都不会影响结果，这种就不需要划分了。</li>
-<li>当前属性集为空，或是所有样本在所有属性上取值相同，无法划分；例如：所有的样本特征都是一样的，就造成无法划分了，训练集太单一。</li>
-<li>当前结点包含的样本集合为空，不能划分。</li>
-</ul>
-<h3 id="1-3-“树”怎么长"><a href="#1-3-“树”怎么长" class="headerlink" title="1.3 “树”怎么长"></a>1.3 “树”怎么长</h3><p>在生活当中，我们都会碰到很多需要做出决策的地方，例如：吃饭地点、数码产品购买、旅游地区等，你会发现在这些选择当中都是依赖于大部分人做出的选择，也就是跟随大众的选择。其实在决策树当中也是一样的，当大部分的样本都是同一类的时候，那么就已经做出了决策。</p>
-<p>我们可以把大众的选择抽象化，这就引入了一个概念就是纯度，想想也是如此，大众选择就意味着纯度越高。好，在深入一点，就涉及到一句话：<strong>信息熵越低，纯度越高</strong>。我相信大家或多或少都听说过“熵”这个概念，信息熵通俗来说就是用来度量包含的“信息量”，如果样本的属性都是一样的，就会让人觉得这包含的信息很单一，没有差异化，相反样本的属性都不一样，那么包含的信息量就很多了。</p>
-<p>一到这里就头疼了，因为马上要引入信息熵的公式，其实也很简单：</p>
-<p><img src="https://latex.codecogs.com/gif.latex?Ent(D)=-%5Csum_%7Bk=1%7D%5E%7B%7Cy%7C%7Dp_klog_2p_k"></p>
-<p>Pk表示的是：当前样本集合D中第k类样本所占的比例为Pk。</p>
-<p><strong>信息增益</strong></p>
-<p>废话不多说直接上公式：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210720130402746.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p>看不懂的先不管，简单一句话就是：划分前的信息熵–划分后的信息熵。表示的是向纯度方向迈出的“步长”。</p>
-<p>好了，有了前面的知识，我们就可以开始“树”的生长了。</p>
-<h4 id="1-3-1-ID3算法"><a href="#1-3-1-ID3算法" class="headerlink" title="1.3.1 ID3算法"></a>1.3.1 ID3算法</h4><p>解释：在根节点处计算信息熵，然后根据属性依次划分并计算其节点的信息熵，用根节点信息熵–属性节点的信息熵=信息增益，根据信息增益进行降序排列，排在前面的就是第一个划分属性，其后依次类推，这就得到了决策树的形状，也就是怎么“长”了。</p>
-<p>如果不理解的，可以查看我分享的图片示例，结合我说的，包你看懂：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210720124641339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="第一张图"><br><img src="https://img-blog.csdnimg.cn/2021072012465192.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="第二张图"><br><img src="https://img-blog.csdnimg.cn/20210720124747106.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="第三张图"><br><img src="https://img-blog.csdnimg.cn/20210720124710420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="第四张图"></p>
-<p>不过，信息增益有一个问题：对可取值数目较多的属性有所偏好，例如：考虑将“编号”作为一个属性。为了解决这个问题，引出了另一个 算法C4.5。</p>
-<h4 id="1-3-2-C4-5"><a href="#1-3-2-C4-5" class="headerlink" title="1.3.2 C4.5"></a>1.3.2 C4.5</h4><p>为了解决信息增益的问题，引入一个信息增益率：</p>
-<p><img src="https://latex.codecogs.com/gif.latex?Gain_ratio(D,a)=%5Cfrac%7BGain(D,a)%7D%7BIV(a)%7D"></p>
-<p>其中：</p>
-<p><img src="https://latex.codecogs.com/gif.latex?IV(a)=-%5Csum_%7Bv=1%7D%5E%7BV%7D%5Cfrac%7B%7CD%5Ev%7C%7D%7B%7CD%7C%7Dlog_2%5Cfrac%7B%7CD%5Ev%7C%7D%7B%7CD%7C%7D"></p>
-<p>属性a的可能取值数目越多(即V越大)，则IV(a)的值通常就越大。<strong>信息增益比本质： 是在信息增益的基础之上乘上一个惩罚参数。特征个数较多时，惩罚参数较小；特征个数较少时，惩罚参数较大。</strong>不过有一个缺点：</p>
-<ul>
-<li>缺点：信息增益率偏向取值较少的特征。</li>
-</ul>
-<p>使用信息增益率：基于以上缺点，并不是直接选择信息增益率最大的特征，而是现在候选特征中找出信息增益高于平均水平的特征，然后在这些特征中再选择信息增益率最高的特征。</p>
-<h4 id="1-3-3-CART算法"><a href="#1-3-3-CART算法" class="headerlink" title="1.3.3 CART算法"></a>1.3.3 CART算法</h4><p>数学家真实聪明，想到了另外一个表示纯度的方法，叫做基尼指数(讨厌的公式)：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210720130427569.jpg"></p>
-<p>表示在样本集合中一个随机选中的样本被分错的概率。举例来说，现在一个袋子里有3种颜色的球若干个，伸手进去掏出2个球，颜色不一样的概率，这下明白了吧。<strong>Gini(D)越小，数据集D的纯度越高。</strong></p>
-<h5 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h5><p>假设现在有特征 “学历”，此特征有三个特征取值： “本科”，“硕士”， “博士”，</p>
-<p>当使用“学历”这个特征对样本集合D进行划分时，划分值分别有三个，因而有三种划分的可能集合，划分后的子集如下：</p>
-<p>1.划分点： “本科”，划分后的子集合 ： {本科}，{硕士，博士}</p>
-<p>2.划分点： “硕士”，划分后的子集合 ： {硕士}，{本科，博士}</p>
-<p>3.划分点： “硕士”，划分后的子集合 ： {博士}，{本科，硕士}}</p>
-<p>对于上述的每一种划分，都可以计算出基于 <strong>划分特征= 某个特征值</strong> 将样本集合D划分为两个子集的纯度：</p>
-<p><img src="https://latex.codecogs.com/gif.latex?Gini(D,A)=%5Cfrac%7B%7CD_1%7C%7D%7B%7CD%7C%7DGini(D_1)+%5Cfrac%7B%7CD_2%7C%7D%7B%7CD%7C%7DGini(D_2)"></p>
-<p>因而<strong>对于一个具有多个取值（超过2个）的特征，需要计算以每一个取值作为划分点，对样本D划分之后子集的纯度Gini(D,Ai)，(其中Ai 表示特征A的可能取值)</strong></p>
-<p>然后从所有的可能划分的Gini(D,Ai)中找出Gini指数最小的划分，这个划分的划分点，便是使用特征A对样本集合D进行划分的最佳划分点。到此就可以长成一棵“大树”了。</p>
-<h4 id="1-3-4-三种不同的决策树"><a href="#1-3-4-三种不同的决策树" class="headerlink" title="1.3.4 三种不同的决策树"></a>1.3.4 三种不同的决策树</h4><ul>
-<li><p><strong>ID3</strong>：取值多的属性，更容易使数据更纯，其信息增益更大。</p>
-<p>训练得到的是一棵庞大且深度浅的树：不合理。</p>
-</li>
-<li><p><strong>C4.5</strong>：采用信息增益率替代信息增益。</p>
-</li>
-<li><p><strong>CART</strong>：以基尼系数替代熵，最小化不纯度，而不是最大化信息增益。</p>
-</li>
-</ul>
-<h2 id="2-树形结构为什么不需要归一化"><a href="#2-树形结构为什么不需要归一化" class="headerlink" title="2. 树形结构为什么不需要归一化?"></a>2. 树形结构为什么不需要归一化?</h2><p>因为数值缩放不影响分裂点位置，对树模型的结构不造成影响。<br>按照特征值进行排序的，排序的顺序不变，那么所属的分支以及分裂点就不会有不同。而且，树模型是不能进行梯度下降的，因为构建树模型（回归树）寻找最优点时是通过寻找最优分裂点完成的，因此树模型是阶跃的，阶跃点是不可导的，并且求导没意义，也就不需要归一化。</p>
-<p>既然树形结构（如决策树、RF）不需要归一化，那为何非树形结构比如Adaboost、SVM、LR、Knn、KMeans之类则需要归一化。</p>
-<p>对于线性模型，特征值差别很大时，运用梯度下降的时候，损失等高线是椭圆形，需要进行多次迭代才能到达最优点。<br>但是如果进行了归一化，那么等高线就是圆形的，促使SGD往原点迭代，从而导致需要的迭代次数较少。</p>
-<h2 id="3-分类决策树和回归决策树的区别"><a href="#3-分类决策树和回归决策树的区别" class="headerlink" title="3. 分类决策树和回归决策树的区别"></a>3. 分类决策树和回归决策树的区别</h2><p>Classification And Regression Tree(CART)是决策树的一种，CART算法既可以用于创建分类树（Classification Tree），也可以用于创建回归树（Regression Tree），两者在建树的过程稍有差异。</p>
-<p><strong>回归树</strong>：</p>
-<p>CART回归树是假设树为二叉树，通过不断将特征进行分裂。比如当前树结点是基于第j个特征值进行分裂的，设该特征值小于s的样本划分为左子树，大于s的样本划分为右子树。 </p>
-<p><img src="https://julyedu-img.oss-cn-beijing.aliyuncs.com/quesbase6415343854853617715.png"></p>
-<p>而CART回归树实质上就是在该特征维度对样本空间进行划分，而这种空间划分的优化是一种NP难问题，因此，在决策树模型中是使用启发式方法解决。典型CART回归树产生的目标函数为：</p>
-<p><img src="https://julyedu-img.oss-cn-beijing.aliyuncs.com/quesbase64153438551488112806.png"></p>
-<p>因此，当我们为了求解最优的切分特征j和最优的切分点s，就转化为求解这么一个目标函数：</p>
-<p><img src="https://julyedu-img.oss-cn-beijing.aliyuncs.com/quesbase6415343855213970444.png"></p>
-<p>所以我们只要遍历所有特征的的所有切分点，就能找到最优的切分特征和切分点。最终得到一棵回归树。</p>
-<p>参考文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/jiede1/article/details/76034328">经典算法详解–CART分类决策树、回归树和模型树</a></p>
-<h2 id="4-决策树如何剪枝"><a href="#4-决策树如何剪枝" class="headerlink" title="4. 决策树如何剪枝"></a>4. 决策树如何剪枝</h2><p>决策树的剪枝基本策略有 预剪枝 (Pre-Pruning) 和 后剪枝 (Post-Pruning)。</p>
-<ul>
-<li><strong>预剪枝</strong>：其中的核心思想就是，在每一次实际对结点进行进一步划分之前，先采用验证集的数据来验证如果划分是否能提高划分的准确性。如果不能，就把结点标记为叶结点并退出进一步划分；如果可以就继续递归生成节点。</li>
-<li><strong>后剪枝</strong>：后剪枝则是先从训练集生成一颗完整的决策树，然后自底向上地对非叶结点进行考察，若将该结点对应的子树替换为叶结点能带来泛化性能提升，则将该子树替换为叶结点。</li>
-</ul>
-<p>参考文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/am290333566/article/details/81187562">决策树及决策树生成与剪枝</a></p>
-<h2 id="5-代码实现"><a href="#5-代码实现" class="headerlink" title="5. 代码实现"></a>5. 代码实现</h2><h3 id="用决策树模型完成分类问题"><a href="#用决策树模型完成分类问题" class="headerlink" title="用决策树模型完成分类问题"></a>用决策树模型完成分类问题</h3><h4 id="把需要的工具库import进来"><a href="#把需要的工具库import进来" class="headerlink" title="把需要的工具库import进来"></a>把需要的工具库import进来</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#用于数据处理和分析的工具包</span>
-<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token comment">#引入用于数据预处理/特征工程的工具包</span>
-<span class="token keyword">from</span> sklearn <span class="token keyword">import</span> preprocessing
-<span class="token comment">#import决策树建模包</span>
-<span class="token keyword">from</span> sklearn <span class="token keyword">import</span> tree<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="读数据"><a href="#读数据" class="headerlink" title="读数据"></a>读数据</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">adult_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'./DecisionTree.csv'</span><span class="token punctuation">)</span>
-<span class="token comment">#读取前5行，了解一下数据</span>
-adult_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20210720125416550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">adult_data<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token punctuation">)</span>
-adult_data<span class="token punctuation">.</span>shape<span class="token comment">#(32561, 9)</span>
-adult_data<span class="token punctuation">.</span>columns<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h4 id="区分一下特征-属性-和目标"><a href="#区分一下特征-属性-和目标" class="headerlink" title="区分一下特征(属性)和目标"></a>区分一下特征(属性)和目标</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">feature_columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">u'workclass'</span><span class="token punctuation">,</span> <span class="token string">u'education'</span><span class="token punctuation">,</span> <span class="token string">u'marital-status'</span><span class="token punctuation">,</span> <span class="token string">u'occupation'</span><span class="token punctuation">,</span> <span class="token string">u'relationship'</span><span class="token punctuation">,</span> <span class="token string">u'race'</span><span class="token punctuation">,</span> <span class="token string">u'gender'</span><span class="token punctuation">,</span> <span class="token string">u'native-country'</span><span class="token punctuation">]</span>
-label_column <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'income'</span><span class="token punctuation">]</span>
-<span class="token comment">#区分特征和目标列</span>
-features <span class="token operator">=</span> adult_data<span class="token punctuation">[</span>feature_columns<span class="token punctuation">]</span>
-label <span class="token operator">=</span> adult_data<span class="token punctuation">[</span>label_column<span class="token punctuation">]</span>
-features<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20210720125627697.png"></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">label<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20210720125718973.png"></p>
-<h4 id="特征处理-特征工程"><a href="#特征处理-特征工程" class="headerlink" title="特征处理/特征工程"></a>特征处理/特征工程</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">features <span class="token operator">=</span> pd<span class="token punctuation">.</span>get_dummies<span class="token punctuation">(</span>features<span class="token punctuation">)</span>
-features<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token comment">#2 rows × 102 columns</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="构建模型"><a href="#构建模型" class="headerlink" title="构建模型"></a>构建模型</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#初始化一个决策树分类器</span>
-clf <span class="token operator">=</span> tree<span class="token punctuation">.</span>DecisionTreeClassifier<span class="token punctuation">(</span>criterion<span class="token operator">=</span><span class="token string">'entropy'</span><span class="token punctuation">,</span> max_depth<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token comment">#用决策树分类器拟合数据</span>
-clf <span class="token operator">=</span> clf<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>features<span class="token punctuation">.</span>values<span class="token punctuation">,</span> label<span class="token punctuation">.</span>values<span class="token punctuation">)</span>
-
-clf<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>features<span class="token punctuation">.</span>values<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="可视化一下这颗决策树"><a href="#可视化一下这颗决策树" class="headerlink" title="可视化一下这颗决策树"></a>可视化一下这颗决策树</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pydotplus
-<span class="token keyword">from</span> IPython<span class="token punctuation">.</span>display <span class="token keyword">import</span> display<span class="token punctuation">,</span> Image
-dot_data <span class="token operator">=</span> tree<span class="token punctuation">.</span>export_graphviz<span class="token punctuation">(</span>clf<span class="token punctuation">,</span> 
-                                out_file<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
-                                feature_names<span class="token operator">=</span>features<span class="token punctuation">.</span>columns<span class="token punctuation">,</span>
-                                class_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'&lt;=50k'</span><span class="token punctuation">,</span> <span class="token string">'&gt;50k'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-                                filled <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
-                                rounded <span class="token operator">=</span><span class="token boolean">True</span>
-                               <span class="token punctuation">)</span>
-
-graph <span class="token operator">=</span> pydotplus<span class="token punctuation">.</span>graph_from_dot_data<span class="token punctuation">(</span>dot_data<span class="token punctuation">)</span>
-display<span class="token punctuation">(</span>Image<span class="token punctuation">(</span>graph<span class="token punctuation">.</span>create_png<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20210720130011942.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-
+                <h1 id="语义分割模型之DeepLab系列"><a href="#语义分割模型之DeepLab系列" class="headerlink" title="语义分割模型之DeepLab系列"></a>语义分割模型之DeepLab系列</h1><p><img src="https://img-blog.csdnimg.cn/1fc6027f0a1d49748c36a8bc65ebe82b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="空气新鲜，风景宜人"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>DeepLab系列一共有四篇文章，分别对应DeepLab V1、DeepLab V2、DeepLab V3和DeepLab V3+。</p>
+<h3 id="DeepLab-V1"><a href="#DeepLab-V1" class="headerlink" title="DeepLab V1"></a>DeepLab V1</h3><p>论文题目：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.00915">Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs</a><br>开源代码：<a target="_blank" rel="noopener" href="https://github.com/TheLegendAli/DeepLab-Context">TheLegendAli/DeepLab-Context</a></p>
+<h3 id="DeepLab-V2"><a href="#DeepLab-V2" class="headerlink" title="DeepLab V2"></a>DeepLab V2</h3><p>论文题目：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.00915">DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs</a><br>开源代码：<a target="_blank" rel="noopener" href="https://github.com/DrSleep/tensorflow-deeplab-resnet">DrSleep/tensorflow-deeplab-resnet</a></p>
+<h3 id="DeepLab-V3"><a href="#DeepLab-V3" class="headerlink" title="DeepLab V3"></a>DeepLab V3</h3><p>论文题目：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.05587">Rethinking Atrous Convolution for Semantic Image Segmentation</a><br>开源代码：<a target="_blank" rel="noopener" href="https://github.com/eveningdong/DeepLabV3-Tensorflow">leonndong/DeepLabV3-Tensorflow</a></p>
+<h3 id="DeepLab-V3-1"><a href="#DeepLab-V3-1" class="headerlink" title="DeepLab V3+"></a>DeepLab V3+</h3><p>论文题目：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1802.02611">Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation</a><br>开源代码：<a target="_blank" rel="noopener" href="https://github.com/jfzhang95/pytorch-deeplab-xception">jfzhang95/pytorch-deeplab-xception</a></p>
+<h3 id="DeepLab系列的思想"><a href="#DeepLab系列的思想" class="headerlink" title="DeepLab系列的思想"></a>DeepLab系列的思想</h3><p>图像分割CNN是根据classification这种high-level semantics改编的，但CNN做语义分割时精准度不够，根本原因是 DCNNs 的高级特征的平移不变性，即高层次特征映射，根源于重复的池化和下采样会丢失localization信息，即无法对像素点精确定位语义（low-level semantics）。</p>
+<p>针对下采样或池化降低分辨率，DeepLab采用了空洞卷积代替池化操作来扩展感受野，获取更多的上下文信息。同时DeepLab v1v2 结合了深度卷积神经网络（DCNNs）和概率图模型（DenseCRFs）的方法。DeepLab v2提出了串行的ASPP模块，ASPP增强了网络在多尺度下多类别分割时的鲁棒性， 使用不同的采样比例与感受野提取输入特征，能在多个尺度上捕获目标与上下文信息，虽然大大扩展了卷积核的感受野，但<strong>随着感受野越来越接近图像大小，会退化为1x1卷积。</strong></p>
+<p>为了解决这个问题，<strong>DeepLab v3改进了ASPP空洞卷积空间金字塔池化层，不同的dilation卷积并行操作，然后归一尺寸后求和</strong>。ASPP模块借鉴PSPNet思想，通过不同采样率的空洞卷积并行采样，捕捉图像不同尺度的上下文信息。</p>
+<p>DeepLab v3+通过添加一个简单而有效的解码器模块扩展DeepLab v3以优化分割结果，在PASCAL VOC 2012数据集和Cityscapes数据集中分别取得了89%和82.1%的MIOU。</p>
+<h3 id="语义分割面临的主要挑战"><a href="#语义分割面临的主要挑战" class="headerlink" title="语义分割面临的主要挑战"></a>语义分割面临的主要挑战</h3><p><strong>分辨率</strong><br>连续的池化或下采样操作会导致图像的分辨率大幅度下降，从而损失了原始信息， 且在上采样过程中难以恢复。因此，越来越多的网络都在试图减少分辨率的损失， 比如使用空洞卷积，或者用步长为2的卷积操作代替池化。</p>
+<p><strong>多尺度特征</strong><br>同一张图片中不同大小物体的分割精度不同，因为不同尺度卷积核对不同大小物体的分割效果不同。在分辨率较小的情况下，小物体的位置信息经常被丢失，通过设置不同参数的卷积层或池化层， 提取到不同尺度的特征图。将这些特征图送入网络做融合，对于整个网络性能的提升很大。但是由于图像金字塔的多尺度输入，造成计算时保存了大量的梯度，从而导致对硬件的要求很高。</p>
+<h2 id="1-DeepLab-V1"><a href="#1-DeepLab-V1" class="headerlink" title="1 DeepLab V1"></a>1 DeepLab V1</h2><p>DeepLab v1是结合了深度卷积神经网络（DCNNs）和概率图模型（DenseCRFs）的方法</p>
+<p><strong>深度卷积神经网络（DCNNs）</strong><br>• 采用FCN思想，修改VGG16网络，得到 coarse score map并插值到原图像大小<br>• 使用Atrous convolution得到更dense且感受野不变的feature map</p>
+<p><strong>概率图模型（DenseCRFs）</strong><br>• 借用fully connected CRF对从DCNNs得到的分割结果进行细节上的refine。</p>
+<p>DeepLab v1:VGG16+空洞卷积+CRF对边缘分割结果进行后处理。针对下采样或池化降低分辨率，DeepLab采用了空洞卷积来扩展感受野，获取更多的上下文信息。同时，采用完全连接的条件随机场（CRF）提高模型捕获细节的能力。</p>
+<p>感受域和步长以及卷积核之间的对应关系：<br><img src="https://img-blog.csdnimg.cn/a8f41fd5c21e4c74b0d31e9364a34143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/4e1d625a98ca4387a30e25cdca49970c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><img src="https://img-blog.csdnimg.cn/b61c961872bc4924984567fae16a4a2c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h3 id="DeepLab-v1-的网络结构"><a href="#DeepLab-v1-的网络结构" class="headerlink" title="DeepLab v1 的网络结构"></a>DeepLab v1 的网络结构</h3><p>1.把全连接层（fc6、fc7、fc8）改成卷积层（端到端训练）<br>2.把最后两个池化层（pool4、pool5）的步长2改成1（保证feature的分辨率下降到原图的1/8）。<br>3.把最后三个卷积层（conv5_1、conv5_2、conv5_3）的dilate rate设置为2，且第一个全连接层的dilate rate设置为4（保持感受野）。<br>4.把最后一个全连接层fc8的通道数从1000改为21（分类数为21）。<br>5.第一个全连接层fc6， 通道数从4096变为1024， 卷积核大小从7x7变为3x3，后续实验中发现此处的dilate rate为12时（LargeFOV），效果最好。<br>!&lt;</p><div align="center"><img src="https://img-blog.csdnimg.cn/4a8ad99eb87642d981a39d73b965d6ab.png"><p></p>
+<h3 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h3><p>网络变形：<br>DeepLab-MSc：类似FCN，加入特征融合<br>DeepLab-7×7：替换全连接的卷积核大小为7× 7<br>DeepLab-4×4：替换全连接的卷积核大小为4× 4<br>DeepLab-LargeFOV：替换全连接的卷积核大小为3×3，空洞率为12<br><img src="https://img-blog.csdnimg.cn/e7d2acf16f7c43beb9201d210deaa11c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>损失函数：交叉熵 + softmax<br>优化器：SGD + momentum 0.9<br>batchsize：20<br>学习率：10^−3（每经过2000个epoch，学习率 * 0.1）<br><img src="https://img-blog.csdnimg.cn/28f5116a5f3a49e9b4b0e2cf7dcc488e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h2 id="2-DeepLab-V2"><a href="#2-DeepLab-V2" class="headerlink" title="2 DeepLab V2"></a>2 DeepLab V2</h2><p><img src="https://img-blog.csdnimg.cn/79368d35d18c44baa83cf82934c2a179.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>Deeplab v2：VGG16/ResNet+串行的ASPP模块+CRF对边缘分割结果进行后处理。添加了ASPP空洞卷积空间金字塔池化层，通过不同的dilation卷积串行操作，来取代导致浅层特征损失的池化操作，大大扩大了感受野。</p>
+<h3 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h3><h4 id="空洞卷积（Atrous-Convolution）"><a href="#空洞卷积（Atrous-Convolution）" class="headerlink" title="空洞卷积（Atrous Convolution）"></a>空洞卷积（Atrous Convolution）</h4><p><strong>稠密映射：</strong><br>标准3×3卷积：3<em>3大小的区域对应一个输出值<br>空洞卷积(rate=2)：5</em>5大小的区域对应一个输出值<br><img src="https://img-blog.csdnimg.cn/bf1eed852a744827b67d5c8149644d9f.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/b529ef0fafeb4bd08c2d93d4ad979a10.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>标准3×3卷积（rate为1），感受野为3；空洞卷积（rate为2），卷积核尺寸为5x5，感受野为7；空洞卷积（rate为4），卷积核尺寸为9x9，感受野为15。<br><img src="https://img-blog.csdnimg.cn/8a492b155ee043c3b1387185d64cecf6.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="请添加图片描述"></p>
+<h4 id="ResNet"><a href="#ResNet" class="headerlink" title="ResNet"></a>ResNet</h4><p>变化率：残差的引入去掉了主体部分，从而突出了微小的变化。</p>
+<p>主要思想：用一个神经网络去拟合y=x这样的恒等映射，比用一个神经网络去拟合y=0这样的0映射要难。因为拟合y=0的时候，只需要将权重和偏置都逼近0就可以了。<br><img src="https://img-blog.csdnimg.cn/340184514adc45a3921c12dbdd109c3c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/be07ad33cbb642d3bd7acf079bdf53bb.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h3 id="Network-amp-ASPP"><a href="#Network-amp-ASPP" class="headerlink" title="Network&amp;ASPP"></a>Network&amp;ASPP</h3><p>ASPP模块构成——&gt;DeepLab v1到DeepLab v2的进化——&gt;基于VGG16的DeepLab v2在v1的基础上做了进一步调整（FC6-FC8替换为ASPP）</p>
+<p><img src="https://img-blog.csdnimg.cn/b842e05ebe80484cb3ea615aa30ba410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/aab30393be6444d6894618db556e3d44.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h3 id="实验设置-1"><a href="#实验设置-1" class="headerlink" title="实验设置"></a>实验设置</h3><p>损失函数：交叉熵 + softmax<br>优化器：SGD + momentum 0.9<br>Batchsize：20<br>学习率策略：step：10^−3（每经过2000个epoch，学习率 * 0.1）<br>poly：<br><img src="https://img-blog.csdnimg.cn/22a9897753804089839eb9c42ca6d1e5.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>网络变形：<br>LargeFOV：3×3卷积 + rate=12(DeepLab v1最好结果)<br>ASPP-S：r = 2, 4, 8, 12<br>ASPP-L：r = 6, 12, 18, 24<br><img src="https://img-blog.csdnimg.cn/892a2d8ff7de4c868abeefc1ee873650.png"><img src="https://img-blog.csdnimg.cn/4f8af814fad5448ba65d2d83cde09262.png"></p>
+<h2 id="3-DeepLab-V3"><a href="#3-DeepLab-V3" class="headerlink" title="3 DeepLab V3"></a>3 DeepLab V3</h2><p><img src="https://img-blog.csdnimg.cn/db29db5edd9a49bc886c88d673509bee.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="请"><br>Deeplab v3：ResNet+改进后的并行ASPP模块。随着采样率的增大，有效滤波器权重的数量（应用于有效特征的权重而不是padding补充的0）变少，在空洞率接近特征映射大小的极端情况下，3×3滤波器不是捕获整个图像上下文，而是退化为简单的1×1卷积（只有中心滤波器权重是有效的）。因此，v3使用了并行ASPP模块，最后一个分支拼接全局池化模块来捕获全局上下文信息。</p>
+<p><strong>语义分割常用特征提取框架</strong><br>1.图像金字塔：从输入图像入手，将不同尺度的图像分别送入网络进行特征提取，后期再融合。<br>2.编解码结构：编码器部分利用下采样进行特征提取，解码器部分利用上采样还原特征图尺寸。<br>3.深度网络vs空洞卷积：经典分类算法利用连续下采样提取特征，而空洞卷积是利用不同的采样率。<br>4.空间金字塔结构：除ASPP外，仍有其他网络使用了该思想，如SPPNet、PSPNet等。<br><img src="https://img-blog.csdnimg.cn/5c2621c7e62c433cb2d955fde3babed4.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h3 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h3><p>经典分类算法网络架构，如ResNet  ——&gt;  DeepLab v3空洞卷积串行网络结构  ——&gt;  DeepLab v3空洞卷积并行网络结构（调整了ASPP模块）<br><img src="https://img-blog.csdnimg.cn/8a8614ad97e441d3941bf2e14a69c68e.png"><br><img src="https://img-blog.csdnimg.cn/b90c7a3e5d704250813cda1bfe7647bd.png" alt="请添加图片描述"><br><img src="https://img-blog.csdnimg.cn/6de7fa641b194aef9cb714c9e0545635.png" alt="请添加图片描述"></p>
+<h3 id="实验设置-2"><a href="#实验设置-2" class="headerlink" title="实验设置"></a>实验设置</h3><p><strong>裁剪尺寸：</strong>裁剪图片至513x513（为了更好的拟合空洞率）<br>学习率策略：采用poly策略，原理同v2</p>
+<p><strong>BN层策略</strong>：当output_stride=16时，batchsize=16，同时BN层做参数衰减decay=0.9997。在增强的数据集上，以初始学习率0.007训练30K后，冻结BN层参数。当output_stride=8时，batchsize=8，使用初始学习率0.001训练30K。</p>
+<h2 id="4-DeepLab-V3"><a href="#4-DeepLab-V3" class="headerlink" title="4 DeepLab V3+"></a>4 DeepLab V3+</h2><p><img src="https://img-blog.csdnimg.cn/3fce4d09fb3b4e269eea88763b02c23d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>Deeplab v3+：DeepLabv3+的核心是通过添加一个简单而有效的解码器模块来恢复对象边界（沿着对象边界来细化分割结果），扩展了DeepLab v3。以Xcepition/ResNet为骨架，采用深度可分离卷积进行编码，在多尺度特征提取ASPP模块后再接一个简单的解码器模块。</p>
+<h3 id="背景知识-1"><a href="#背景知识-1" class="headerlink" title="背景知识"></a>背景知识</h3><h4 id="深度可分离卷积"><a href="#深度可分离卷积" class="headerlink" title="深度可分离卷积"></a>深度可分离卷积</h4><p><strong>标准卷积：</strong><br>标准输入图片尺寸为12×12×3，用1个5×5×3的卷积核进行卷积操作，会得到8×8×1的输出；<br>用256个5×5×3的卷积核进行卷积操作，会得到8×8×256的输出。<br>参数计算：256×5×5×3 = 19200<br><img src="https://img-blog.csdnimg.cn/c89edb27b5024cfdab086cce6c5fa16b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/1688fe0d78bd44419c859dfb5dadcf65.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><strong>分组卷积：</strong><br>组卷积是对输入特征图进行分组，每组分别进行卷积。<br>假设输入特征图的尺寸为C<em>H</em>W (12× 5×5)，输出特征图的数量为N (6)个，如果设定要分成G (3)个groups，则每组的输入特征图数量为C/G (4)，每 组 的 输出特征图数量为N/G (2)，每个卷积核的尺寸为(C/G)<em>K</em>K (4×5×5)，卷积核的总数仍为N (6)个，每组的卷积核数量为N/G (2)，每个卷积核只与其同组的输入特征图进行卷积，卷积核的总参数量为N*(C/G)<em>K</em>K，可见，总参数量减少为原来的1/G。</p>
+<p>深度可分离卷积是组卷积的一种极端情况，也就是输入有多少个通道，对应的分组就有多少个组，即分组的组数=输入特征图的通道数。<br><img src="https://img-blog.csdnimg.cn/f3d42843851b418198593087b1e631f0.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/a5c19f7d3e2b45ae9b32b0ca92eddd5b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><strong>深度可分离卷积 = 深度卷积 + 逐点卷积</strong></p>
+<p><strong>深度卷积：</strong>每个5×5×1的卷积核对应输入图像中的一个通道，得到三个8×8×1的输出， 拼接后得到8×8×3的结果</p>
+<p><strong>逐点卷积：</strong>设置256个1×1×3的卷积核，对深度卷积的输出再进行卷积操作，最终得到<br>8×8×256的输出</p>
+<p><strong>参数计算：</strong><br>深度卷积参数 = 5×5×3 = 75<br>逐点卷积参数 = 256×1×1×3 = 768<br>总参数 = 75 + 768 = 843 &lt;&lt; 19200<br><img src="https://img-blog.csdnimg.cn/ab7f954841c742f0a3e8cfb3bed2deb9.png"><img src="https://img-blog.csdnimg.cn/88a7b178f787413b988845637267109a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h3 id="网络结构-1"><a href="#网络结构-1" class="headerlink" title="网络结构"></a>网络结构</h3><p><strong>编码器：</strong></p>
+<ol>
+<li>使用DeepLab v3作为编码器结构，输出与输入尺寸之比16(output_stride = 16)。</li>
+<li>ASPP：一个1×1卷积 + 三个3×3卷积(rate = {6, 12, 18}) + 全局平均池化。</li>
+</ol>
+<p><strong>解码器：</strong></p>
+<ol>
+<li>先把encoder的结果上采样4倍（双线性插值），然后与编码器中相对应尺寸的特征图进行拼接融合，再进行3x3的卷积， 最后上采样4倍得到最终结果</li>
+<li>融合低层次信息前，先进行1x1的卷积， 目的是降低通道数。</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/1da65cd0dc424bd6909775d7fb95481c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="请"><br>DeepLab v3+对Xception进行了微调：<br><img src="https://img-blog.csdnimg.cn/3c2a712dda4747999a01a4b8a821a00e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/464b22aff4be4d0baab40e86d8807878.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/312255e342ef4d718f1c594f88c1518a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>1.更深的Xception结构，原始middle flow迭代8次，微调后迭代16次。<br>2.所有max pooling结构被stride=2的深度可分离卷积替代。<br>3.每个3x3的depthwise convolution（结合了空洞卷积）后都跟BN和Relu。</p>
+<h3 id="实验设置-3"><a href="#实验设置-3" class="headerlink" title="实验设置"></a>实验设置</h3><p>剪尺寸：裁剪图片至513*513<br>学习率策略：采用poly策略，原理同v2 v3<br><img src="https://img-blog.csdnimg.cn/8cdd6315658b41bdbfd6991e1d0bde7e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/d6b6db83db33440f83c2ee466866ed94.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h2 id="论文总结"><a href="#论文总结" class="headerlink" title="论文总结"></a>论文总结</h2><p><strong>DeepLab系列发展历程</strong></p>
+<p>v1：修改经典分类网络(VGG16)，将空洞卷积应用于模型中，试图解决分辨率过低及提取多尺度特征问题，用CRF做后处理（VGG16+空洞卷积+CRF对边缘分割结果进行后处理）</p>
+<p>v2：设计ASPP模块，将空洞卷积的性能发挥到最大，沿用VGG16作为主网络，尝试使用ResNet-101进行对比实验，用CRF做后处理（VGG16/ResNet+串行的ASPP模块+CRF对边缘分割结果进行后处理）</p>
+<p>v3：以ResNet为主网络，设计了一种串行和一种并行的DCNN网络，微调ASPP模块，取消CRF做后处理（ResNet+改进后的并行ASPP模块）</p>
+<p>v3+：以ResNet或Xception为主网络，结合编解码结构设计了一种新的算法模型，以v3作为编码器结构，另行设计了解码器结构，取消CRF做后处理（ResNet/Xception+并行的ASPP模块+编码器结构）<br><img src="https://img-blog.csdnimg.cn/0e4dda37ed6f41d4bb1245ef9fc9d198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/23d1c632752747d0b5355e5ead2f5230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+</div>
                 
             </div>
             <hr/>
@@ -633,7 +567,7 @@ display<span class="token punctuation">(</span>Image<span class="token punctuati
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wuliwuxin.github.io/2021/07/20/jue-ce-shu/">http://wuliwuxin.github.io/2021/07/20/jue-ce-shu/</a>
+                    <a href="http://wuliwuxin.github.io/2021/08/08/deeplab/">http://wuliwuxin.github.io/2021/08/08/deeplab/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -671,8 +605,12 @@ display<span class="token punctuation">(</span>Image<span class="token punctuati
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                                    <span class="chip bg-color">基础知识</span>
+                                <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">论文</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/">
+                                    <span class="chip bg-color">图像分割</span>
                                 </a>
                             
                         </div>
@@ -842,9 +780,10 @@ display<span class="token punctuation">(</span>Image<span class="token punctuati
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/08/08/deeplab/">
                     <div class="card-image">
@@ -862,9 +801,9 @@ display<span class="token punctuation">(</span>Image<span class="token punctuati
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -877,6 +816,7 @@ display<span class="token punctuation">(</span>Image<span class="token punctuati
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -899,13 +839,13 @@ display<span class="token punctuation">(</span>Image<span class="token punctuati
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/18/luo-ji-hui-gui/">
+                <a href="/2021/07/20/jue-ce-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="逻辑回归">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="决策树">
                         
-                        <span class="card-title">逻辑回归</span>
+                        <span class="card-title">决策树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -916,7 +856,7 @@ display<span class="token punctuation">(</span>Image<span class="token punctuati
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
                             </span>
                         <span class="publish-author">
                             
