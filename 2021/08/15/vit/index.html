@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DeepLab系列, W&amp;X">
+    <meta name="keywords" content="ViT, W&amp;X">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DeepLab系列 | W&amp;X</title>
+    <title>ViT | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DeepLab系列</h1>
+                    <h1 class="description center-align post-title">ViT</h1>
                 </div>
             </div>
         </div>
@@ -438,8 +438,8 @@
                                 <span class="chip bg-color">论文</span>
                             </a>
                         
-                            <a href="/tags/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/">
-                                <span class="chip bg-color">语义分割</span>
+                            <a href="/tags/Transformer/">
+                                <span class="chip bg-color">Transformer</span>
                             </a>
                         
                     </div>
@@ -463,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-08
+                    2021-08-15
                 </div>
                 
 
@@ -487,60 +487,43 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="语义分割模型之DeepLab系列"><a href="#语义分割模型之DeepLab系列" class="headerlink" title="语义分割模型之DeepLab系列"></a>语义分割模型之DeepLab系列</h1><p><img src="https://img-blog.csdnimg.cn/1fc6027f0a1d49748c36a8bc65ebe82b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="空气新鲜，风景宜人"></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>DeepLab系列一共有四篇文章，分别对应DeepLab V1、DeepLab V2、DeepLab V3和DeepLab V3+。</p>
-<h3 id="DeepLab-V1"><a href="#DeepLab-V1" class="headerlink" title="DeepLab V1"></a>DeepLab V1</h3><p>论文题目：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.00915">Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs</a><br>开源代码：<a target="_blank" rel="noopener" href="https://github.com/TheLegendAli/DeepLab-Context">TheLegendAli/DeepLab-Context</a></p>
-<h3 id="DeepLab-V2"><a href="#DeepLab-V2" class="headerlink" title="DeepLab V2"></a>DeepLab V2</h3><p>论文题目：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.00915">DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs</a><br>开源代码：<a target="_blank" rel="noopener" href="https://github.com/DrSleep/tensorflow-deeplab-resnet">DrSleep/tensorflow-deeplab-resnet</a></p>
-<h3 id="DeepLab-V3"><a href="#DeepLab-V3" class="headerlink" title="DeepLab V3"></a>DeepLab V3</h3><p>论文题目：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.05587">Rethinking Atrous Convolution for Semantic Image Segmentation</a><br>开源代码：<a target="_blank" rel="noopener" href="https://github.com/eveningdong/DeepLabV3-Tensorflow">leonndong/DeepLabV3-Tensorflow</a></p>
-<h3 id="DeepLab-V3-1"><a href="#DeepLab-V3-1" class="headerlink" title="DeepLab V3+"></a>DeepLab V3+</h3><p>论文题目：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1802.02611">Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation</a><br>开源代码：<a target="_blank" rel="noopener" href="https://github.com/jfzhang95/pytorch-deeplab-xception">jfzhang95/pytorch-deeplab-xception</a></p>
-<h3 id="DeepLab系列的思想"><a href="#DeepLab系列的思想" class="headerlink" title="DeepLab系列的思想"></a>DeepLab系列的思想</h3><p>图像分割CNN是根据classification这种high-level semantics改编的，但CNN做语义分割时精准度不够，根本原因是 DCNNs 的高级特征的平移不变性，即高层次特征映射，根源于重复的池化和下采样会丢失localization信息，即无法对像素点精确定位语义（low-level semantics）。</p>
-<p>针对下采样或池化降低分辨率，DeepLab采用了空洞卷积代替池化操作来扩展感受野，获取更多的上下文信息。同时DeepLab v1v2 结合了深度卷积神经网络（DCNNs）和概率图模型（DenseCRFs）的方法。DeepLab v2提出了串行的ASPP模块，ASPP增强了网络在多尺度下多类别分割时的鲁棒性， 使用不同的采样比例与感受野提取输入特征，能在多个尺度上捕获目标与上下文信息，虽然大大扩展了卷积核的感受野，但<strong>随着感受野越来越接近图像大小，会退化为1x1卷积。</strong></p>
-<p>为了解决这个问题，<strong>DeepLab v3改进了ASPP空洞卷积空间金字塔池化层，不同的dilation卷积并行操作，然后归一尺寸后求和</strong>。ASPP模块借鉴PSPNet思想，通过不同采样率的空洞卷积并行采样，捕捉图像不同尺度的上下文信息。</p>
-<p>DeepLab v3+通过添加一个简单而有效的解码器模块扩展DeepLab v3以优化分割结果，在PASCAL VOC 2012数据集和Cityscapes数据集中分别取得了89%和82.1%的MIOU。</p>
-<h3 id="语义分割面临的主要挑战"><a href="#语义分割面临的主要挑战" class="headerlink" title="语义分割面临的主要挑战"></a>语义分割面临的主要挑战</h3><p><strong>分辨率</strong><br>连续的池化或下采样操作会导致图像的分辨率大幅度下降，从而损失了原始信息， 且在上采样过程中难以恢复。因此，越来越多的网络都在试图减少分辨率的损失， 比如使用空洞卷积，或者用步长为2的卷积操作代替池化。</p>
-<p><strong>多尺度特征</strong><br>同一张图片中不同大小物体的分割精度不同，因为不同尺度卷积核对不同大小物体的分割效果不同。在分辨率较小的情况下，小物体的位置信息经常被丢失，通过设置不同参数的卷积层或池化层， 提取到不同尺度的特征图。将这些特征图送入网络做融合，对于整个网络性能的提升很大。但是由于图像金字塔的多尺度输入，造成计算时保存了大量的梯度，从而导致对硬件的要求很高。</p>
-<h2 id="1-DeepLab-V1"><a href="#1-DeepLab-V1" class="headerlink" title="1 DeepLab V1"></a>1 DeepLab V1</h2><p>DeepLab v1是结合了深度卷积神经网络（DCNNs）和概率图模型（DenseCRFs）的方法</p>
-<p><strong>深度卷积神经网络（DCNNs）</strong><br>• 采用FCN思想，修改VGG16网络，得到 coarse score map并插值到原图像大小<br>• 使用Atrous convolution得到更dense且感受野不变的feature map</p>
-<p><strong>概率图模型（DenseCRFs）</strong><br>• 借用fully connected CRF对从DCNNs得到的分割结果进行细节上的refine。</p>
-<p>DeepLab v1:VGG16+空洞卷积+CRF对边缘分割结果进行后处理。针对下采样或池化降低分辨率，DeepLab采用了空洞卷积来扩展感受野，获取更多的上下文信息。同时，采用完全连接的条件随机场（CRF）提高模型捕获细节的能力。</p>
-<p>感受域和步长以及卷积核之间的对应关系：<br><img src="https://img-blog.csdnimg.cn/a8f41fd5c21e4c74b0d31e9364a34143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/4e1d625a98ca4387a30e25cdca49970c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><img src="https://img-blog.csdnimg.cn/b61c961872bc4924984567fae16a4a2c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h3 id="DeepLab-v1-的网络结构"><a href="#DeepLab-v1-的网络结构" class="headerlink" title="DeepLab v1 的网络结构"></a>DeepLab v1 的网络结构</h3><p>1.把全连接层（fc6、fc7、fc8）改成卷积层（端到端训练）<br>2.把最后两个池化层（pool4、pool5）的步长2改成1（保证feature的分辨率下降到原图的1/8）。<br>3.把最后三个卷积层（conv5_1、conv5_2、conv5_3）的dilate rate设置为2，且第一个全连接层的dilate rate设置为4（保持感受野）。<br>4.把最后一个全连接层fc8的通道数从1000改为21（分类数为21）。<br>5.第一个全连接层fc6， 通道数从4096变为1024， 卷积核大小从7x7变为3x3，后续实验中发现此处的dilate rate为12时（LargeFOV），效果最好。<br><img src="https://img-blog.csdnimg.cn/4a8ad99eb87642d981a39d73b965d6ab.png"></p>
-<h3 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h3><p>网络变形：<br>DeepLab-MSc：类似FCN，加入特征融合<br>DeepLab-7×7：替换全连接的卷积核大小为7× 7<br>DeepLab-4×4：替换全连接的卷积核大小为4× 4<br>DeepLab-LargeFOV：替换全连接的卷积核大小为3×3，空洞率为12<br><img src="https://img-blog.csdnimg.cn/e7d2acf16f7c43beb9201d210deaa11c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>损失函数：交叉熵 + softmax<br>优化器：SGD + momentum 0.9<br>batchsize：20<br>学习率：10^−3（每经过2000个epoch，学习率 * 0.1）<br><img src="https://img-blog.csdnimg.cn/28f5116a5f3a49e9b4b0e2cf7dcc488e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h2 id="2-DeepLab-V2"><a href="#2-DeepLab-V2" class="headerlink" title="2 DeepLab V2"></a>2 DeepLab V2</h2><p><img src="https://img-blog.csdnimg.cn/79368d35d18c44baa83cf82934c2a179.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>Deeplab v2：VGG16/ResNet+串行的ASPP模块+CRF对边缘分割结果进行后处理。添加了ASPP空洞卷积空间金字塔池化层，通过不同的dilation卷积串行操作，来取代导致浅层特征损失的池化操作，大大扩大了感受野。</p>
-<h3 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h3><h4 id="空洞卷积（Atrous-Convolution）"><a href="#空洞卷积（Atrous-Convolution）" class="headerlink" title="空洞卷积（Atrous Convolution）"></a>空洞卷积（Atrous Convolution）</h4><p><strong>稠密映射：</strong><br>标准3×3卷积：3<em>3大小的区域对应一个输出值<br>空洞卷积(rate=2)：5</em>5大小的区域对应一个输出值<br><img src="https://img-blog.csdnimg.cn/bf1eed852a744827b67d5c8149644d9f.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/b529ef0fafeb4bd08c2d93d4ad979a10.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>标准3×3卷积（rate为1），感受野为3；空洞卷积（rate为2），卷积核尺寸为5x5，感受野为7；空洞卷积（rate为4），卷积核尺寸为9x9，感受野为15。<br><img src="https://img-blog.csdnimg.cn/8a492b155ee043c3b1387185d64cecf6.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="请添加图片描述"></p>
-<h4 id="ResNet"><a href="#ResNet" class="headerlink" title="ResNet"></a>ResNet</h4><p>变化率：残差的引入去掉了主体部分，从而突出了微小的变化。</p>
-<p>主要思想：用一个神经网络去拟合y=x这样的恒等映射，比用一个神经网络去拟合y=0这样的0映射要难。因为拟合y=0的时候，只需要将权重和偏置都逼近0就可以了。<br><img src="https://img-blog.csdnimg.cn/340184514adc45a3921c12dbdd109c3c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/be07ad33cbb642d3bd7acf079bdf53bb.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h3 id="Network-amp-ASPP"><a href="#Network-amp-ASPP" class="headerlink" title="Network&amp;ASPP"></a>Network&amp;ASPP</h3><p>ASPP模块构成——&gt;DeepLab v1到DeepLab v2的进化——&gt;基于VGG16的DeepLab v2在v1的基础上做了进一步调整（FC6-FC8替换为ASPP）</p>
-<p><img src="https://img-blog.csdnimg.cn/b842e05ebe80484cb3ea615aa30ba410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/aab30393be6444d6894618db556e3d44.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h3 id="实验设置-1"><a href="#实验设置-1" class="headerlink" title="实验设置"></a>实验设置</h3><p>损失函数：交叉熵 + softmax<br>优化器：SGD + momentum 0.9<br>Batchsize：20<br>学习率策略：step：10^−3（每经过2000个epoch，学习率 * 0.1）<br>poly：<br><img src="https://img-blog.csdnimg.cn/22a9897753804089839eb9c42ca6d1e5.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>网络变形：<br>LargeFOV：3×3卷积 + rate=12(DeepLab v1最好结果)<br>ASPP-S：r = 2, 4, 8, 12<br>ASPP-L：r = 6, 12, 18, 24<br><img src="https://img-blog.csdnimg.cn/892a2d8ff7de4c868abeefc1ee873650.png"><img src="https://img-blog.csdnimg.cn/4f8af814fad5448ba65d2d83cde09262.png"></p>
-<h2 id="3-DeepLab-V3"><a href="#3-DeepLab-V3" class="headerlink" title="3 DeepLab V3"></a>3 DeepLab V3</h2><p><img src="https://img-blog.csdnimg.cn/db29db5edd9a49bc886c88d673509bee.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="请"><br>Deeplab v3：ResNet+改进后的并行ASPP模块。随着采样率的增大，有效滤波器权重的数量（应用于有效特征的权重而不是padding补充的0）变少，在空洞率接近特征映射大小的极端情况下，3×3滤波器不是捕获整个图像上下文，而是退化为简单的1×1卷积（只有中心滤波器权重是有效的）。因此，v3使用了并行ASPP模块，最后一个分支拼接全局池化模块来捕获全局上下文信息。</p>
-<p><strong>语义分割常用特征提取框架</strong><br>1.图像金字塔：从输入图像入手，将不同尺度的图像分别送入网络进行特征提取，后期再融合。<br>2.编解码结构：编码器部分利用下采样进行特征提取，解码器部分利用上采样还原特征图尺寸。<br>3.深度网络vs空洞卷积：经典分类算法利用连续下采样提取特征，而空洞卷积是利用不同的采样率。<br>4.空间金字塔结构：除ASPP外，仍有其他网络使用了该思想，如SPPNet、PSPNet等。<br><img src="https://img-blog.csdnimg.cn/5c2621c7e62c433cb2d955fde3babed4.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h3 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h3><p>经典分类算法网络架构，如ResNet  ——&gt;  DeepLab v3空洞卷积串行网络结构  ——&gt;  DeepLab v3空洞卷积并行网络结构（调整了ASPP模块）<br><img src="https://img-blog.csdnimg.cn/8a8614ad97e441d3941bf2e14a69c68e.png"><br><img src="https://img-blog.csdnimg.cn/b90c7a3e5d704250813cda1bfe7647bd.png"><br><img src="https://img-blog.csdnimg.cn/6de7fa641b194aef9cb714c9e0545635.png"></p>
-<h3 id="实验设置-2"><a href="#实验设置-2" class="headerlink" title="实验设置"></a>实验设置</h3><p><strong>裁剪尺寸：</strong>裁剪图片至513x513（为了更好的拟合空洞率）<br>学习率策略：采用poly策略，原理同v2</p>
-<p><strong>BN层策略</strong>：当output_stride=16时，batchsize=16，同时BN层做参数衰减decay=0.9997。在增强的数据集上，以初始学习率0.007训练30K后，冻结BN层参数。当output_stride=8时，batchsize=8，使用初始学习率0.001训练30K。</p>
-<h2 id="4-DeepLab-V3"><a href="#4-DeepLab-V3" class="headerlink" title="4 DeepLab V3+"></a>4 DeepLab V3+</h2><p><img src="https://img-blog.csdnimg.cn/3fce4d09fb3b4e269eea88763b02c23d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>Deeplab v3+：DeepLabv3+的核心是通过添加一个简单而有效的解码器模块来恢复对象边界（沿着对象边界来细化分割结果），扩展了DeepLab v3。以Xcepition/ResNet为骨架，采用深度可分离卷积进行编码，在多尺度特征提取ASPP模块后再接一个简单的解码器模块。</p>
-<h3 id="背景知识-1"><a href="#背景知识-1" class="headerlink" title="背景知识"></a>背景知识</h3><h4 id="深度可分离卷积"><a href="#深度可分离卷积" class="headerlink" title="深度可分离卷积"></a>深度可分离卷积</h4><p><strong>标准卷积：</strong><br>标准输入图片尺寸为12×12×3，用1个5×5×3的卷积核进行卷积操作，会得到8×8×1的输出；<br>用256个5×5×3的卷积核进行卷积操作，会得到8×8×256的输出。<br>参数计算：256×5×5×3 = 19200<br><img src="https://img-blog.csdnimg.cn/c89edb27b5024cfdab086cce6c5fa16b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/1688fe0d78bd44419c859dfb5dadcf65.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><strong>分组卷积：</strong><br>组卷积是对输入特征图进行分组，每组分别进行卷积。<br>假设输入特征图的尺寸为C<em>H</em>W (12× 5×5)，输出特征图的数量为N (6)个，如果设定要分成G (3)个groups，则每组的输入特征图数量为C/G (4)，每 组 的 输出特征图数量为N/G (2)，每个卷积核的尺寸为(C/G)<em>K</em>K (4×5×5)，卷积核的总数仍为N (6)个，每组的卷积核数量为N/G (2)，每个卷积核只与其同组的输入特征图进行卷积，卷积核的总参数量为N*(C/G)<em>K</em>K，可见，总参数量减少为原来的1/G。</p>
-<p>深度可分离卷积是组卷积的一种极端情况，也就是输入有多少个通道，对应的分组就有多少个组，即分组的组数=输入特征图的通道数。<br><img src="https://img-blog.csdnimg.cn/f3d42843851b418198593087b1e631f0.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/a5c19f7d3e2b45ae9b32b0ca92eddd5b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><strong>深度可分离卷积 = 深度卷积 + 逐点卷积</strong></p>
-<p><strong>深度卷积：</strong>每个5×5×1的卷积核对应输入图像中的一个通道，得到三个8×8×1的输出， 拼接后得到8×8×3的结果</p>
-<p><strong>逐点卷积：</strong>设置256个1×1×3的卷积核，对深度卷积的输出再进行卷积操作，最终得到<br>8×8×256的输出</p>
-<p><strong>参数计算：</strong><br>深度卷积参数 = 5×5×3 = 75<br>逐点卷积参数 = 256×1×1×3 = 768<br>总参数 = 75 + 768 = 843 &lt;&lt; 19200<br><img src="https://img-blog.csdnimg.cn/ab7f954841c742f0a3e8cfb3bed2deb9.png"><img src="https://img-blog.csdnimg.cn/88a7b178f787413b988845637267109a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h3 id="网络结构-1"><a href="#网络结构-1" class="headerlink" title="网络结构"></a>网络结构</h3><p><strong>编码器：</strong></p>
-<ol>
-<li>使用DeepLab v3作为编码器结构，输出与输入尺寸之比16(output_stride = 16)。</li>
-<li>ASPP：一个1×1卷积 + 三个3×3卷积(rate = {6, 12, 18}) + 全局平均池化。</li>
-</ol>
-<p><strong>解码器：</strong></p>
-<ol>
-<li>先把encoder的结果上采样4倍（双线性插值），然后与编码器中相对应尺寸的特征图进行拼接融合，再进行3x3的卷积， 最后上采样4倍得到最终结果</li>
-<li>融合低层次信息前，先进行1x1的卷积， 目的是降低通道数。</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/1da65cd0dc424bd6909775d7fb95481c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>DeepLab v3+对Xception进行了微调：<br><img src="https://img-blog.csdnimg.cn/3c2a712dda4747999a01a4b8a821a00e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/464b22aff4be4d0baab40e86d8807878.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/312255e342ef4d718f1c594f88c1518a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>1.更深的Xception结构，原始middle flow迭代8次，微调后迭代16次。<br>2.所有max pooling结构被stride=2的深度可分离卷积替代。<br>3.每个3x3的depthwise convolution（结合了空洞卷积）后都跟BN和Relu。</p>
-<h3 id="实验设置-3"><a href="#实验设置-3" class="headerlink" title="实验设置"></a>实验设置</h3><p>剪尺寸：裁剪图片至513*513<br>学习率策略：采用poly策略，原理同v2 v3<br><img src="https://img-blog.csdnimg.cn/8cdd6315658b41bdbfd6991e1d0bde7e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/d6b6db83db33440f83c2ee466866ed94.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h2 id="论文总结"><a href="#论文总结" class="headerlink" title="论文总结"></a>论文总结</h2><p><strong>DeepLab系列发展历程</strong></p>
-<p>v1：修改经典分类网络(VGG16)，将空洞卷积应用于模型中，试图解决分辨率过低及提取多尺度特征问题，用CRF做后处理（VGG16+空洞卷积+CRF对边缘分割结果进行后处理）</p>
-<p>v2：设计ASPP模块，将空洞卷积的性能发挥到最大，沿用VGG16作为主网络，尝试使用ResNet-101进行对比实验，用CRF做后处理（VGG16/ResNet+串行的ASPP模块+CRF对边缘分割结果进行后处理）</p>
-<p>v3：以ResNet为主网络，设计了一种串行和一种并行的DCNN网络，微调ASPP模块，取消CRF做后处理（ResNet+改进后的并行ASPP模块）</p>
-<p>v3+：以ResNet或Xception为主网络，结合编解码结构设计了一种新的算法模型，以v3作为编码器结构，另行设计了解码器结构，取消CRF做后处理（ResNet/Xception+并行的ASPP模块+编码器结构）<br><img src="https://img-blog.csdnimg.cn/0e4dda37ed6f41d4bb1245ef9fc9d198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/23d1c632752747d0b5355e5ead2f5230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+                <h1 id="初识-CV-Transformer-之Vision-Transformer-ViT"><a href="#初识-CV-Transformer-之Vision-Transformer-ViT" class="headerlink" title="初识 CV Transformer 之Vision Transformer (ViT)"></a>初识 CV Transformer 之Vision Transformer (ViT)</h1><p><img src="https://img-blog.csdnimg.cn/301c3f48793e4c7cb88c406e77b82248.webp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="请没有征服不了的高山"></p>
+<h2 id="0-回顾"><a href="#0-回顾" class="headerlink" title="0 回顾"></a>0 回顾</h2><p><img src="https://img-blog.csdnimg.cn/88feb5dcb14544b6b50099d310aebd9a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/23cec76c6e2a4d33810cdbfc522a190a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/39149dc298a9451c83aa134a685002c5.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/9cc0e4eae2a2410fb318935e2a029404.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><img src="https://img-blog.csdnimg.cn/3310d82ecb4f42e092202bfb027525e6.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/b750e1b780c14f4e8a111c3ade235c33.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/9da3e5f699804afcaaae1dc2c671a28c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<p><strong>Attention Is All You Need</strong></p>
+<p>RNN、LSTM时序网络，存在一定的问题：1.记忆长度有限，像RNN记忆时序比较短，后面就提出了LSTM；2.无法并行化，即只有计算完t0时刻才能计算t1时刻，计算效率比较低。</p>
+<p>Google提出了Transformer，在理论上不受硬件的限制，记忆长度可以无限长，并且可以并行化。</p>
+<p><strong>Embedding层有什么用？</strong><br><img src="https://img-blog.csdnimg.cn/593768affb074d09a5534f6e92de7e70.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>Eembedding层, Keras中文文档中对嵌入层 Embedding的介绍除了一句 “嵌入层将正整数（下标）转换为具有固定大小的向量”之外就不愿做过多的解释。那么我们为什么要使用嵌入层 Embedding呢? 主要有这两大原因:</p>
+<p>1、使用One-hot方法编码的向量会很高维也很稀疏。假设我们在做自然语言处理（NLP）中遇到了一个包含2000个词的字典，当使用One-hot编码时，每一个词会被一个包含2000个整数的向量来表示，其中1999个数字是0，如果字典再大一点，这种方法的计算效率会大打折扣。</p>
+<p>2、训练神经网络的过程中，每个嵌入的向量都会得到更新。通过上面的图片我们就会发现在多维空间中词与词之间有多少相似性，这使我们能可视化的了解词语之间的关系，不仅仅是词语，任何能通过嵌入层 Embedding 转换成向量的内容都可以这样做。</p>
+<p>上面说的概念可能还有些不清楚，那我们就举个例子看看嵌入层Embedding对下面的句子怎么处理的。Embedding的概念来自于word embeddings，如果您有兴趣阅读更多内容，可以查询word2vec。<br><img src="https://img-blog.csdnimg.cn/0c80054324d04212b1cb6d93caabbb91.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="图片来自：A Survey on Visual Transformer"></p>
+<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h2><blockquote>
+<p>论文题目：An Image is Worth 16x16 Words:Transformers for Image Recognition<br>at Scale</p>
+</blockquote>
+<h3 id="研究背景"><a href="#研究背景" class="headerlink" title="研究背景"></a>研究背景</h3><p>Transformer提出后在NLP领域中取得了极好的效果，其全Attention的结构，不仅增强了特征提取能力，还保持了并行计算的特点，可以又快又好的完成NLP领域内几乎所有任务，极大地推动自然语言处理的发展。</p>
+<p>虽然Transformer很强，但在其在计算机视觉领域的应用还非常有限。在此之前只有目标检测(Objectdetection)中的DETR大规模使用了Transformer，其他领域很少，而纯Transformer结构的网络则是没有。</p>
+<p>下图是该方向论文必出现的图：<br><img src="https://img-blog.csdnimg.cn/351eba39ea9a4b848e2750da6db20a77.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/633b544a28d646f5985ae2cc19c5191e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><strong>Transformer的优势</strong><br>1、并行计算；<br>2、全局视野；<br>3、灵活的堆叠能力；</p>
+<h3 id="研究成果及意义"><a href="#研究成果及意义" class="headerlink" title="研究成果及意义"></a>研究成果及意义</h3><p>ViT和ResNet Baseline取得了不相上下的结果<br><img src="https://img-blog.csdnimg.cn/48aec390c8c04ea898f7285df442b937.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>JFT：谷歌闭源数据集，规模是ImageNet的30倍左右<br>ViT-H/14：ViT-Huge模型，输入序列14x14</p>
+<p>ViT的历史意义：展示了在计算机视觉中使用纯Transformer结构的可能。<br>   图片→Backbone(CNNs)→Transformer→结果<br>   图片→Transformer→结果</p>
+<h2 id="2-论文算法模型总览"><a href="#2-论文算法模型总览" class="headerlink" title="2 论文算法模型总览"></a>2 论文算法模型总览</h2><h3 id="一切的开端：Self-Attention"><a href="#一切的开端：Self-Attention" class="headerlink" title="一切的开端：Self-Attention"></a>一切的开端：Self-Attention</h3><p>Attention是什么？以机器翻译为例。<br><img src="https://img-blog.csdnimg.cn/9dee07b26c814ffda86d0dc749d22066.png"><img src="https://img-blog.csdnimg.cn/7950f0c0bae14b4f9b7869daf4aea8f3.png"><br><img src="https://img-blog.csdnimg.cn/c5a6c2d369c4454faf7eaaa5d3a6bbce.png"><br><img src="https://img-blog.csdnimg.cn/d253b172b170476b9afc052044c5651b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><strong>每次输出只与输入的某几个词有关，关系深，权重大，关系浅，权重小。</strong></p>
+<p><strong>Attention Mechanism</strong><br>Attention的本质：加权平均<br>Attention的计算：实际上就是相似度计算<br><img src="https://img-blog.csdnimg.cn/9eec11b8e694475cbba3fd4c38065571.png"><br><img src="https://img-blog.csdnimg.cn/caa22e2ea71e4171a2a66313452127d3.png"></p>
+<p><strong>Self-Attention怎么计算？</strong></p>
+<p>Self Attention 计算：实际上是在进行相似度计算，计算每个q分别和每个k的相似度</p>
+<p>公式：<br><img src="https://img-blog.csdnimg.cn/2546cfc4ffea47bd9198a2615e238c26.png"><br>Q，K，V是什么？<br>Query：查询，询问；<br><img src="https://img-blog.csdnimg.cn/7477d518a008472594118a672b3cc61a.png"><br>Key：键值，关键词；<br><img src="https://img-blog.csdnimg.cn/70d0b6b1ecfc45d6b0768166c80a2a28.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>Value：价值，数值。<br><img src="https://img-blog.csdnimg.cn/a4af820b319d43bb9728f42680440ad2.png"></p>
+<p><strong>点积为什么可以衡量q与k的相似度？</strong><br>公式：q1·k1= |q1| x |k1| x cos<br>            q1·k2= |q1| x |k2| x cos<br><img src="https://img-blog.csdnimg.cn/b667aa4f28cf490da7844cb3b930f981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h3 id="Attention计算"><a href="#Attention计算" class="headerlink" title="Attention计算"></a>Attention计算</h3><p><img src="https://img-blog.csdnimg.cn/0c8fa648024648f8a930e7f3331ecc53.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/55b44b5dca624b96a2a220ede0f7f245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>假设的input是x1-x4，是一个sequence，每一个input (vector)先乘以矩阵W得到embedding，即向量a1-a4。接着这个embedding进入self-attention层，每一个向量a1-a4分别乘上3个不同的transformation matrix Wq，Wk，Wv，以向量a1为例，分别得到3个不同的向量q1，k1，v1；接下来使用每个query q去对每个key k做attention，attention就是做点积，匹配这2个向量有多接近，然后除以q和k的维度的开平方。</p>
+<p><img src="https://img-blog.csdnimg.cn/e00890167e2643e7971230dbedc90ebf.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/d1b349551a12488596dd004f19ae4c7c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/3e127e9790214706b85c8a670c204111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/607729b448e74af38d1169645d0853d7.png"><br><img src="https://img-blog.csdnimg.cn/c667fba233f74cdaab041a37fd9b61f3.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/126dc2513df941409f2c42896aee18d5.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h3 id="MultiHead-Attention"><a href="#MultiHead-Attention" class="headerlink" title="MultiHead Attention"></a>MultiHead Attention</h3><p><img src="https://img-blog.csdnimg.cn/b667cd031d144a40b7c44b90ef54b688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/9cc2c3d627454356a6ff1e66c5953fd6.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/6eb6f41f6883406f8527e6780948acb4.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h3 id="ViT结构"><a href="#ViT结构" class="headerlink" title="ViT结构"></a>ViT结构</h3><p>受NLP中Transformer扩展成功的启发，我们尝试将一个标准的Transformer直接应用于图像，并尽可能少地进行修改。为此，我们将图像分割成补丁，并将这些补丁的线性嵌入序列作为转化器的一个输入。图像斑块的处理方式与NLP应用中的记号（单词）相同。我们以监督的方式训练图像分类的模型。<br><img src="https://img-blog.csdnimg.cn/f412de189fa749a785014708b4aad0cc.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/eb7c3976a91b4f6e881fd638f3ea2183.png"></p>
+<p>1、将图像切分转化为序列化数据：原本HxWxC维的图片被转化为N个 D维的向量（或者一个NxD维的二维矩阵）；</p>
+<p>2、Position Embedding：采用position embedding（紫色框） + patch embedding（粉色框）方式来结合position信息；</p>
+<p>3、Learnable Embedding：Xclass（带星号的粉色框）是可学习的vector，这个token没有语义信息（即在句子中与任何的词无关，在图像中与任何的patch无关），它与图片label有关，经过encoder得到的结果使得整体表示偏向于这个指定embedding的信息；</p>
+<p>4、Transformer Encoder：将前面得到的Z0作为transformer的初始输入，transformer encoder是由多个MSA和MLP块交替组成的，每次在MSA和MLP前都要进行LN归一化。</p>
+<h3 id="位置编码-Positional-Encoding"><a href="#位置编码-Positional-Encoding" class="headerlink" title="位置编码 Positional Encoding"></a>位置编码 Positional Encoding</h3><p><strong>为什么要位置编码？</strong><br>图像切分重排（由二维变一维）后失去了位置/空间信息，并且Transformer的内部运算是空间信息无关的，所以需要把位置信息编码重新传进网络；</p>
+<p>ViT使用了一个可学习的vector（Xclass）来编码，编码vector和patch vector直接相加组成输入；</p>
+<p><strong>为什么直接相加，而不是concat？</strong><br>因为相加是concat的一种特例<br>相加形式：W(I+P)=WI+WP<br>concat形式：<br>当W1=W2时，两式内涵一致<br><img src="https://img-blog.csdnimg.cn/c87ccc3762744bbf9c6be90a363ea809.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h3 id="BN和LN的区别"><a href="#BN和LN的区别" class="headerlink" title="BN和LN的区别"></a>BN和LN的区别</h3><p><strong>为什么采用LN？</strong><br>LN其实就是在每个样本上都计算均值和方差，将输入数据转化成均值为0，方差为1的数据。而不采用BN是因为，Batch Normalization的处理对象是对一批样本，是对这批样本的同一维度特征做归一化，Layer Normalization 的处理对象是单个样本，是对这单个样本的所有维度特征做归一化，而此处输入的N+1个序列，每个序列的长度可能是不同的。<br><img src="https://img-blog.csdnimg.cn/ca26391ef5df4f52b8acec154421a3af.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<h2 id="3-实验结果分析"><a href="#3-实验结果分析" class="headerlink" title="3 实验结果分析"></a>3 实验结果分析</h2><p>先在大数据集上预训练，然后到小数据集上Fine Tune<br>迁移过去后，需要把原本的MLP Head换掉，换成对应类别数的FC层，处理不同尺寸输入的时候需要对Positional Encoding的结果进行插值<br><img src="https://img-blog.csdnimg.cn/1eebf9ca147e45b8b126b80dd822a25a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>在中等规模的数据集上（例如ImageNet），transformer模型的表现不如ResNets；<br>而当数据集的规模扩大，transformer模型的效果接近或者超过了目前的一些<strong>SOTA</strong>结果。</p>
+<p>BiT : 一个大ResNet进行监督+迁移学习的模型<br>Noisy Student：一个半监督学习的EfficientNet-L2<br>ViT-H/14：ViT-Huge模型，输入序列14x14<br><img src="https://img-blog.csdnimg.cn/519063363a2e47839286b0bf63c38a79.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/976c9bc250f344309cd3e86a9e19d29f.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br>Attention距离和网络层数的关系。Attention的距离可以等价为Conv中的感受野大小，层数越深，Attention跨越的距离越远，但是在最底层，也有的head可以覆盖到很远的距离。这说明Transformer可以进行Global信息整合。<br><img src="https://img-blog.csdnimg.cn/ca3ad2428c1140749acfe633ce60d4ea.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 
                 
             </div>
@@ -567,7 +550,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wuliwuxin.github.io/2021/08/08/deeplab/">http://wuliwuxin.github.io/2021/08/08/deeplab/</a>
+                    <a href="http://wuliwuxin.github.io/2021/08/15/vit/">http://wuliwuxin.github.io/2021/08/15/vit/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -609,8 +592,8 @@
                                     <span class="chip bg-color">论文</span>
                                 </a>
                             
-                                <a href="/tags/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/">
-                                    <span class="chip bg-color">语义分割</span>
+                                <a href="/tags/Transformer/">
+                                    <span class="chip bg-color">Transformer</span>
                                 </a>
                             
                         </div>
@@ -780,9 +763,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/08/15/vit/">
                     <div class="card-image">
@@ -800,9 +784,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -815,6 +799,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -837,13 +822,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/20/jue-ce-shu/">
+                <a href="/2021/08/08/deeplab/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="决策树">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="DeepLab系列">
                         
-                        <span class="card-title">决策树</span>
+                        <span class="card-title">DeepLab系列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -854,18 +839,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
-                                </a>
-                            
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9D%A2%E8%AF%95/" class="post-category">
-                                    面试
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
+                                    计算机视觉
                                 </a>
                             
                             
@@ -875,8 +856,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">基础知识</span>
+                    <a href="/tags/%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">论文</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/">
+                        <span class="chip bg-color">语义分割</span>
                     </a>
                     
                 </div>
