@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-08-27T05:10:15.595Z</updated>
+  <updated>2021-09-01T00:35:12.301Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RCNN</title>
+    <link href="http://wuliwuxin.github.io/2021/09/01/rcnn/"/>
+    <id>http://wuliwuxin.github.io/2021/09/01/rcnn/</id>
+    <published>2021-09-01T00:33:47.000Z</published>
+    <updated>2021-09-01T00:35:12.301Z</updated>
+    
+    
+    <summary type="html">RCNN系列的文章主要是RCNN，Fast RCNN， Faster RCNN， Mask RCNN, Cascade RCNN,这一系列的文章是目标检测two-stage算法的代表，这系列的算法精度高，效果好，是一类重要的方法。</summary>
+    
+    
+    
+    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>BoTNet</title>

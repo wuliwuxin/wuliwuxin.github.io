@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="BoTNet, W&amp;X">
+    <meta name="keywords" content="RCNN, W&amp;X">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>BoTNet | W&amp;X</title>
+    <title>RCNN | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">BoTNet</h1>
+                    <h1 class="description center-align post-title">RCNN</h1>
                 </div>
             </div>
         </div>
@@ -438,10 +438,6 @@
                                 <span class="chip bg-color">论文</span>
                             </a>
                         
-                            <a href="/tags/CNN-Transformers/">
-                                <span class="chip bg-color">CNN+Transformers</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -463,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-27
+                    2021-09-01
                 </div>
                 
 
@@ -487,95 +483,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="初识BoTNet：视觉识别的Bottleneck-Transformers"><a href="#初识BoTNet：视觉识别的Bottleneck-Transformers" class="headerlink" title="初识BoTNet：视觉识别的Bottleneck Transformers"></a>初识BoTNet：视觉识别的Bottleneck Transformers</h1><p><img src="https://img-blog.csdnimg.cn/db15391103464d429425369c9f336796.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="人生何必纠结，放下就是晴天！"></p>
-<h2 id="杂谈"><a href="#杂谈" class="headerlink" title="杂谈"></a>杂谈</h2><p>最近，我的思想有点消极，对自己的未来很迷茫，不知道要从事什么，又在担心行业的内卷严重，有几篇论文看完了也没有写文章总结，这也是为什么我有时候不怎么更新的原因。一边否定自己，一边又给自己力量。也许科研道路就是要黑暗中前行，我们需要给自己一束灯光，或做自己的太阳。在消极的时候，我一般会看点书，电视剧或电影，出去散步或者锻炼。人生宝贵，也许有些事情我们无法改变。但如何提升自己却可以由我们自己决定。未来还有无数美好，在等着与更好的你相遇。请相信，那些你流过的汗，读过的书，走过的路，兴国的山，最终都会回馈到自己身上。</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2101.11605">Bottleneck Transformers for Visual Recognition</a></strong></p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/lucidrains/bottleneck-transformer-pytorch/">代码</a></strong></p>
-<p>BoTNet：一种简单却功能强大的backbone，该架构将自注意力纳入了多种计算机视觉任务，包括图像分类，目标检测和实例分割。该方法在实例分割和目标检测方面显著改善了基线，同时还减少了参数，从而使延迟最小化。</p>
-<p><strong>创新点</strong><br><img src="https://img-blog.csdnimg.cn/634e6ac76b5c4c5f95186b10e30b2753.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"><br>左边的是ResNet的bottleneck结构，右边的是引入multi-head self-attention的bottleneck，称作BoT。两者唯一的不同在3*3的卷积和MHSA，其它的没有任何区别。在Mask RCNN中的ResNet50加入BoT，并且其它超参不变的情况下，COCO实例分割的beachmark的mask AP提升了1.2%。</p>
-<p>论文就是修改经典网络ResNet，用Multi-Head Self-Attention替换ResNet Bottleneck中的3*3卷积，其他不进行修改。这一个简单的改变，就能使性能提升。</p>
-<p><img src="https://img-blog.csdnimg.cn/ad0c9ed228934134947a09d8d29c7a89.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>BoTNet是一个混合模型（CNN + Transformer）。近期华为诺亚也使用这种混合模型提出了CMT。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2107.06263">CMT: Convolutional Neural Networks Meet Vision Transformers</a></strong></p>
-<p><strong><a target="_blank" rel="noopener" href="https://github.com/FlyEgle/CMT-pytorch">代码</a></strong></p>
-<p><img src="https://img-blog.csdnimg.cn/cdecd99e5d624bb888103a009188f4fe.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>DeiT直接将输入图像拆分为非重叠图像块，图像块的结构信息则通过线性投影方式弱建模。采用类似ResNet的stem架构，它由三个3*3卷积构成，但激活函数采用了GELU，而非ResNet的ReLU。</p>
-<p>类似经典CNN(如ResNet)架构设计，所提CMT包含四个阶段以生成多尺度特征(这对于稠密预测任务非常重要)。为生成分层表达，在每个阶段开始之前采用卷积降低特征分辨率并提升通道维度。在每个阶段，堆叠多个CMT模块进行特征变换同时保持特征分辨率不变，每个CMT模块可以同时捕获局部与长距离依赖关系。在模型的尾部，我们采用GAP+FC方式进行分类。</p>
-<p><img src="https://img-blog.csdnimg.cn/a984143d8cae4cfcb976bc59a4032364.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>上表给出了所提方法与其他CNN、Transformer的性能对比，从中可以看到：</p>
+                <h1 id="带你读论文系列之计算机视觉RCNN"><a href="#带你读论文系列之计算机视觉RCNN" class="headerlink" title="带你读论文系列之计算机视觉RCNN"></a>带你读论文系列之计算机视觉RCNN</h1><p><img src="https://img-blog.csdnimg.cn/c6dbf5873193455aa98f2dd163d645f6.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="但是这样，我们总是习惯了不愿改变。"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>RCNN系列的文章主要是**RCNN，Fast RCNN， Faster RCNN， Mask RCNN, Cascade RCNN,**这一系列的文章是目标检测two-stage算法的代表，这系列的算法精度高，效果好，是一类重要的方法。</p>
+<p>先来讲解目标检测开山之作R-CNN</p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1311.2524"><strong>Rich feature hierarchies for accurate object detection and semantic segmentation</strong></a></p>
+<p>这是一篇比较早的Object Detection算法，发表在2014年的CVPR，也是R-CNN系列算法的开山之作，网上可以搜到很多相关的博客讲解，本篇没有按论文顺序来讲述，而是结合自己经验来看这个算法，希望给初学者一个直观的感受，细节方面不需要太纠结，因为很多部分在后来的算法中都改进了。</p>
+<p>R-CNN作为第一个将RPN理念与CNN结合的论文，在后续不断改进，诞生了Faster-RCNN，Mask-RCNN等一系列经典模型，所以是一篇入门CV必读的经典论文。</p>
+<h2 id="01-寻找推荐区域"><a href="#01-寻找推荐区域" class="headerlink" title="01 寻找推荐区域"></a>01 寻找推荐区域</h2><p>在R-CNN中架构的第一步是要寻找推荐区域（Region Proposal），也就是找出可能的感兴趣区域（Region Of Interest, ROI）。获取推荐区域的方法有下三种，分为：滑动窗口、规则块和选择性搜索。</p>
+<p>第一种就是滑动窗口。滑动窗口本质上就是穷举法，利用不同的尺度和长宽比把所有可能的大大小小的块都穷举出来，然后送去识别，识别出来概率大的就留下来。很明显，这样的方法复杂度太高，产生了很多的冗余候选区域，在现实当中不可行。</p>
+<p>第二种是规则块。在穷举法的基础上进行了一些剪枝，只选用固定的大小和长宽比。但是对于普通的目标检测来说，规则块依然需要访问很多的位置，复杂度高。</p>
+<p>第三种是<strong>选择性搜索</strong>。从机器学习的角度来说，前面的方法召回是不错了，但是精度差强人意，所以问题的核心在于如何有效地去除冗余候选区域。<strong>其实冗余候选区域大多是发生了重叠，选择性搜索利用这一点，自底向上合并相邻的重叠区域，从而减少冗余。</strong></p>
+<h2 id="02-R-CNN结构"><a href="#02-R-CNN结构" class="headerlink" title="02 R-CNN结构"></a>02 R-CNN结构</h2><p>R-CNN主要由<strong>三部分</strong>结构构成，分别为：</p>
+<p><strong>第一阶段</strong>：Region Proposals提取阶段。主要使用的是之前就已经提出的技术：selective search，该技术我们不细讲，如感兴趣可在最后看一下该论文的具体实现细节。我们只要明白该阶段输入了图像，会返回大约2k个region proposals.</p>
+<p><strong>第二阶段</strong>：是在得到了很多region proposal后我们将其分别输入到一个CNN网络中，每一个region proposals输入一次，返回一个该region proposal对应的特征向量（4096维），在CNN的具体结构上，论文作者使用了Alexnet作为模型骨架。</p>
+<p>有的人可能已经发现问题了，第一阶段提取的region proposal都是不同大小的，而CNN的输入往往都是要求固定的，在本文要求CNN的输入大小固定为227*227，那么我们如何解决region proposal的大小不匹配问题呢。</p>
+<p><strong>第三阶段</strong>：在得到了每个region proposal的特征向量后，我们使用SVM二分类器对每一个region proposal进行预测。</p>
+<p>有同学又有疑问了，为啥这么麻烦，直接跟Alexnet一样用一个Softmax直接做分类不香么，干嘛还用SVM一个个去分类呢?</p>
+<p>主要由于：正负样本类别不平衡，负样本的数量远大于正样本数量，训练过程中以128的batch_size为例，仅有32个正样本，96个负样本，而且负样本都是随机取样，而SVM有着比Softmax更好的利用困难样本的能力。</p>
+<p><strong>正样本</strong><br>本类的真值标定框。</p>
+<p><strong>负样本</strong><br>考察每一个候选框，如果和本类所有标定框的重叠都小于0.3，认定其为负样本。</p>
+<h2 id="03-R-CNN详情"><a href="#03-R-CNN详情" class="headerlink" title="03 R-CNN详情"></a>03 R-CNN详情</h2><p>R-CNN的工作流程<br><img src="https://img-blog.csdnimg.cn/77895e7adc1741c1871ff45f3c6ecbce.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>RCNN算法分为4个步骤</p>
 <ul>
-<li>所提CMT取得了更佳的精度，同时具有更少的参数量、更少的计算复杂度；</li>
-<li>所提CMT-S凭借4.0B FLOPs取得了83.5%的top1精度，这比DeiT-S高3.7%，比CPVT高2.0%；</li>
-<li>所提CMT-S比EfficientNet-B4指标高0.6%，同时具有更低的计算复杂度。</li>
+<li>一张图像生成1K~2K个候选区域；</li>
+<li>对每个候选区域，使用深度网络提取特征；</li>
+<li>特征送入每一类的SVM 分类器，判别是否属于该类；</li>
+<li>使用回归器精细修正候选框位置；</li>
 </ul>
-<h2 id="回顾ResNet"><a href="#回顾ResNet" class="headerlink" title="回顾ResNet"></a>回顾ResNet</h2><p><a href="https://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/">带你读论文系列之计算机视觉–ResNet</a></p>
-<p>ResNet在2015年由微软实验室提出，斩获当年ImageNet竞赛中分类任务第一名，目标检测第一名。获得COCO数据集中目标检测第一名，图像分割第一名。</p>
-<p><img src="https://img-blog.csdnimg.cn/44b5f279224447988f789dcbf4090f5c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>注意：主分支与shortcut的输出特征矩阵shape必须相同。</p>
-<p>ResNet-34层网络结构<br><img src="https://img-blog.csdnimg.cn/35484e7bcd9b471fb451b07c94b1f9ea.png"></p>
-<p><strong>网络中的亮点：</strong></p>
-<ul>
-<li>超深的网络结构（突破1000层）</li>
-<li>提出Residual模块</li>
-<li>使用Batch Normalization加速训练（丢弃Dropout）</li>
-</ul>
-<p><strong>网络并不是越深越好。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/d84d53b3f3c7486d86b2b905b4dc1d69.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br><strong>原因</strong>:</p>
-<ul>
-<li>梯度消失或梯度爆炸</li>
-<li>退化问题</li>
-</ul>
-<p>可以通过对数据的标准化，权重初始化和BN处理，解决梯度消失或梯度爆炸的问题。而退化问题能通过残差结构不断加深网络获得更好的效果。</p>
-<p><img src="https://img-blog.csdnimg.cn/a7e4e58dfc774caf9acfe676674660d7.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<h2 id="BotNet详解"><a href="#BotNet详解" class="headerlink" title="BotNet详解"></a>BotNet详解</h2><p><img src="https://img-blog.csdnimg.cn/ec2e95d0a7ad4ba4a49925a8dbfb92e1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>左边可以看作是传统的Transformer模型，中间就是本文主角BoTNet，右图就是一个BoT block。</p>
-<p>带有MHSA层的ResNet botlteneck可以被看作是具有bottleneck的Transformer块。，但有一些细微的差别，如剩余连接、归一化层的选择等等。</p>
-<p><strong>Transformer中的MHSA和BoTNet中的MHSA的区别：</strong></p>
-<p>1、 归一化，Transformer使用 Layer Normalization，而BoTNet使用 Batch Normalization。</p>
-<p>2、非线性激活，Transformer仅仅使用一个非线性激活在FPN block模块中，BoTNet使用了3个非线性激活。</p>
-<p>3、输出投影，Transformer中的MHSA包含一个输出投影，BoTNet则没有。</p>
-<p>4、优化器，Transformer使用Adam优化器训练，BoTNet使用sgd+ momentum</p>
-<p>深度学习优化算法经历了 SGD -&gt; SGDM -&gt; NAG -&gt;AdaGrad -&gt; AdaDelta -&gt; Adam -&gt; Nadam 这样的发展历程。</p>
-<p><strong>算法固然美好，数据才是根本。</strong></p>
-<p>先用Adam快速下降，再用SGD调优</p>
-<ol>
-<li><pre><code>什么时候切换优化算法？——如果切换太晚，Adam可能已经跑到自己的盆地里去了，SGD再怎么好也跑不出来了。
-</code></pre>
-</li>
-<li><pre><code>切换算法以后用什么样的学习率？——Adam用的是自适应学习率，依赖的是二阶动量的累积，SGD接着训练的话，用什么样的学习率？
-</code></pre>
-</li>
-</ol>
-<p>优化算法的选择和使用方面的一些tricks<br>1、首先，各大算法孰优孰劣并无定论。如果是刚入门，优先考虑 SGD+Nesterov Momentum或者Adam.（Standford 231n : The two recommended updates to use are either SGD+Nesterov Momentum or Adam）；</p>
-<p>2、 <strong>选择你熟悉的算法</strong>——这样你可以更加熟练地利用你的经验进行调参。</p>
-<p>3、 <strong>充分了解你的数据</strong>——如果模型是非常稀疏的，那么优先考虑自适应学习率的算法。</p>
-<p>4、<strong>根据你的需求来选择</strong>——在模型设计实验过程中，要快速验证新模型的效果，可以先用Adam进行快速实验优化；在模型上线或者结果发布前，可以用精调的SGD进行模型的极致优化。</p>
-<p>5、先用小数据集进行实验。有论文研究指出，随机梯度下降算法的收敛速度和数据集的大小的关系不大。（The mathematics of stochastic gradient descent are amazingly independent of the training set size. In particular, the asymptotic SGD convergence rates are independent from the sample size. [2]）因此可以先用一个具有代表性的小数据集进行实验，测试一下最好的优化算法，并通过参数搜索来寻找最优的训练参数。</p>
-<p>6、 <strong>考虑不同算法的组合。</strong>先用Adam进行快速下降，而后再换到SGD进行充分的调优。切换策略可以参考本文介绍的方法。</p>
-<p>7、数据集一定要充分的打散（shuffle）。这样在使用自适应学习率算法的时候，可以避免某些特征集中出现，而导致的有时学习过度、有时学习不足，使得下降方向出现偏差的问题。</p>
-<p>8、训练过程中<strong>持续监控训练数据和验证数据</strong>上的目标函数值以及精度或者AUC等指标的变化情况。对训练数据的监控是要保证模型进行了充分的训练——下降方向正确，且学习率足够高；对验证数据的监控是为了避免出现过拟合。</p>
-<p>9、 <strong>制定一个合适的学习率衰减策略</strong>。可以使用定期衰减策略，比如每过多少个epoch就衰减一次；或者利用精度或者AUC等性能指标来监控，当测试集上的指标不变或者下跌时，就降低学习率。</p>
-<p><img src="https://img-blog.csdnimg.cn/d2f34af49e2f4a768cc7fb2ac609f77a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>上图是ResNet-50和BoTNet-50的区别，唯一的不同在c5。而且BoTNe-50t的参数量只有ResNet-50的0.82倍，但是steptime略有增加。</p>
-<p>只将ResNet的c5 block中的残差结构替换为MHSA结构。</p>
-<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p><strong>BoTNet vs ResNet</strong><br>设置训练策略：一个训练周期定义为12个epoch，以此类推。<br><img src="https://img-blog.csdnimg.cn/90eeca7aa872431c9b99c5d9127c9966.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br><strong>Multi-Scale Jitter对BoTNet的帮助更大</strong><br><img src="https://img-blog.csdnimg.cn/480f586b804e41dfa6237964bceddd95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16"><br><img src="https://img-blog.csdnimg.cn/f7ae675bdfd044aeb6846612b7e8fd39.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16"><br>就是对分辨率的一个多尺度变化。从上图可以得出图像分辨率越大，它提升的性能越高。</p>
-<p>加入 <strong>relative position encodings</strong> ，还能进一步提升性能！</p>
-<p><img src="https://img-blog.csdnimg.cn/f4436d374c9b424bab0e5dd136271df9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>第一行是R50什么夜不加，原始的ResNet；第二行只加了自注意力机制，提升了0.6；第三行只加了相对位置编码。相对位置编码比自注意力机制提神的性能要高一点。第四行，加入了自注意力机制和相对位置编码，性能提升了1.5；第五行加入了自注意力机制和绝对位置编码只提高了0.4。</p>
-<p><img src="https://img-blog.csdnimg.cn/61ef9541a8044e998106497f49997ea5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>这个图是几个网络性能的对比图。BoTNet是红色线，SENet是黑色线，EfficientNet是蓝色线。T3和T4的性能比SENet差一点，而在T5的时候两者性能差不多。这可以得出纯卷积模型在准确率上可达到83%。T7准确率达到84.7%，与EfficientNet B7的精度相当，效率提升了1.64倍，BoTNet的性能优于DeiT-384。</p>
-<p>BoTNet要替换ResNet中的3*3的卷积部分代码<br><img src="https://img-blog.csdnimg.cn/63f6cf2978fa46389cacbb890bb10d12.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>MHSA的部分代码<br><img src="https://img-blog.csdnimg.cn/4f81acb7ce114027a72bc3c241dde3f7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p><img src="https://img-blog.csdnimg.cn/3d4e198e055947af83db71e7a034fa65.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>在没有任何附加条件的情况下，BoTNet使用Mask R-CNN框架在COCO实例分割基准上取得了44.4%的MaskAP和49.7%的Box AP；</li>
-<li>卷积和混合（卷积和self-attention）模型仍然是很强的模型；</li>
-<li>在ImageNet上BoTNet高达84.7％的top-1精度，性能优于SENet、EfficientNet等</li>
-</ul>
-<p>与这篇论文思路相似的论文，还有京东AI开源的ResNet变体CoTNet–即插即用的视觉识别模块。</p>
-<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2107.12292">论文</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/JDAI-CV/CoTNet">代码</a></p>
-<p><img src="https://img-blog.csdnimg.cn/49075572a99f4797bae2154403c45eba.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br><img src="https://img-blog.csdnimg.cn/a8f6b63626a14af2b095a066900b9b2f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>京东AI研究院梅涛团队在自注意力机制方面的探索，不同于现有注意力机制仅采用局部或者全局方式进行上下文信息获取，他们创造性的将Transformer中的自注意力机制的动态上下文信息聚合与卷积的静态上下文信息聚合进行了集成，提出了一种新颖的Transformer风格的“即插即用”CoT模块，它可以直接替换现有ResNet架构Bottleneck中的卷积并取得显著的性能提升。无论是ImageNet分类，还是COCO检测与分割，所提CoTNet架构均取得了显著性能提升且参数量与FLOPs保持同水平。比如，相比EfficientNet-B6的84.3%，所提SE-CoTNetD-152取得了84.6%同时具有快2.75倍的推理速度。</p>
-<p><img src="https://img-blog.csdnimg.cn/25a8c9d360f541b4833fa6fe7a3b071f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>用”CoT模块”，它可以直接替换现有ResNet架构Bottleneck中的卷积并取得显著的性能提升。无论是ImageNet分类，还是COCO检测与分割，所提CoTNet架构均取得了显著性能提升且参数量与FLOPs保持同水平。比如，相比EfficientNet-B6的84.3%，所提SE-CoTNetD-152取得了84.6%同时具有快2.75倍的推理速度。<br><img src="https://img-blog.csdnimg.cn/c2d3e0eafe124393a7b5c8a8071f9e71.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p><img src="https://img-blog.csdnimg.cn/a2c8f5a5657445e0a51cbb83727ade7a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br>具体来说，CoTNet-50直接采用CoT替换Bottlenck中的卷积；类似的，CoTNeXt-50采用CoT模块替换对应的组卷积，为获得相似计算量，对通道数、分组数进行了调整：CoTNeXt-50的参数量是ResNeXt-50的1.2倍，FLOPs则是1.01倍。</p>
-<p><strong>可以看到</strong>：</p>
-<ul>
-<li>所提CoTNet、CoTNeXt均具有比其他ResNet改进版更优的性能；</li>
-<li>相比ResNeSt-50，ResNeSt-101，所提CoTNeXt-50与CoTNeXt-101分别取得了1.0%与0.9%的性能提升；</li>
-<li>相比BoTNet，所提CoTNet同样具有更优的性能；甚至于，SE-CoTNetD-152(320)取得了比BoTNet-S1-128(320)、EfficientNet-B7更优的性能。<br><img src="https://img-blog.csdnimg.cn/126dee476ce94102b65710a98310a4df.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></li>
-</ul>
+<p>VOC 2007 训练的扭曲训练样本。<br><img src="https://img-blog.csdnimg.cn/a811c0b95737445e8b0d9b23abcca283.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br><img src="https://img-blog.csdnimg.cn/7e51eab8401043cda8f85fc06d22bd2f.webp"><br>VOC 2010 测试的检测平均精度 (%)。R-CNN 与 UVA 和 Regionlets 最直接可比，因为所有方法都使用选择性搜索区域建议。边界框回归（BB）。在发布时，SegDPM 是 PASCAL VOC 排行榜上的最佳表现。DPM 和 SegDPM 使用其他方法未使用的上下文重新评分。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>论文发表的2014年，DPM已经进入瓶颈期，即使使用复杂的特征和结构得到的提升也十分有限。本文将深度学习引入检测领域，一举将PASCAL VOC上的检测率从35.1%提升到53.7%。</p>
+<p>本文的前两个步骤（候选区域提取+特征提取）与待检测类别无关，可以在不同类之间共用。这两步在GPU上约需13秒。</p>
+<p>同时检测多类时，需要倍增的只有后两步骤（判别+精修），都是简单的线性运算，速度很快。这两步对于100K类别只需10秒。</p>
+<p>参考：<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/168742724">https://zhuanlan.zhihu.com/p/168742724</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_30091945/">https://blog.csdn.net/qq_30091945/</a></p>
+<p><img src="https://img-blog.csdnimg.cn/78c89ca6b1544b67ac297b16294d232a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
 
                 
             </div>
@@ -602,7 +542,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wuliwuxin.github.io/2021/08/27/botnet/">http://wuliwuxin.github.io/2021/08/27/botnet/</a>
+                    <a href="http://wuliwuxin.github.io/2021/09/01/rcnn/">http://wuliwuxin.github.io/2021/09/01/rcnn/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -642,10 +582,6 @@
                             
                                 <a href="/tags/%E8%AE%BA%E6%96%87/">
                                     <span class="chip bg-color">论文</span>
-                                </a>
-                            
-                                <a href="/tags/CNN-Transformers/">
-                                    <span class="chip bg-color">CNN+Transformers</span>
                                 </a>
                             
                         </div>
@@ -815,9 +751,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/09/01/rcnn/">
                     <div class="card-image">
@@ -835,9 +772,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -850,6 +787,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -868,13 +806,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/27/resnet-he-resnext/">
+                <a href="/2021/08/27/botnet/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="ResNet和ResNeXt">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="BoTNet">
                         
-                        <span class="card-title">ResNet和ResNeXt</span>
+                        <span class="card-title">BoTNet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -904,6 +842,10 @@
                     
                     <a href="/tags/%E8%AE%BA%E6%96%87/">
                         <span class="chip bg-color">论文</span>
+                    </a>
+                    
+                    <a href="/tags/CNN-Transformers/">
+                        <span class="chip bg-color">CNN+Transformers</span>
                     </a>
                     
                 </div>
