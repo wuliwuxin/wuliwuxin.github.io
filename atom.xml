@@ -61,7 +61,7 @@
     <link href="http://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/"/>
     <id>http://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/</id>
     <published>2021-08-27T04:41:50.000Z</published>
-    <updated>2021-08-27T04:45:17.752Z</updated>
+    <updated>2021-09-09T08:49:39.909Z</updated>
     
     
     <summary type="html">ResNet发布于2015年，目前仍有大量CV任务用其作为backbone（尤其是顶会实验比较），而且当前很多网络都在使用残差模块。</summary>
