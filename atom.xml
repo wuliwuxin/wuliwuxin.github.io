@@ -204,7 +204,7 @@
     <link href="http://wuliwuxin.github.io/2021/07/14/googlenet/"/>
     <id>http://wuliwuxin.github.io/2021/07/14/googlenet/</id>
     <published>2021-07-14T11:08:48.000Z</published>
-    <updated>2021-09-12T03:32:47.130Z</updated>
+    <updated>2021-09-12T03:36:58.300Z</updated>
     
     
     <summary type="html">为ILSVRC14提交的文件中使用的网络，叫做GoogLeNet，这是一个22 层（如果我们也计算池化，则有27层）的深度网络，其质量是在分类和检测的背景下评估的。</summary>
