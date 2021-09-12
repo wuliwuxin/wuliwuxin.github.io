@@ -503,41 +503,75 @@
 <p><strong>文章主要讨论深度。为此，我们固定了架构的其他参数，并通过添加更多的卷积层来稳步增加网络的深度。</strong></p>
 <p>ConvNet架构设计的深度进行研究，<strong>控制单一变量</strong>（深度），固定了其他参数，并通过添加更多的卷积层来稳步增加网络的深度，因为在所有层中使用了非常小的（3×3）卷积滤波器。</p>
 <p>之前Ciresan等人曾使用过小尺寸卷积滤波器。但他们的网络比我们的网络深度要小得多，而且他们没有对大规模的ILSVRC数据集进行评估。Goodfellow等人。将深度ConvNets（11个权重层）应用于街道号码识别任务，并<strong>表明增加的深度导致更好的性能</strong>。除了3×3，它们还使用1×1 和5×5卷积。然而，他们的网络拓扑比VGG网络的更复杂，并且特征图的空间分辨率在第一层中更积极地降低以减少计算量。1×1卷积本质上是在相同维度空间上的线性投影（1*1增加非线性，输入和输出通道的数量相同）。</p>
-<h1 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h1><h2 id="VGG网络亮点"><a href="#VGG网络亮点" class="headerlink" title="VGG网络亮点"></a>VGG网络亮点</h2><p><strong>与AlexNet相比<br>亮点：</strong><br>1、通过堆叠两个3<em>3的卷积核来的代替一个5</em>5的卷积核<br>2、通过堆叠三个3<em>3的卷积核来代替一个7</em>7的卷积核</p>
+<h1 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h1><h2 id="VGG网络亮点"><a href="#VGG网络亮点" class="headerlink" title="VGG网络亮点"></a>VGG网络亮点</h2><p><strong>与AlexNet相比亮点：</strong></p>
+<ol>
+<li>通过堆叠两个3<em>3的卷积核来的代替一个5</em>5的卷积核</li>
+<li>通过堆叠三个3<em>3的卷积核来代替一个7</em>7的卷积核</li>
+</ol>
 <p><strong>好处</strong>：可以减少参数量</p>
-<p>假设输入特征矩阵和输出特征矩阵的深度（channel）为C<br>使用一个7<em>7卷积核所需参数：<br>7</em>7<em>C</em>C=49<em>C</em>C<br>使用三个3<em>3卷积核所需参数：<br>3</em>3<em>C</em>C+3<em>3</em>C<em>C+3</em>3<em>C</em>C=27<em>C</em>C</p>
+<p>假设输入特征矩阵和输出特征矩阵的深度（channel）为C</p>
+<p>使用一个7<em>7卷积核所需参数：<br>7</em>7<em>C</em>C=49<em>C</em>C</p>
+<p>使用三个3<em>3卷积核所需参数：<br>3</em>3<em>C</em>C+3<em>3</em>C<em>C+3</em>3<em>C</em>C=27<em>C</em>C</p>
 <p>3个3<em>3比1个7</em>7节省(49-27)/27=81%参数。</p>
-<h2 id="感受野的计算"><a href="#感受野的计算" class="headerlink" title="感受野的计算"></a>感受野的计算</h2><p><strong>感受野（receptive fields）</strong>：输出feature map上的一个单元对应的输入层的区域大小。<br>计算公式：F(i) =  [F(i+1)-1]*stride+ksize<br>其中：F(i)为第i层的感受野；stride为 第i的步距；ksize为卷积核的大小。</p>
-<p>例如：最后一层输出为一个单元：F = 1<br>conv3：F = (1-1)<em>1 + 3 =3<br>conv3：F = (3-1)<em>1 +3 =5<br>此时为两个3</em>3的卷积核代替一个5</em>5的卷积核。<br>conv3：F = (5-1)<em>1 +3 =7<br>此时为三个3</em>3的卷积核代替一个7*7的卷积核。</p>
+<h2 id="感受野的计算"><a href="#感受野的计算" class="headerlink" title="感受野的计算"></a>感受野的计算</h2><p><strong>感受野（receptive fields）</strong>：输出feature map上的一个单元对应的输入层的区域大小。</p>
+<p>计算公式：F(i) =  [F(i+1)-1]*stride+ksize</p>
+<p>其中：F(i)为第i层的感受野；stride为 第i的步距；ksize为卷积核的大小。</p>
+<p>例如：最后一层输出为一个单元：F = 1</p>
+<p>conv3：F = (1-1)*1 + 3 =3</p>
+<p>conv3：F = (3-1)*1 +3 =5</p>
+<p>此时为两个3<em>3的卷积核代替一个5</em>5的卷积核。</p>
+<p>conv3：F = (5-1)*1 +3 =7</p>
+<p>此时为三个3<em>3的卷积核代替一个7</em>7的卷积核。</p>
 <p><img src="https://img-blog.csdnimg.cn/20210706123502806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="网络结构"></p>
-<h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><p>1、固定大小224*224RGB输入；<br>2.、唯一预处理是从每个像素中减去在训练集上计算的平均RGB值；<br>3、用具有非常小的感受野的过滤器：3×3（这是捕捉左/右、上/下、中心概念的最小尺寸）；<br>4、使用了1×1卷积滤波器，可以将其视为输入通道的线性变换（后跟非线性）；<br>5、卷积步长固定为1像素；conv的空间填充，即卷积后保留空间分辨率，即填充为1像素，3×3卷积；<br>6、空间池化是由五个最大池化层，最大池化在一个2×2像素的窗口上执行，步幅为2；<br>7、后面是三个全连接层（FC层4096-4096-1000）：前两个层每个有4096个通道，第三个执行1000路ILSVRC分类，因此包含1000 个通道（每个通道一个）班级）。最后一层是soft-max层。全连接层的配置在所有网络中都是相同的。</p>
+<h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><ol>
+<li>固定大小224*224RGB输入；</li>
+<li>唯一预处理是从每个像素中减去在训练集上计算的平均RGB值；</li>
+<li>用具有非常小的感受野的过滤器：3×3（这是捕捉左/右、上/下、中心概念的最小尺寸）；</li>
+<li>使用了1×1卷积滤波器，可以将其视为输入通道的线性变换（后跟非线性）；</li>
+<li>卷积步长固定为1像素；conv的空间填充，即卷积后保留空间分辨率，即填充为1像素，3×3卷积；</li>
+<li>空间池化是由五个最大池化层，最大池化在一个2×2像素的窗口上执行，步幅为2；</li>
+<li>后面是三个全连接层（FC层4096-4096-1000）：前两个层每个有4096个通道，第三个执行1000路ILSVRC分类，因此包含1000 个通道（每个通道一个）班级）。最后一层是soft-max层。全连接层的配置在所有网络中都是相同的。</li>
+</ol>
 <p>所有隐藏层都配置了ReLU非线性函数。<strong>该网络没有用局部相应归一化（LRN）</strong>，因为这种规范化不<strong>会提高ILSVRC数据集的性能，但会导致内存消耗和计算时间增加。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20210706123615955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>卷积层参数表示为“*conv(感受野大小)-(通道数)*”。为简洁，未显示ReLU激活函数.</p>
-<p>例如：conv3-64表示64个大小3<em>3的卷积核<br>conv3：卷积核大小3</em>3；stride=1；padding=1<br>maxpool：池化尺寸2*2；stride=2</p>
+<p><img src="https://img-blog.csdnimg.cn/20210706123615955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<p>卷积层参数表示为“*conv(感受野大小)-(通道数)*”。为简洁，未显示ReLU激活函数.</p>
+<p>例如：conv3-64表示64个大小3*3的卷积核</p>
+<p>conv3：卷积核大小3*3；stride=1；padding=1</p>
+<p>maxpool：池化尺寸2*2；stride=2</p>
 <p>只在深度上有所不同：从网络A的11个权重层（8个conv.和3个FC层）到网络E的19个权重层（16个conv.和3个FC层）。</p>
 <p>网络D：conv3+FC=2+2+3+3+3+3=16</p>
 <p><strong>maxpool和softmax不计入层数</strong></p>
-<p>max pool和全连接层之间有一个flatten函数，把多维像素展平成一维像素，便于全连接层进行处理。<br>前两个全连接层：ReLU和Dropout</p>
+<p>max pool和全连接层之间有一个flatten函数，把多维像素展平成一维像素，便于全连接层进行处理。</p>
+<p>前两个全连接层：ReLU和Dropout</p>
 <p>该网络可以看层两部分：最后一次全连接层（不包括）之前看为提取特征网络结构，三个全连接和softmax可看为分类结构。</p>
 <h2 id="网络的训练"><a href="#网络的训练" class="headerlink" title="网络的训练"></a>网络的训练</h2><p>ConvNet的训练过程一般遵循Krizhevsky等人（2012）的方法（除了从多尺度训练图像中对输入作物进行抽样）。训练是通过使用<strong>min-batch梯度下降法</strong>（基于反向传播）优化多叉逻辑回归目标来进行的，并带有动量。<strong>batch size为256，momentum为0.9</strong>。训练通过权重衰减（L2惩罚乘数设置为5·10e-4）和前两个全连接层的dropout正则化（<strong>dropout比率为0.5</strong>）进行正则化，Learning rate为0.01。然后在验证集准确性不再提高时，<strong>学习率下降了3次，37万次迭代（74次）后停止。</strong></p>
 <p>我们推测，尽管与Alex Net网络相比，我们的网络有更多的参数和更大的深度，但<strong>网络需要更多的收敛时间</strong>，这是因为（a）更大的深度和更小的conv.filter尺寸带来的隐性正则化；（b）某些层的预先初始化。</p>
 <p>网络权重的初始化很重要，因为不好的初始化会因为深层网络中梯度的不稳定性而使学习停滞。</p>
 <p><strong>网络A</strong>足够浅，可以用<strong>随机初始化</strong>进行训练。然后，在训练更深的架构时，我们用网络A的层初始化前四个卷积层和最后三个全连接层（中间层随机初始化）。</p>
 <h2 id="图像处理"><a href="#图像处理" class="headerlink" title="图像处理"></a>图像处理</h2><p>为了获得固定尺寸的<strong>224×224ConvNet 输入图像</strong>，它们被随机地从重新缩放的训练图像中裁剪出来（每个SGD迭代的图像裁剪一次）。为了进一步增加训练集，<strong>将图像随机水平翻转和随机RGB颜色移动。</strong></p>
-<p>S为resize后最小边，并且裁剪大小224*224。<br>虽然裁剪尺寸固定为224×224，但原则上S可以取不低于224的任何值：对于S=224，裁剪将捕获整个图像的统计数据，完全覆盖训练图像的最小一面；对于S远大于224，裁剪将对应于图像的一小部分，包含一个小物体或一个物体部分。</p>
-<p><strong>两种方法来设置训练尺度S。</strong><br><strong>第一种是固定S</strong>，对应于单尺度训练。两个固定尺寸：S=256和S=384；首先用S =256来训练网络。为了加快S=384 网络的训练，我们用S=256的权重进行初始化，并使用较小的初始学习率10的-3次方。</p>
+<p>S为resize后最小边，并且裁剪大小224*224。</p>
+<p>虽然裁剪尺寸固定为224×224，但原则上S可以取不低于224的任何值：对于S=224，裁剪将捕获整个图像的统计数据，完全覆盖训练图像的最小一面；对于S远大于224，裁剪将对应于图像的一小部分，包含一个小物体或一个物体部分。</p>
+<p><strong>两种方法来设置训练尺度S。</strong></p>
+<p><strong>第一种是固定S</strong>，对应于单尺度训练。两个固定尺寸：S=256和S=384；首先用S =256来训练网络。为了加快S=384 网络的训练，我们用S=256的权重进行初始化，并使用较小的初始学习率10的-3次方。</p>
 <p><strong>第二种设置S</strong>多尺度训练的方法其中每个训练图像通过从一定<strong>范围[256，512]中随机采样</strong>S来单独重新缩放。因为图像中的对象可能具有不同的大小。</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p><strong>1、等比例缩放至Q，Q可以≠S<br>2、稠密测试法：FC变卷积<br>3、类分数图平均池化<br>4、水平镜像</strong></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p><strong>1. 等比例缩放至Q，Q可以≠S<br>2. 稠密测试法：FC变卷积<br>3. 类分数图平均池化<br>4. 水平镜像</strong></p>
 <p>在测试时，给定一个训练好的ConvNet和一个输入图像，按以下方式分类。首先，被重新<strong>缩放到一个预先定义的最小图像边</strong>，用Q表示（我们也把它称为测试尺度）。我们注意到<strong>Q不一定等于训练规模S</strong>。然后，网络以密集地应用于重新缩放的测试图像。即全连接层首先转换为卷积层（第一个FC层转换为7×7卷积层，最后两个FC层转换为1×1卷积层）。然后将所得的全卷积网络应用于整个（未裁剪的）图像。结果是一个类分数图，其通道数等于类数，空间分辨率可变，取决于输入图像的大小。最后，为了获得图像的类分数的固定大小向量，<strong>对类分数图进行平均池化</strong>。还通过图像的水平翻转来扩充测试集。对<strong>原始图像和翻转图像</strong>的soft-max类后验求平均以获得图像的最终分数。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210706124016329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>首先，我们注意到使用局部响应归一化（A-LRN网络）并没有改进没有任何归一化层的模型A 。因此，我们不在更深层次的架构（B-E）中使用归一化。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210706124016329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<p>首先，我们注意到使用局部响应归一化（A-LRN网络）并没有改进没有任何归一化层的模型A 。因此，我们不在更深层次的架构（B-E）中使用归一化。</p>
 <p>其次，我们观察到<strong>分类误差随着ConvNet深度的增加而降低</strong>：从A中的11层到E中的19层。</p>
 <p>值得注意的是，尽管深度相同，配置C（包含三个1×1卷积层）的性能比配置D在整个网络中使用3×3conv layers差<strong>（D优于C）</strong>。上图也表明<strong>非线性确实有帮助（C比B 好）</strong>，但使用conv捕获空间上下文也很重要。<strong>当深度达到19层时，我们架构的错误率会饱和，但更深的模型可能对更大的数据集有益。证实了具有小过滤器的深网优于具有较大过滤器的浅网。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20210706124109863.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>测试时的尺度抖动导致更好的性能。最深的配置（D和E）表现最好，并且尺度抖动比固定最小边S的训练更好。在验证集上的最佳单网络性能是24.8%/7.5%top-1/top-5错误（在上表中以粗体突出显示）。在测试集上，配置E 实现了7.3%的top-5错误。<br><img src="https://img-blog.csdnimg.cn/20210706124128761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210706124132575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>上表可以看出，使用<strong>multi-crop比dense评估略好</strong>，但它们的组合优于单一方式（multi-crop与dense互为补充）。multi-crop：150张（5<em>5</em>2*3=150）。<br><img src="https://img-blog.csdnimg.cn/20210706124159826.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>表明深的ConvNets显着优于前一代模型。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210706124109863.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<p>测试时的尺度抖动导致更好的性能。最深的配置（D和E）表现最好，并且尺度抖动比固定最小边S的训练更好。在验证集上的最佳单网络性能是24.8%/7.5%top-1/top-5错误（在上表中以粗体突出显示）。在测试集上，配置E 实现了7.3%的top-5错误。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210706124128761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210706124132575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<p>上表可以看出，使用<strong>multi-crop比dense评估略好</strong>，但它们的组合优于单一方式（multi-crop与dense互为补充）。multi-crop：150张（5<em>5</em>2*3=150）。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210706124159826.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
+<p>表明深的ConvNets显着优于前一代模型。</p>
 <h2 id="发展分析"><a href="#发展分析" class="headerlink" title="发展分析"></a>发展分析</h2><p><strong>瓶颈</strong></p>
 <p>VGG耗费更多计算资源，并且使用了更多的参数，导致更多的内存占用（140M）。其中绝大多数的参数都是来自于第一个全连接层。并且单纯的增加神经网络的深度，会给训练带来困难，会出现梯度消失、不收敛等问题。</p>
 <p><strong>未来发展方向</strong></p>
 <p>VGG的提出让研究员们看到网络的深度对结果的影响，并启发了他们去研究更深的网络。并且VGG网络的中间层能有效提取出输入图的feature，所以训练好的VGG模型通常会被运用到损失函数中间去，来弥补L2损失函数所造成的过于光滑的缺点。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210706124315337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210706124315337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 
                 
             </div>

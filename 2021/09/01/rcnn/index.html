@@ -484,7 +484,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="带你读论文系列之计算机视觉RCNN"><a href="#带你读论文系列之计算机视觉RCNN" class="headerlink" title="带你读论文系列之计算机视觉RCNN"></a>带你读论文系列之计算机视觉RCNN</h1><p><img src="https://img-blog.csdnimg.cn/c6dbf5873193455aa98f2dd163d645f6.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="但是这样，我们总是习惯了不愿改变。"></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>RCNN系列的文章主要是**RCNN，Fast RCNN， Faster RCNN， Mask RCNN, Cascade RCNN,**这一系列的文章是目标检测two-stage算法的代表，这系列的算法精度高，效果好，是一类重要的方法。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>RCNN系列的文章主要是<strong>RCNN，Fast RCNN， Faster RCNN， Mask RCNN, Cascade RCNN</strong>,这一系列的文章是目标检测two-stage算法的代表，这系列的算法精度高，效果好，是一类重要的方法。</p>
 <p>先来讲解目标检测开山之作R-CNN</p>
 <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1311.2524"><strong>Rich feature hierarchies for accurate object detection and semantic segmentation</strong></a></p>
 <p>这是一篇比较早的Object Detection算法，发表在2014年的CVPR，也是R-CNN系列算法的开山之作，网上可以搜到很多相关的博客讲解，本篇没有按论文顺序来讲述，而是结合自己经验来看这个算法，希望给初学者一个直观的感受，细节方面不需要太纠结，因为很多部分在后来的算法中都改进了。</p>
@@ -500,9 +500,12 @@
 <p><strong>第三阶段</strong>：在得到了每个region proposal的特征向量后，我们使用SVM二分类器对每一个region proposal进行预测。</p>
 <p>有同学又有疑问了，为啥这么麻烦，直接跟Alexnet一样用一个Softmax直接做分类不香么，干嘛还用SVM一个个去分类呢?</p>
 <p>主要由于：正负样本类别不平衡，负样本的数量远大于正样本数量，训练过程中以128的batch_size为例，仅有32个正样本，96个负样本，而且负样本都是随机取样，而SVM有着比Softmax更好的利用困难样本的能力。</p>
-<p><strong>正样本</strong><br>本类的真值标定框。</p>
-<p><strong>负样本</strong><br>考察每一个候选框，如果和本类所有标定框的重叠都小于0.3，认定其为负样本。</p>
-<h2 id="03-R-CNN详情"><a href="#03-R-CNN详情" class="headerlink" title="03 R-CNN详情"></a>03 R-CNN详情</h2><p>R-CNN的工作流程<br><img src="https://img-blog.csdnimg.cn/77895e7adc1741c1871ff45f3c6ecbce.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><strong>正样本</strong></p>
+<p>本类的真值标定框。</p>
+<p><strong>负样本</strong></p>
+<p>考察每一个候选框，如果和本类所有标定框的重叠都小于0.3，认定其为负样本。</p>
+<h2 id="03-R-CNN详情"><a href="#03-R-CNN详情" class="headerlink" title="03 R-CNN详情"></a>03 R-CNN详情</h2><p>R-CNN的工作流程</p>
+<p><img src="https://img-blog.csdnimg.cn/77895e7adc1741c1871ff45f3c6ecbce.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
 <p>RCNN算法分为4个步骤</p>
 <ul>
 <li>一张图像生成1K~2K个候选区域；</li>
@@ -510,7 +513,10 @@
 <li>特征送入每一类的SVM 分类器，判别是否属于该类；</li>
 <li>使用回归器精细修正候选框位置；</li>
 </ul>
-<p>VOC 2007 训练的扭曲训练样本。<br><img src="https://img-blog.csdnimg.cn/a811c0b95737445e8b0d9b23abcca283.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br><img src="https://img-blog.csdnimg.cn/7e51eab8401043cda8f85fc06d22bd2f.webp"><br>VOC 2010 测试的检测平均精度 (%)。R-CNN 与 UVA 和 Regionlets 最直接可比，因为所有方法都使用选择性搜索区域建议。边界框回归（BB）。在发布时，SegDPM 是 PASCAL VOC 排行榜上的最佳表现。DPM 和 SegDPM 使用其他方法未使用的上下文重新评分。</p>
+<p>VOC 2007 训练的扭曲训练样本。</p>
+<p><img src="https://img-blog.csdnimg.cn/a811c0b95737445e8b0d9b23abcca283.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/7e51eab8401043cda8f85fc06d22bd2f.webp"></p>
+<p>VOC 2010 测试的检测平均精度 (%)。R-CNN 与 UVA 和 Regionlets 最直接可比，因为所有方法都使用选择性搜索区域建议。边界框回归（BB）。在发布时，SegDPM 是 PASCAL VOC 排行榜上的最佳表现。DPM 和 SegDPM 使用其他方法未使用的上下文重新评分。</p>
 <h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>论文发表的2014年，DPM已经进入瓶颈期，即使使用复杂的特征和结构得到的提升也十分有限。本文将深度学习引入检测领域，一举将PASCAL VOC上的检测率从35.1%提升到53.7%。</p>
 <p>本文的前两个步骤（候选区域提取+特征提取）与待检测类别无关，可以在不同类之间共用。这两步在GPU上约需13秒。</p>
 <p>同时检测多类时，需要倍增的只有后两步骤（判别+精修），都是简单的线性运算，速度很快。这两步对于100K类别只需10秒。</p>
