@@ -204,7 +204,7 @@
     <link href="http://wuliwuxin.github.io/2021/07/14/googlenet/"/>
     <id>http://wuliwuxin.github.io/2021/07/14/googlenet/</id>
     <published>2021-07-14T11:08:48.000Z</published>
-    <updated>2021-09-12T03:03:05.276Z</updated>
+    <updated>2021-09-12T03:32:47.130Z</updated>
     
     
     <summary type="html">为ILSVRC14提交的文件中使用的网络，叫做GoogLeNet，这是一个22 层（如果我们也计算池化，则有27层）的深度网络，其质量是在分类和检测的背景下评估的。</summary>
@@ -336,14 +336,14 @@
     <link href="http://wuliwuxin.github.io/2021/06/28/zfnet/"/>
     <id>http://wuliwuxin.github.io/2021/06/28/zfnet/</id>
     <published>2021-06-28T14:19:59.000Z</published>
-    <updated>2021-09-12T02:44:32.768Z</updated>
+    <updated>2021-09-12T03:35:31.848Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–FZNet&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–FZNet&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–ZFNet&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–ZFNet&quot; class=&quot;headerlink&quot; title=&quot;带你读论文系列之计算机视觉–ZFNet&quot;&gt;&lt;/a&gt;带你读论文系列之计算机视觉–ZFNet&lt;/h1&gt;&lt;h2</summary>
         
       
     
