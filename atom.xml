@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-09-12T10:58:04.021Z</updated>
+  <updated>2021-09-13T16:01:08.932Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -17,14 +17,14 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Inception v2/BN-Inception</title>
-    <link href="http://wuliwuxin.github.io/2021/09/12/inception-v2-bn-inception/"/>
-    <id>http://wuliwuxin.github.io/2021/09/12/inception-v2-bn-inception/</id>
-    <published>2021-09-12T10:48:14.000Z</published>
-    <updated>2021-09-12T10:58:04.021Z</updated>
+    <title>GoogLeNet V3</title>
+    <link href="http://wuliwuxin.github.io/2021/09/13/googlenet-v3/"/>
+    <id>http://wuliwuxin.github.io/2021/09/13/googlenet-v3/</id>
+    <published>2021-09-13T15:57:14.000Z</published>
+    <updated>2021-09-13T16:01:08.932Z</updated>
     
     
-    <summary type="html">Inception-v2结构的改进就是将原来的Inception-v1结构中的5✖️5卷积层进行修改，用两个3✖️3卷积层代替。</summary>
+    <summary type="html">重新思考计算机视觉中的Inception结构！</summary>
     
     
     
