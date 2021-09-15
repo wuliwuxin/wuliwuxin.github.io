@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="RCNN, W&amp;X">
+    <meta name="keywords" content="Inception-V4, W&amp;X">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>RCNN | W&amp;X</title>
+    <title>Inception-V4 | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">RCNN</h1>
+                    <h1 class="description center-align post-title">Inception-V4</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%BA%E6%96%87/">
-                                <span class="chip bg-color">论文</span>
+                            <a href="/tags/%E6%A0%87%E7%AD%BE/">
+                                <span class="chip bg-color">标签</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
-                                计算机视觉
+                            <a href="/categories/%E5%88%86%E7%B1%BB/" class="post-category">
+                                分类
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-01
+                    2021-09-15
                 </div>
                 
 
@@ -483,45 +483,98 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="带你读论文系列之计算机视觉RCNN"><a href="#带你读论文系列之计算机视觉RCNN" class="headerlink" title="带你读论文系列之计算机视觉RCNN"></a>带你读论文系列之计算机视觉RCNN</h1><p><img src="https://img-blog.csdnimg.cn/c6dbf5873193455aa98f2dd163d645f6.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="但是这样，我们总是习惯了不愿改变。"></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>RCNN系列的文章主要是<strong>RCNN，Fast RCNN， Faster RCNN， Mask RCNN, Cascade RCNN</strong>,这一系列的文章是目标检测two-stage算法的代表，这系列的算法精度高，效果好，是一类重要的方法。</p>
-<p>先来讲解目标检测开山之作R-CNN</p>
-<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1311.2524"><strong>Rich feature hierarchies for accurate object detection and semantic segmentation</strong></a></p>
-<p>这是一篇比较早的Object Detection算法，发表在2014年的CVPR，也是R-CNN系列算法的开山之作，网上可以搜到很多相关的博客讲解，本篇没有按论文顺序来讲述，而是结合自己经验来看这个算法，希望给初学者一个直观的感受，细节方面不需要太纠结，因为很多部分在后来的算法中都改进了。</p>
-<p>R-CNN作为第一个将RPN理念与CNN结合的论文，在后续不断改进，诞生了Faster-RCNN，Mask-RCNN等一系列经典模型，所以是一篇入门CV必读的经典论文。</p>
-<h2 id="01-寻找推荐区域"><a href="#01-寻找推荐区域" class="headerlink" title="01 寻找推荐区域"></a>01 寻找推荐区域</h2><p>在R-CNN中架构的第一步是要寻找推荐区域（Region Proposal），也就是找出可能的感兴趣区域（Region Of Interest, ROI）。获取推荐区域的方法有下三种，分为：滑动窗口、规则块和选择性搜索。</p>
-<p>第一种就是滑动窗口。滑动窗口本质上就是穷举法，利用不同的尺度和长宽比把所有可能的大大小小的块都穷举出来，然后送去识别，识别出来概率大的就留下来。很明显，这样的方法复杂度太高，产生了很多的冗余候选区域，在现实当中不可行。</p>
-<p>第二种是规则块。在穷举法的基础上进行了一些剪枝，只选用固定的大小和长宽比。但是对于普通的目标检测来说，规则块依然需要访问很多的位置，复杂度高。</p>
-<p>第三种是<strong>选择性搜索</strong>。从机器学习的角度来说，前面的方法召回是不错了，但是精度差强人意，所以问题的核心在于如何有效地去除冗余候选区域。<strong>其实冗余候选区域大多是发生了重叠，选择性搜索利用这一点，自底向上合并相邻的重叠区域，从而减少冗余。</strong></p>
-<h2 id="02-R-CNN结构"><a href="#02-R-CNN结构" class="headerlink" title="02 R-CNN结构"></a>02 R-CNN结构</h2><p>R-CNN主要由<strong>三部分</strong>结构构成，分别为：</p>
-<p><strong>第一阶段</strong>：Region Proposals提取阶段。主要使用的是之前就已经提出的技术：selective search，该技术我们不细讲，如感兴趣可在最后看一下该论文的具体实现细节。我们只要明白该阶段输入了图像，会返回大约2k个region proposals.</p>
-<p><strong>第二阶段</strong>：是在得到了很多region proposal后我们将其分别输入到一个CNN网络中，每一个region proposals输入一次，返回一个该region proposal对应的特征向量（4096维），在CNN的具体结构上，论文作者使用了Alexnet作为模型骨架。</p>
-<p>有的人可能已经发现问题了，第一阶段提取的region proposal都是不同大小的，而CNN的输入往往都是要求固定的，在本文要求CNN的输入大小固定为227*227，那么我们如何解决region proposal的大小不匹配问题呢。</p>
-<p><strong>第三阶段</strong>：在得到了每个region proposal的特征向量后，我们使用SVM二分类器对每一个region proposal进行预测。</p>
-<p>有同学又有疑问了，为啥这么麻烦，直接跟Alexnet一样用一个Softmax直接做分类不香么，干嘛还用SVM一个个去分类呢?</p>
-<p>主要由于：正负样本类别不平衡，负样本的数量远大于正样本数量，训练过程中以128的batch_size为例，仅有32个正样本，96个负样本，而且负样本都是随机取样，而SVM有着比Softmax更好的利用困难样本的能力。</p>
-<p><strong>正样本</strong></p>
-<p>本类的真值标定框。</p>
-<p><strong>负样本</strong></p>
-<p>考察每一个候选框，如果和本类所有标定框的重叠都小于0.3，认定其为负样本。</p>
-<h2 id="03-R-CNN详情"><a href="#03-R-CNN详情" class="headerlink" title="03 R-CNN详情"></a>03 R-CNN详情</h2><p>R-CNN的工作流程</p>
-<p><img src="https://img-blog.csdnimg.cn/77895e7adc1741c1871ff45f3c6ecbce.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>RCNN算法分为4个步骤</p>
+                <h1 id="带你读论文系列之计算机视觉–Inception-V4"><a href="#带你读论文系列之计算机视觉–Inception-V4" class="headerlink" title="带你读论文系列之计算机视觉–Inception V4"></a>带你读论文系列之计算机视觉–Inception V4</h1><p><img src="https://img-blog.csdnimg.cn/5260b9a877e745a795283e4ce9360233.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p> 一直在路上,不是在奔跑,就是在漫步。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>论文</strong>：<br><strong><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1602.07261">Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning</a></strong></p>
+<p><strong>CNN很强，例如我们的Inception；最近的resnet也很强。那强强联手会怎么样呢</strong>？</p>
+<ol>
+<li>速度方面：残差学习可加快inception收敛；</li>
+<li>精度方面：残差学习仅带来一小部分提升；</li>
+<li>提出新模型；</li>
+<li>提出激活值缩放技巧来训练模型；</li>
+<li>在2015ILSVRC挑战中取得了 SOTA(State Of The Art), 它的性能类似于最新一代的Inception-v3 网络；</li>
+<li>使用三个残差和一个Inception-v4的集合，在ImageNet classification (CLS)挑战的测试集上实现3.08%的top-5 错误。</li>
+</ol>
+<p><strong>残差Inception网络在没有残差连接的情况下比同样的Inception网络表现出色。</strong></p>
+<p><a href="https://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/">回顾Res Net</a></p>
+<p>主要思想就是将residual和inception结构相结合，以获得residual带来的好处。</p>
+<h2 id="论文详情"><a href="#论文详情" class="headerlink" title="论文详情"></a>论文详情</h2><p>由于Inception网络往往非常深，因此用残差连接替换Inception架构的过滤器级联阶段。</p>
+<p><strong>ResNet网络的亮点</strong>：</p>
 <ul>
-<li>一张图像生成1K~2K个候选区域；</li>
-<li>对每个候选区域，使用深度网络提取特征；</li>
-<li>特征送入每一类的SVM 分类器，判别是否属于该类；</li>
-<li>使用回归器精细修正候选框位置；</li>
+<li>超神的网络结构（突破1000层）；</li>
+<li>提出Residual模块；</li>
+<li>使用Batch Normalization加速训练（丢弃Dropput）；</li>
 </ul>
-<p>VOC 2007 训练的扭曲训练样本。</p>
-<p><img src="https://img-blog.csdnimg.cn/a811c0b95737445e8b0d9b23abcca283.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p><img src="https://img-blog.csdnimg.cn/7e51eab8401043cda8f85fc06d22bd2f.webp"></p>
-<p>VOC 2010 测试的检测平均精度 (%)。R-CNN 与 UVA 和 Regionlets 最直接可比，因为所有方法都使用选择性搜索区域建议。边界框回归（BB）。在发布时，SegDPM 是 PASCAL VOC 排行榜上的最佳表现。DPM 和 SegDPM 使用其他方法未使用的上下文重新评分。</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>论文发表的2014年，DPM已经进入瓶颈期，即使使用复杂的特征和结构得到的提升也十分有限。本文将深度学习引入检测领域，一举将PASCAL VOC上的检测率从35.1%提升到53.7%。</p>
-<p>本文的前两个步骤（候选区域提取+特征提取）与待检测类别无关，可以在不同类之间共用。这两步在GPU上约需13秒。</p>
-<p>同时检测多类时，需要倍增的只有后两步骤（判别+精修），都是简单的线性运算，速度很快。这两步对于100K类别只需10秒。</p>
-<p>参考：<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/168742724">https://zhuanlan.zhihu.com/p/168742724</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_30091945/">https://blog.csdn.net/qq_30091945/</a></p>
-<p><img src="https://img-blog.csdnimg.cn/78c89ca6b1544b67ac297b16294d232a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><strong>因此Inception获得残差方法的所有好处，同时保持其计算效率。</strong></p>
+<p><a href="https://wuliwuxin.github.io/2021/07/14/googlenet/">带你读论文系列之计算机视觉–GoogLeNet</a></p>
+<p><a href="https://wuliwuxin.github.io/2021/09/12/Inception-v2-BN-Inception">带你读论文系列之计算机视觉–Inception v2/BN-Inception</a></p>
+<p><a href="https://wuliwuxin.github.io/2021/09/13/googlenet-v3/">带你读论文系列之计算机视觉–GoogLeNet V3</a></p>
+<p>模型的参数和计算复杂性束缚了Inception V3 的性能。而Inception V4它具有比Inception V3更统一的简化架构和更多的Inception模块。</p>
+<p>Inception V4和Inception-ResNet V2的表现相似，超过了最先进的单帧性能ImageNet验证集。</p>
+<p><img src="https://img-blog.csdnimg.cn/8c352b66ae574ea6997a32418089f249.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_14,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>残差模块的引入。</p>
+<p><img src="https://img-blog.csdnimg.cn/388a6a337a6f4bdfb45f579ef3384bc9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>ResNet的残差连接。</p>
+<p><strong>v4要针对v3进行一系列简洁的优化。</strong></p>
+<p>Inception的结构是很容易调节的，就是说改变一些fitler最终并不会影响结果。但是作者为了优化训练速度小心的调整了每一层的大小。现在因为tensorflow的优化功能，作者认为不需要再像以前一样根据经验小心的调整每一层，现在可以更加标准化的设置每一层的参数。而提出了Inception-V4，网络结构如下：</p>
+<p><img src="https://img-blog.csdnimg.cn/0fe0a191ffba431ab00c058e28027a43.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/9229d3cfe34a4b17a80a44d2e1355ab3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>纯Inception-v4和Inception-ResNet-v2网络的Stem模式。这是这些网络的输入部分。</p>
+<p>Inception V4具体的Block如下图：</p>
+<p><img src="https://img-blog.csdnimg.cn/7cd1669ac43140adb37e828946a208c2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>纯Inception-v4网络的35×35网格模块的模式。这是Inception-V4网络结构中的Inception-A块。</p>
+<p><img src="https://img-blog.csdnimg.cn/c6cfa7565be2410592e67776c0bf0394.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>纯Inception-v4网络的17×17grid模块的模式。这是Inception-V4网络结构中的Inception-B块。</p>
+<p><img src="https://img-blog.csdnimg.cn/97fe75c5d9eb4172bb63165101a85b7d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>纯Inception-v4网络的8×8 grid模块模式。这是Inception-V4网络结构中的Inception- C块。</p>
+<p><img src="https://img-blog.csdnimg.cn/8028063636934dbdbd59b34ac0e41336.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>35×35到17×17reduction模块的模式。</p>
+<p><img src="https://img-blog.csdnimg.cn/e88ee0ae1947417daef6e678991b6e31.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>17×17到8×8grid-reduction模块的模式。这是Inception-V4网络结构中的纯Inception-v4 network使用的reduction模块。</p>
+<p><img src="https://img-blog.csdnimg.cn/2334e63cdb0a4611b7d2d073705b79b8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Inception-ResNet-v1网络的35×35网格（Inception-ResNet-A）模块的模式。</p>
+<p><img src="https://img-blog.csdnimg.cn/66b28ae77a0d48c8a6277b89cab221eb.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Inception-ResNet-v1网络的17×17 grid（Inception-ResNet-B）模块的模式。</p>
+<p><img src="https://img-blog.csdnimg.cn/b070d1c0dd4a4d6b8948240176487e52.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>较小的Inception-ResNet-v1网络所使用的这个模块是”Reduction-B”17×17至8×8 grid还原模块。</p>
+<p><img src="https://img-blog.csdnimg.cn/1718910f4adf4a95bdaa35efd588221b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Inception-ResNet-v1网络的8×8网格（Inception-ResNet-C）模块的模式。</p>
+<p><img src="https://img-blog.csdnimg.cn/040f500ec6a64bb5bede28cffaf9a625.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Inception-ResNet-v1网络的主干。</p>
+<p><img src="https://img-blog.csdnimg.cn/c9aba3119cc44454b9b682df4c88f2e4.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Inception-ResNet-v1和Inception-ResNet-v2网络的架构。此架构适用于两个网络，但底层组件不同。</p>
+<p>Inception-ResNet-v2具体的Block如下图：</p>
+<p><img src="https://img-blog.csdnimg.cn/e0c325dd2be6417fbb89f10f88c5c7d4.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Inception-ResNet-v2网络的35×35grid（Inception-ResNet-A）模块的模式。</p>
+<p><img src="https://img-blog.csdnimg.cn/6990041aa92840478b9e745b3a2c2e6c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Inception-ResNet-v2网络的17×17grid（Inception-ResNet-B）模块的模式。</p>
+<p><img src="https://img-blog.csdnimg.cn/a3b4333448de4e9c9dd5597c95eb26bc.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>17×17至8×8网格还原模块的模式。图中更广泛的Inception-ResNet-v1network所使用的Reduction-B模块。</p>
+<p><img src="https://img-blog.csdnimg.cn/93c8c8ebc8d04946b622a197031f34f1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Inception-ResNet-v2网络的8×8 grid（Inception-ResNet-C）模块的模式。</p>
+<p>Inception-V4和Inception-Resnet-V2的总体结构是比较像的，都是一个stem加上多次重复的Inception或者Inception-Resnet block，然后后面再连接reduction，然后重复这样的结构几次。</p>
+<p><img src="https://img-blog.csdnimg.cn/d8eb8f95845e4dcbb651bc0011522164.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>三种Inception变体的Reduction-A模块的filter数量。</p>
+<p><img src="https://img-blog.csdnimg.cn/5e89539eaba34813b5a83995edb77a62.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>K代表1✖️1 Conv，l代表3✖️3 Conv，m代表 3✖️3 Conv stride为2，n代表 3✖️3 Conv stride为2。</p>
+<p><img src="https://img-blog.csdnimg.cn/d6e1c86c64b24a0c8726e9077949a1f1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>当超过1000个卷积核时，会出现“死”神经元。在最后的平均。池化层之前会出现输出值为0 的现象。解决方案是要么减小learning rate，要么对这些层增加额外的batch normalization。</p>
+<p>如果将残差部分缩放后再跟需要相加的层相加，会使网络在训练过程中更稳定。因此缩放块只是用一个合适的常数来缩放最后的线性激活，通常在0.1 左右，用这个缩放因子去缩放残差网络，然后再做加法。求和前进行缩放，可稳定训练。缩放系数为0.1-0.3之间。</p>
+<p>类似的不稳定在resnet中也有resnet提出warm-up来解决。当卷积核很多，很小的学习率（0.00001）也不能让训练稳定。</p>
+<p><strong>scaling并不是必须的！是否找到某种应用场景，让scaling成为必须的，此为一个可研究方向。</strong></p>
+<h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><p><img src="https://img-blog.csdnimg.cn/067feff851044e58858f708452326df6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Inception-v3训练期间的TOP-1error与计算成本相似的残余Inception相比。评估是在ILSVRC-2012验证集的非黑名单图像的单一作物上进行的。<strong>Residual version 的训练速度要快得多，最终准确率也比传统的Inception-v4略高</strong>。</p>
+<p><img src="https://img-blog.csdnimg.cn/8dec779cf06a4dc5b885d11262f57aba.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Single crop-Single model的实验结果。报告了ILSVRC2012验证集的非黑名单子集。</p>
+<p><img src="https://img-blog.csdnimg.cn/ff3548b233dc467cbc153aefdb1ef8d2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>可以看出Inception-V4和Inception-ResNet-V2的差别并不大，但是都比Inception-V3和Inception-ResNet-V1都好很多。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li> <strong>Inception-ResNet-v1</strong>：一个混合的Inception版本</li>
+<li> <strong>Inception-ResNet-v2</strong>：一个成本较高的混合Inception版本，其识别能力显著提高。</li>
+<li> <strong>Inception-V4</strong>：纯粹的Inception变体，无残余连接，其识别能力与Inception-ResNet-v2 大致相同。</li>
+</ol>
+<p>主要研究了如何用residual learning 来提升inception的训练速度（紧扣主题，residual learning 只能加快训练，对精度提升没什么用）。此外，我们最新的模型（有和没有残差连接）优于我们以前的所有网络，仅因为模型尺寸的增加。</p>
+<p><img src="https://img-blog.csdnimg.cn/634f90ba54414607b8c292b48ab3df77.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
 
                 
             </div>
@@ -548,7 +601,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wuliwuxin.github.io/2021/09/01/rcnn/">http://wuliwuxin.github.io/2021/09/01/rcnn/</a>
+                    <a href="http://wuliwuxin.github.io/2021/09/15/inception-v4/">http://wuliwuxin.github.io/2021/09/15/inception-v4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -586,8 +639,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%BA%E6%96%87/">
-                                    <span class="chip bg-color">论文</span>
+                                <a href="/tags/%E6%A0%87%E7%AD%BE/">
+                                    <span class="chip bg-color">标签</span>
                                 </a>
                             
                         </div>
@@ -757,17 +810,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/12/inception-v2-bn-inception/">
+                <a href="/2021/09/15/inception-v4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Inception v2/BN-Inception">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Inception-V4">
                         
-                        <span class="card-title">Inception v2/BN-Inception</span>
+                        <span class="card-title">Inception-V4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -777,26 +831,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
-                                    计算机视觉
+                            <a href="/categories/%E5%88%86%E7%B1%BB/" class="post-category">
+                                    分类
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BA%E6%96%87/">
-                        <span class="chip bg-color">论文</span>
+                    <a href="/tags/%E6%A0%87%E7%AD%BE/">
+                        <span class="chip bg-color">标签</span>
                     </a>
                     
                 </div>
@@ -810,13 +865,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/27/botnet/">
+                <a href="/2021/09/13/googlenet-v3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="BoTNet">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="GoogLeNet V3">
                         
-                        <span class="card-title">BoTNet</span>
+                        <span class="card-title">GoogLeNet V3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -827,7 +882,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-13
                             </span>
                         <span class="publish-author">
                             
@@ -846,10 +901,6 @@
                     
                     <a href="/tags/%E8%AE%BA%E6%96%87/">
                         <span class="chip bg-color">论文</span>
-                    </a>
-                    
-                    <a href="/tags/CNN-Transformers/">
-                        <span class="chip bg-color">CNN+Transformers</span>
                     </a>
                     
                 </div>
