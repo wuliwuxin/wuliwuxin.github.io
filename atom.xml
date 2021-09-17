@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-09-15T09:25:31.941Z</updated>
+  <updated>2021-09-17T15:39:08.651Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DenseNet</title>
+    <link href="http://wuliwuxin.github.io/2021/09/17/densenet/"/>
+    <id>http://wuliwuxin.github.io/2021/09/17/densenet/</id>
+    <published>2021-09-17T15:36:20.000Z</published>
+    <updated>2021-09-17T15:39:08.651Z</updated>
+    
+    
+    <summary type="html">本文是重新思考认识short path和feature reuse的意义，引入稠密连接思想。</summary>
+    
+    
+    
+    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Inception-V4</title>
