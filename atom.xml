@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-09-17T15:39:08.651Z</updated>
+  <updated>2021-09-20T16:17:36.905Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SENet</title>
+    <link href="http://wuliwuxin.github.io/2021/09/21/senet/"/>
+    <id>http://wuliwuxin.github.io/2021/09/21/senet/</id>
+    <published>2021-09-20T16:15:19.000Z</published>
+    <updated>2021-09-20T16:17:36.905Z</updated>
+    
+    
+    <summary type="html">让我们的神经网络使用全局信息来增强有用的信息，同时抑制无用的信息。</summary>
+    
+    
+    
+    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>DenseNet</title>
@@ -395,31 +414,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–AlexNet&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–AlexNet&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-    
-    
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ZFNet</title>
-    <link href="http://wuliwuxin.github.io/2021/06/28/zfnet/"/>
-    <id>http://wuliwuxin.github.io/2021/06/28/zfnet/</id>
-    <published>2021-06-28T14:19:59.000Z</published>
-    <updated>2021-09-12T08:23:49.077Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–ZFNet&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–ZFNet&quot; class=&quot;headerlink&quot; title=&quot;带你读论文系列之计算机视觉–ZFNet&quot;&gt;&lt;/a&gt;带你读论文系列之计算机视觉–ZFNet&lt;/h1&gt;&lt;h2</summary>
         
       
     
