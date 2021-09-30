@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ZFNet, W&amp;X">
+    <meta name="keywords" content="小样本学习和元学习基础知识, W&amp;X">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ZFNet | W&amp;X</title>
+    <title>小样本学习和元学习基础知识 | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ZFNet</h1>
+                    <h1 class="description center-align post-title">小样本学习和元学习基础知识</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%BA%E6%96%87/">
-                                <span class="chip bg-color">论文</span>
+                            <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">小样本学习</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%85%83%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">元学习</span>
                             </a>
                         
                     </div>
@@ -446,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
-                                计算机视觉
+                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
+                                基础知识
                             </a>
                         
                     </div>
@@ -459,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-28
+                    2021-09-30
                 </div>
                 
 
@@ -483,124 +487,48 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="带你读论文系列之计算机视觉–ZFNet"><a href="#带你读论文系列之计算机视觉–ZFNet" class="headerlink" title="带你读论文系列之计算机视觉–ZFNet"></a>带你读论文系列之计算机视觉–ZFNet</h1><h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p><a href="https://wuliwuxin.github.io/2021/06/28/alexnet/">《带你读论文系列之计算机视觉–AlexNet》</a></p>
-<p>Convolutional Network表现好：</p>
-<ul>
-<li>更大的训练集的可用性，有数百万的标记样本；</li>
-<li>强大的GPU实现，使训练非常大的模型成为现实；</li>
-<li>更好的模型正则化策略，如Dropout</li>
-</ul>
-<p>复杂模型的内部运作和行为，或它们如何取得如此好的性能，仍然没有什么深入了解。你如此优秀，我还不知道你为什么这么优秀。嗯，我必须要了解你一下。「🤔」</p>
-<h2 id="背景与作者"><a href="#背景与作者" class="headerlink" title="背景与作者"></a>背景与作者</h2><p><strong>ZFNet</strong>是<strong>Matthew D.Zeiler与Rob Fergus</strong>于2013年提出，并获得了<strong>2013年ImageNet的冠军</strong>。2012年AlexNet问世，并在ImageNet竞赛中取得了优异的成绩，也证明了大的卷积网路的性能优异，但是我们并不知道为什么CNN性能好。</p>
-<p>因此，该论文是在AlexNet基础上进行了一些细节的改动,通过使用可视化技术揭示了神经网络各层到底在干什么，起到了什么作用。也是基于这个技术，作者对AlexNet进行了优化，<strong>调整之后的网络的性能在很多问题上性能都好于AlexNet。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20210625220749108.png"></p>
-<p><strong>Matthew D.Zeiler</strong>创始人兼 CEO Matthew Zeiler 是机器学习博士。应用人工智能 (AI) 领域的先驱和思想领袖。Matt 与著名机器学习专家 Geoff Hinton 和 Yann LeCun 在计算机视觉方面的开创性研究推动了图像识别行业从理论到实际应用。自 2013 年创立 Clarifai 以来，Matt 已将他屡获殊荣的研究发展为开发人员友好的产品，使企业能够快速无缝地将 AI 集成到他们的工作流程和客户体验中。今天，Clarifai 是领先的独立 AI 公司，被广泛视为机器学习领域最有前途的 初创公司之一。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210625220815254.png"></p>
-<p><strong>Rob Fergus</strong>的研究领域是计算机视觉、机器学习和计算机图形。他对建立图像的统计模型感兴趣，这些模型既包括高层次的物体和场景，也包括低层次的像素和边缘。这些模型可以在各种问题中部署。他特别感兴趣的问题包括：物体识别、图像搜索等。</p>
-<h2 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h2><p><strong>论文的主要贡献：</strong><br>1、特征可视化<br>2、对于CNN结构的改进<br>3、对于遮挡的敏感性<br>4、关联分析<br>5、特征提取的通用性<br>6、特征分析</p>
-<h3 id="技术："><a href="#技术：" class="headerlink" title="技术："></a>技术：</h3><ol>
-<li><strong>反池化过程</strong>：池化是不可逆的过程，然而我们可以通过记录池化过程中，最大激活值得坐标位置。然后在反池化的时候，只把池化过程中最大激活值所在的位置坐标的值激活，其它的值置为0。这个过程只是一种近似，因为我们在池化的过程中，除了最大值所在的位置，其它的值也是不为0的。</li>
-<li><strong>反激活</strong>：在AlexNet中，relu函数是用于保证每层输出的激活值都是正数，因此对于反向过程，我们同样需要保证每层的特征图为正值，也就是说这个反激活过程和激活过程没有什么差别，都是直接采用relu函数。</li>
-<li><strong>反卷积</strong>：利用相同卷积核的转置作为核，于输入做卷积运算</li>
-</ol>
-<h3 id="特征可视化"><a href="#特征可视化" class="headerlink" title="特征可视化"></a>特征可视化</h3><p><strong>什么是平移不变性？</strong></p>
-<p>不变性即使目标的外观发生了某种变化，但是你依然可以把它识别出来。这对图像分类来说是一种很好的特性，因为我们希望图像中目标无论是被平移，被旋转，还是被缩放，甚至是不同的光照条件、视角，都可以被成功地识别出来。</p>
-<p>所以上面的描述就对应着各种不变性：</p>
-<ul>
-<li>平移不变性：Translation Invariance</li>
-<li>旋转/视角不变性：</li>
-<li>Ratation/Viewpoint Invariance</li>
-<li>尺度不变性：Size Invariance</li>
-<li>光照不变性：Illumination Invariance</li>
-</ul>
-<p><strong>特征可视化局限在第一层</strong>，可以投射到像素空间，但是更<strong>高层的解释方法有限</strong>。因为对于较高的层，不变性是非常复杂的，所以很难被简单的二次逼近法所捕获。</p>
-<p><strong>作者的方法</strong>提供了一个非参数化的不变性观点，显示了训练集的哪些patch激活了特征图。</p>
-<p>在2013年Donahue等人展示了在数据集中识别patch的可视化，这些patch负责模型中更高层次的强激活。我们的可视化不同的是，不只是输入图像的作物，而是自上而下的投影，揭示了每个patch内刺激特定特征图的结构。</p>
-<p>带标签的图像来训练模型，交叉熵损失函数用来比较预测值与实际值。（卷积层中的过滤器、全连接层中的权重矩阵和偏置）通过反向传播损失对整个网络参数的导数进行训练，并通过随机梯度下降更新参数。</p>
-<p>我们提出了一种将这些活动映射回输入像素空间的新方法，显示什么输入模式最初导致了特征图中的给定激活。</p>
-<h3 id="用反卷积法进行可视化"><a href="#用反卷积法进行可视化" class="headerlink" title="用反卷积法进行可视化"></a>用反卷积法进行可视化</h3><p>反卷积网络，相反的convolution network过程，而不是将像素映射到特征。convnet使用学习的过滤器来卷积来自前一层的特征图。deconvnet使用相同过滤器的转置版本（即垂直和水平翻转每个过滤器），但应用于校正后的map，而不是下层的输出。</p>
-<p><strong>最大池化不可逆</strong>，但我们可以在变量中记录每个池化区域内最大值的位置来近似逆转。反池化：在卷积神经网络时，记录每个最大池化局部最大的位置。反池化时，将最大位置值还原，其余位置设为0。</p>
-<p>为了确保特征图始终是正的，我们通过ReLu非线性函数重建信号。单个激活获得的重建类似于原始输入图像的一小部分。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210625221457777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h3 id="训练细节"><a href="#训练细节" class="headerlink" title="训练细节"></a>训练细节</h3><p>一个区别是在CNN的第3 、4、5层中使用的稀疏连接（由于模型被拆分为2个GPU）在我们的模型中被密集连接替换。</p>
-<p>每个RGB图像都通过将最小尺寸调整为256、裁剪中心256x256区域、减去每像素平均值（跨所有图像）然后使用10个不同的大小为224x224 的子裁剪（角+中心和（外）水平翻转）进行预处理。为每个训练示例生成多种不同的裁剪和翻转，以提高训练集的大小。使用小批量大小为128的随机梯度下降来更新参数。</p>
-<p>在模型的第一层，输入图像大致在[-128,128]范围内。</p>
-<p><strong>参数设置：</strong></p>
-<ul>
-<li>初始学习率：0.01</li>
-<li>初始动量：0.9</li>
-<li>dropout概率：0.5</li>
-<li>所有初始权重:0.01</li>
-<li>偏置项：0</li>
-</ul>
-<p>将RMS值超过固定半径0.1的卷积层中的每个滤波器重新归一化为这个固定半径。</p>
-<blockquote>
-<p>均方根误差（RMSE，root-mean-square error）：</p>
-</blockquote>
-<p>均方根误差为了说明样本的离散程度。</p>
-<p>做非线性拟合时,RMSE越小越好。</p>
-<p><strong>该模型在70个epoch后停止训练，这在单个GTX580 GPU上花费了大约12天。</strong><br><img src="https://img-blog.csdnimg.cn/20210625221537984.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><img src="https://img-blog.csdnimg.cn/20210625221551891.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/20210625221545124.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="
-"></p>
-<p><strong>第2层</strong>响应角和其他边缘/颜色连接；</p>
-<p><strong>第3层</strong>具有更复杂的不变性，捕获相似的纹理；</p>
-<p><strong>第4层</strong>显示出显着的变化，但更具有特定类别：</p>
-<p><strong>第5层</strong>显示了具有显着姿势变化的整个对象；</p>
-<p><strong>注意：</strong></p>
-<ul>
-<li>每个特征图内的强分组；</li>
-<li>较高层次的不变性；</li>
-<li>图像中歧视性部分的夸大，例如狗的眼睛和鼻子</li>
-</ul>
-<h3 id="训练时特征演变"><a href="#训练时特征演变" class="headerlink" title="训练时特征演变"></a>训练时特征演变</h3><p>在一个给定的特征图中投射回像素空间的强激活（跨越所有训练实例）的进展。外观上的突然跳动是由于最强激活的图像发生了变化。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210625221733179.png"></p>
-<p>上图表示通过训练随机选择的模型特征子集的演化。每个图层的特征显示在不同的块中。在每个块中，我们在 epoch [1,2,5,10,20,30,40,64] 中显示了随机选择的特征子集。可视化显示了给定特征图的最强激活（在所有训练示例中），使用我们的 deconvnet 方法投影到像素空间。人为增强色彩对比度。</p>
-<p><strong>上层只有在相当多的 epochs(40-50)之后才发展，需要让模型训练直到完全收敛。</strong></p>
-<h3 id="特征不变性"><a href="#特征不变性" class="headerlink" title="特征不变性"></a>特征不变性</h3><p>样本图像，在观察模型顶层和底层的特征向量相对于未变换特征的变化时，它们被不同程度地平移、旋转和缩放。小的变换在模型的第一层有很大的影响，但在顶部特征层的影响较小。该网络的输出对平移和缩放是稳定的。一般来说，除了具有旋转对称性的物体，输出对旋转是不变的。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210625221819624.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p>上图表示：模型内垂直平移、缩放和旋转不变性的分析（分别为 a-c 行）。第 1 列：5 个经过转换的示例图像。列2和3：分别来自第1层和第7层的原始图像和变换图像的特征向量之间的欧几里德距离。第4列：每个图像的真实标签的概率，因为图像被变换。</p>
-<h3 id="结构的选择"><a href="#结构的选择" class="headerlink" title="结构的选择"></a>结构的选择</h3><p>可视化 Krizhevsky 等人的架构<strong>存在的问题</strong>：</p>
-<p>第一层滤波器是极高频和低频信息的混合，几乎没有覆盖中频。</p>
-<p>第二层可视化显示了由第一层卷积中使用的大步幅 4 引起的混叠伪影。</p>
-<p><strong>解决方案：</strong><br>将第 1 层过滤器的大小从 11x11 减小到 7x7 并且使卷积的步幅4变为 2。这样在第 1 层和第 2 层特征中保留了更多信息，它还提高了分类性能。</p>
-<h3 id="遮挡敏感度"><a href="#遮挡敏感度" class="headerlink" title="遮挡敏感度"></a>遮挡敏感度</h3><p>对于<strong>图像分类</strong>方法，<strong>存在的问题</strong>是模型是真正识别图像中对象的位置，还是仅使用周围的上下文。</p>
-<p>通过系统地用灰色方块遮挡输入图像的不同部分，并监测分类器的输出。因为当对象被遮挡时，正确类别的概率显着下降。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210625221941959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p>如图所示三个测试示例，我们系统地用灰色方块（第 1 列）覆盖场景的不同部分，并查看顶部（第 5 层）特征映射（第二列和第三列）和分类器输出（第四列和第五列) 变化。第二列：对于灰度的每个位置，我们在第 5 层特征图（未遮挡图像中响应最强的那个）中记录总激活。第三列：投影到输入图像（黑色方块）中的该特征图的可视化，以及来自其他图像的该地图的可视化。第一行的例子显示了最强的特征是狗的脸。当这被掩盖时，特征图中的活动减少（第二列中的蓝色区域）。第四列：作为灰色方块位置的函数的正确类别概率图。例如。当狗的脸被遮挡时，“博美犬”的概率显着下降。第五列：最可能的标签作为遮挡器位置的函数。例如。在第一行，对于大多数位置，它是“博美犬”，但如果狗的脸被遮挡而不是球，那么它预测“网球”。在第二个示例中，汽车上的文本是第 5 层中最强的特征，但分类器对车轮最敏感。第三个示例包含多个对象。第 5 层中最强的特征挑出人脸，但分类器对狗敏感（第四列中的蓝色区域），因为它使用了多个特征图。</p>
-<p>当遮挡物覆盖出现在可视化中的图像区域时，我们看到特征图中的活动急剧下降。<strong>这表明可视化真正对应于对象的位置和该特征图的图像结构。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20210625222041365.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p><img src="https://img-blog.csdnimg.cn/20210625222047265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="
-"></p>
-<p>如图所示：不同狗图像中不同对象部分的对应性度量。眼睛和鼻子的较低分数（与随机对象部分相比）表明该模型在模型的第 5 层隐式建立了某种形式的部分对应关系。在第 7 层，分数更相似，可能是由于上层试图区分不同品种的狗。</p>
-<h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><p><strong>ImageNet数据集</strong>：训练集1.3M；验证集50K;测试集100K；1000个分类.</p>
-<h4 id="网络架构"><a href="#网络架构" class="headerlink" title="网络架构"></a>网络架构</h4><p><img src="https://img-blog.csdnimg.cn/20210625222128677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p>224 x 224（具有 3 个颜色平面）图像作为输入呈现。第一层96 个过滤器（红色）卷积的，每个过滤器的大小为 7 x 7，在 x 和 y 中使用 2 的步长。然后得到的特征图是：（i）通过一个修正的线性函数；(ii) 池化（最大在 3x3 区域内，使用步幅 2）；（iii）跨特征映射归一化的对比度，以提供 96 个不同的 55 x 55 元素特征映射。</p>
-<p>在第 2、3、4、5 层重复类似的操作。最后两层是全连接的，将顶部卷积层的特征作为向量形式（6·6·256 = 9216 维）的输入。最后一层是一个C-way softmax function，C是类的数量。所有过滤器和特征图都是方形的。</p>
-<p>架构变化（第1层的7×7过滤器和第1、2层的stride 2卷积），比他们的单一模型结果Top-5 error 降低了1.7%，证明了这样改进的正向效果。</p>
-<p>结合多个模型时，我们得到14.8%的测试误差。</p>
-<h3 id="模型探索"><a href="#模型探索" class="headerlink" title="模型探索"></a>模型探索</h3><ul>
-<li>删除模型的两个卷积层或者两个全连接层，对分类结果影响不大。</li>
-<li>去除中间卷积层和全连接层后，只有4个层的模型的性能明显下降，说明了模型的整体深度很重要。</li>
-<li>单独改变全连接层的尺寸，对分类结果影响不大，但增大中间卷积层的尺寸对分类结果。</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20210625222219818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p>使用ImageNet预训练的模型用到其他数据集上也取得了很好的效果，说明了fine-tuning的价值。</p>
-<p>特征分析部分在原始模型某一中间层后加SoftMax或者SVM分类器，说明了最后面层特征的分类效果最好，再次佐证了不同层之间学习到的特征具有层次结构，层数越大，学习到的特征表达能力越强。</p>
-<p><strong>其他数据集上的表现</strong></p>
-<p>对于 Caltech-101 和 Caltech-256，数据集非常相似，以至于我们模型得到结果做好。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210625222515559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/20210625222523409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p>但我们的 convnet 模型对 PASCAL 数据的泛化不太好，可能存在数据集偏差。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210625222600421.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li>提出了一种可视化方法，展示了如何使用这些可视化来调试模型的问题以获得更好的结果。</li>
-<li>发现学习到的特征远不是无法解释的，而是特征间存在层次性，层数越深，特征不变性越强，类别的判别能力越强；</li>
-<li>通过可视化模型中间层，在AlexNet基础上进一步提升了分类效果；</li>
-<li>通过一系列遮挡实验证明，该模型在进行分类训练时，对图像中的局部结构高度敏感，而不仅仅是使用广泛的场景上下文。对该模型的消融研究表明，网络的最小深度，而不是任何单个部分，对模型的性能至关重要。遮挡实验表明分类时模型和局部块的特征高度相关；</li>
-<li>模型的深度很关键；</li>
-<li>预训练模型可以在其他数据集上fine-tuning得到很好的结果。</li>
-</ul>
-<blockquote>
-<p>愿你的身后总有力量<br>愿你成为自己的太阳</p>
-</blockquote>
+                <h1 id="小样本学习和元学习基础知识"><a href="#小样本学习和元学习基础知识" class="headerlink" title="小样本学习和元学习基础知识"></a>小样本学习和元学习基础知识</h1><p><img src="https://img-blog.csdnimg.cn/e849b63f342f4da69ff89eeb41d3b700.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>人工智能最终依赖于大数据中学习。很难用很少的数据快速概括一个模型。相反，人类可以快速应用他们过去学到的东西来学习新事物。一个重要的方向是缩小人工智能与人类之间的差距。通过有限数据进行学习。</p>
+<h2 id="少样本学习（few-shot-learning）"><a href="#少样本学习（few-shot-learning）" class="headerlink" title="少样本学习（few-shot learning）"></a>少样本学习（few-shot learning）</h2><p>深度学习是data hunger的方法， 需要大量的数据，标注或者未标注。少样本学习研究就是如何从少量样本中去学习。拿分类问题来说,每个类只有一张或者几张样本。少样本学习可以分为zero-shot learning（即要识别训练集中没有出现过的类别样本）和one-shot learning/few shot learning（即在训练集中，每一类都有一张或者几张样本）。</p>
+<p>人类是有少样本学习的能力。以zero-shot learning来说，比如有一个中文 “放弃”，要你从I, your, she, them, abnegation 五个单词中选择出来对应的英文单词，尽管你不知道“放弃”的英文是什么，但是你会将“放弃”跟每个单词对比，而且在你之前的学习中，你已经知道了I, your, she, them的中文意思，都不是“放弃”,所以你会选择abnegation。</p>
+<p>首先明确几个概念<br>（1）<strong>support set</strong> :每次训练的样本集合<br>（2）<strong>query set</strong> :用于与训练样本比对的样本，一般来说query set就是一个样本<br>（3）在support set中，如果有n个种类，每个种类有k个样本，那么这个训练过程叫n -way k-shot ，如下图就是5-way 1-shot。</p>
+<p><img src="https://img-blog.csdnimg.cn/421ebb198f5741ce879c58d68f7c0a16.webp"></p>
+<p><img src="https://img-blog.csdnimg.cn/6e3b6eb3b6c14bb7a74e2726c9352266.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
+<h2 id="元学习（meta-learning）"><a href="#元学习（meta-learning）" class="headerlink" title="元学习（meta learning）"></a>元学习（meta learning）</h2><p><strong>元学习是要“学会如何学习”</strong>，即利用以往的知识经验来指导新任务的学习，具有学会学习的能力，元学习被视为实现通用人工智能（Artificial   General Intelligence，AGI）的基础，也必将令人工智能走出深度学习的困境。目前，元学习方法主要分为：度量方法、模型方法、优化方法以及基于数据增强。</p>
+<p>基于度量的元学习的核心思想类似于最近邻算法(k-NN分类、k-means聚类)和核密度估计。该类方法在已知标签的集合上预测出来的概率，是support set中的样本标签的加权和。权重由核函数计算得出，该权重代表着两个数据样本之间的相似性。Convolutional Siamese Neural Network提出了一种用孪生网络做one-shot image  classification的方法；Matching  Network对support set进行特征提取后，在embedding空间中利用Cosine来度量，通过对测试样本计算匹配程度来实现分类；Relation Network关系网络提出的relation module结构替换了Matching Network和Prototypical Network中的Cosine和欧式距离度量，使其成为一种学习的非线性分类器用于判断关系，实现分类；Prototypical Network利用聚类思想，将support set投影到一个度量空间，在欧式距离度量的基础上获取向量均值，对测试样本计算到每个原型的距离，实现分类。然而，虽然训练模型不需要针对测试任务进行调整，但当测试与训练任务距离远时，效果不好，另外，当任务变得更大时，逐对比较会导致计算成本昂贵。</p>
+<p>meta learning 是学习如何学习，few-shot learning 是要达到的目标（用一点点训练资料就可以训练出我们要的结果）。为什么觉得meta learning 和few-shot learning 像呢？就是希望达到few-shot learning，想要一个学习演算法只看到一点点资料就可以学起来。few-shot learning的Algorithm往往是用meta learning 得到的。</p>
+<p><img src="https://img-blog.csdnimg.cn/4021a13ebb064e219f0780151abaa086.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/34c373d39aa846af94999eb5b3b2afe5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/87c122a4d219437b99fec591d6dae1fb.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/d19af60b396246dd86112414952c0d52.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_14,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/97e5bb00ea3648faa71aad4b429291b8.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_13,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/aac57dac99f44d728e6b6206963a0c02.webp"></p>
+<p>k-way是support set 里有多少个类别；n-shot是每个类别有多少个例子。</p>
+<p>如果做few-shot 分类，预测的准确率会受support set 的类别数量和样本数量影响。随着分类类别数量增加，准确率会降低；随着number of shot的增加预测值会增加。</p>
+<p>学一个函数来判断相似度。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>Omniglot数据集</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/brendenlake/omniglot/">Office website</a></p>
+<p><a target="_blank" rel="noopener" href="http://tensorflow.org/datasets/catalog/omniglot/">Tensorflow</a></p>
+<p>常用的数据集：Omniglot是meta learning最常用的数据集。这个数据集不大，只有几兆，很适合学术界使用。Omniglot有点类似MNIST。MNIST有10个类每个勒有6000个样本；Omniglot的类别很多，每个类的样本却很少，有1600多个类，每个类只有20个样本。</p>
+<p><img src="https://img-blog.csdnimg.cn/f788320fe2a14a598790a6a403922c95.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_17,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>另一个数据集是Mini-ImageNet。一共有100类，每个类有600个样本，样本是84*84的小图片。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">https<span class="token punctuation">:</span><span class="token operator">//</span>deepai<span class="token punctuation">.</span>org<span class="token operator">/</span>dataset<span class="token operator">/</span>imagenet<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>分类问题：<br>（1）Siamese Neural Network<br>（2）Matching Network<br>（3）Prototypical Network<br>（4）Relation Network</strong></p>
+<p>介绍两种训练方法。第一种是每次取两个样本，比较它们的相似度，需要用大的数据集，每类有标注，每类下面有很多个样本。用训练集构造正样本和负样本，正样本告诉神经网络什么东西同一类，负样本可以告诉神经网络它们的区别。正样本是通过每次抽取一张图片，然后从同一类中随机抽取另一张图片，标签设置为1。负样本是随机抽取一张图片，然后排出这类，在其余类中随机抽取一张，两张图片类别不同，标签设置为0。</p>
+<p><img src="https://img-blog.csdnimg.cn/4182b992195c43d598839fefd78d217c.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_16,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>希望神经网络的输出接近标签，把标签和预测的差别记为损失函数，可以是cross entropy。有了损失函数就可以用反向传播来计算梯度，然后用梯度下降来更新模型参数。</p>
+<p>Siamese Network是计算两两之间的相似度。另一种方法是triplet Loss。每次需要三张图做一轮训练，首先从训练集中随机选一张图片作为anchor（锚点），记录下这个锚点，然后从该类别中随机抽取一张图片作为正样本，然后排出这个类别，做随机抽样，得到一个负样本。</p>
+<p><img src="https://img-blog.csdnimg.cn/f1b878e924d14b989b834f62dfe4e61a.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_14,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>Prototypical Networks是基于这样一种思想，对于每个类别，都存在一个嵌入空间中的点，称为类的原型，每个样本的嵌入空间表示都会围绕这个点进行聚类。为了做到这一点，即利用神经网络的非线性映射将输入映射到嵌入空间，并将嵌入空间中支持集的平均值作为类的原型。预测分类的时候，就只需要比较跟支持集类别的哪个类的原型更近了。</p>
+<p>基于度量的元学习的核心思想类似于最近邻算法(k-NN分类、k-means聚类)和核密度估计。该类方法在已知标签的集合上预测出来的概率，是support set中的样本标签的加权和。权重由核函数计算得出，该权重代表着两个数据样本之间的相似性。因此，学到一个好的核函数对于基于度量的元学习模型至关重要。度量元学习正是针对该问题提出的方法，它的目标就是学到一个不同样本之间的度量或者说是距离函数。任务不同，好的度量的定义也不同，但它一定在任务空间上表示了输入之间的联系，并且能够帮助我们解决问题。</p>
+<p><strong>Siamese Neural Network</strong>孪生网络做one-shot  image  classification的方法；<strong>Matching Network</strong>对support set进行特征提取后，在embedding空间中利用Cosine来度量，通过对测试样本计算匹配程度来实现分类；<strong>Relation  Network</strong>关系网络提出的relation  module结构替换了MatchingNet和Prototypical Net中的Cosine和欧式距离度量，使其成为一种学习的非线性分类器用于判断关系，实现分类；<strong>Prototypical Network</strong>利用聚类思想，将support set投影到一个度量空间，在欧式距离度量的基础上获取向量均值，对测试样本计算到每个原型的距离，实现分类。</p>
+<p>然而，虽然训练模型不需要针对测试任务进行调整，但当测试与训练任务距离远时，效果不好，另外，当任务变得更大时，逐对比较会导致计算成本昂贵。基于度量的元学习方向倾向于最大程度上抽取任务样本内含的特征，使用特征比对的方式判定样本的种类，因此如何提取最能代表样本特点的特征便成为了该方向研究重点。相比于普通学习得到的特征表示，元学习得到的特征表示（Meta-learned Representations）是有区别的，更有助于少样本学习。</p>
+<p>使用元学习的特征表示能够提升少样本学习的效果，作者归为两种不同的机制：<br>（1）固定特征提取模块的参数，只更新（微调）最后的分类层（Classification Layer）参数。在这种机制下，类别数据点在特征空间中会更加聚集，那么在微调时，分类边界对于提供的样本会没那么敏感。<br>（2）在模型参数空间寻找最优点作为基础模型，该最优点接近大部分特定任务（Task-specific）模型参数的最优点，那么在面对新的特定任务时，能够通过几步的梯度计算，将基础模型更新为适用于新任务的特定模型。<br>后续会持续更新关于小样本学习的文章。</p>
+<p>每天按时吃饭绝不敷衍，致力于不断寻找更多的人类美食，然后……然后我就胖了。</p>
+<p>大家也要按时吃饭哟♥️</p>
+<p>祝大家国庆节快乐哇！😁</p>
+<p><img src="https://img-blog.csdnimg.cn/f6b5de354f5c45ccbccb843b8dcb3b28.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
 
                 
             </div>
@@ -617,7 +545,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">wulixin</a>
+                    <a href="/about" rel="external nofollow noreferrer">wuliwuxin</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -627,7 +555,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wuliwuxin.github.io/2021/06/28/zfnet/">http://wuliwuxin.github.io/2021/06/28/zfnet/</a>
+                    <a href="http://wuliwuxin.github.io/2021/09/30/xiao-yang-ben-xue-xi-he-yuan-xue-xi-ji-chu-zhi-shi/">http://wuliwuxin.github.io/2021/09/30/xiao-yang-ben-xue-xi-he-yuan-xue-xi-ji-chu-zhi-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -640,7 +568,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">wulixin</a>
+                    <a href="/about" target="_blank">wuliwuxin</a>
                     !
                 </span>
             </div>
@@ -665,8 +593,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%BA%E6%96%87/">
-                                    <span class="chip bg-color">论文</span>
+                                <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">小样本学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%85%83%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">元学习</span>
                                 </a>
                             
                         </div>
@@ -836,46 +768,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/06/28/alexnet/">
+                <a href="/2021/09/30/xiao-yang-ben-xue-xi-he-yuan-xue-xi-ji-chu-zhi-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="AlexNet">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="小样本学习和元学习基础知识">
                         
-                        <span class="card-title">AlexNet</span>
+                        <span class="card-title">小样本学习和元学习基础知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            AlexNet被认为是计算机视觉领域最有影响力的论文之一。
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
-                                    计算机视觉
+                            <a href="/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    基础知识
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BA%E6%96%87/">
-                        <span class="chip bg-color">论文</span>
+                    <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">小样本学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%85%83%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">元学习</span>
                     </a>
                     
                 </div>
@@ -886,27 +824,27 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/28/zfnet/">
+                <a href="/2021/09/21/senet/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="ZFNet">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="SENet">
                         
-                        <span class="card-title">ZFNet</span>
+                        <span class="card-title">SENet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            AlexNet提出了一种可视化方法，展示了如何使用这些可视化来调试模型的问题以获得更好的结果。
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
                             </span>
                         <span class="publish-author">
                             
@@ -920,7 +858,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
