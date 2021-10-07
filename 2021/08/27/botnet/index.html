@@ -535,12 +535,8 @@
 <p><strong>算法固然美好，数据才是根本。</strong></p>
 <p>先用Adam快速下降，再用SGD调优</p>
 <ol>
-<li><pre><code>什么时候切换优化算法？——如果切换太晚，Adam可能已经跑到自己的盆地里去了，SGD再怎么好也跑不出来了。
-</code></pre>
-</li>
-<li><pre><code>切换算法以后用什么样的学习率？——Adam用的是自适应学习率，依赖的是二阶动量的累积，SGD接着训练的话，用什么样的学习率？
-</code></pre>
-</li>
+<li>什么时候切换优化算法？——如果切换太晚，Adam可能已经跑到自己的盆地里去了，SGD再怎么好也跑不出来了。</li>
+<li>切换算法以后用什么样的学习率？——Adam用的是自适应学习率，依赖的是二阶动量的累积，SGD接着训练的话，用什么样的学习率？</li>
 </ol>
 <p>优化算法的选择和使用方面的一些tricks<br>1、首先，各大算法孰优孰劣并无定论。如果是刚入门，优先考虑 SGD+Nesterov Momentum或者Adam.（Standford 231n : The two recommended updates to use are either SGD+Nesterov Momentum or Adam）；</p>
 <p>2、 <strong>选择你熟悉的算法</strong>——这样你可以更加熟练地利用你的经验进行调参。</p>
