@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-09-30T15:54:38.734Z</updated>
+  <updated>2021-11-08T14:19:29.189Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021年10月总结</title>
+    <link href="http://wuliwuxin.github.io/2021/11/08/2021-nian-10-yue-zong-jie/"/>
+    <id>http://wuliwuxin.github.io/2021/11/08/2021-nian-10-yue-zong-jie/</id>
+    <published>2021-11-08T14:10:09.000Z</published>
+    <updated>2021-11-08T14:19:29.189Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="反思" scheme="http://wuliwuxin.github.io/tags/%E5%8F%8D%E6%80%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>小样本学习和元学习基础知识</title>
@@ -394,31 +417,6 @@
     
     
     <category term="PV操作" scheme="http://wuliwuxin.github.io/tags/PV%E6%93%8D%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA WEB环境搭建教程</title>
-    <link href="http://wuliwuxin.github.io/2021/06/29/javaweb/"/>
-    <id>http://wuliwuxin.github.io/2021/06/29/javaweb/</id>
-    <published>2021-06-28T16:11:59.000Z</published>
-    <updated>2021-06-28T16:15:25.593Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;JAVA-WEB环境搭建教程&quot;&gt;&lt;a href=&quot;#JAVA-WEB环境搭建教程&quot; class=&quot;headerlink&quot; title=&quot;JAVA WEB环境搭建教程&quot;&gt;&lt;/a&gt;JAVA WEB环境搭建教程&lt;/h1&gt;&lt;p&gt;需要的软件安装包下载地址：链接：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="JAVA" scheme="http://wuliwuxin.github.io/categories/JAVA/"/>
-    
-    
-    <category term="JAVA WEB" scheme="http://wuliwuxin.github.io/tags/JAVA-WEB/"/>
     
   </entry>
   
