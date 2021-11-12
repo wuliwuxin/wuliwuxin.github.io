@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2021-11-12T13:31:30.953Z</updated>
+  <updated>2021-11-12T13:43:43.358Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wuliwuxin.github.io/2021/11/12/sknet/"/>
     <id>http://wuliwuxin.github.io/2021/11/12/sknet/</id>
     <published>2021-11-12T13:07:55.000Z</published>
-    <updated>2021-11-12T13:31:30.953Z</updated>
+    <updated>2021-11-12T13:43:43.358Z</updated>
     
     
     <summary type="html">SKNet的思想就是利用非线性的方法整合信息，以实现动态调整感受野的大小，就是根据实际内容，找出一个最适合的感受野去适应图片。它的核心方法是Split-Fuse-Select这三个步骤。</summary>
