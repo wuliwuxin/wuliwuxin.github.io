@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="初识SINet和SINetV2, W&amp;X">
+    <meta name="keywords" content="时隔三月再识ViT, W&amp;X">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>初识SINet和SINetV2 | W&amp;X</title>
+    <title>时隔三月再识ViT | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初识SINet和SINetV2</h1>
+                    <h1 class="description center-align post-title">时隔三月再识ViT</h1>
                 </div>
             </div>
         </div>
@@ -443,6 +443,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Transformer%E5%81%9A%E5%A4%A7%E8%A7%84%E6%A8%A1%E7%9A%84%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E3%80%82/" class="post-category">
+                                Transformer做大规模的图像识别。
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -450,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-20
+                    2021-12-02
                 </div>
                 
 
@@ -474,76 +483,81 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="初识SINet和SINetV2"><a href="#初识SINet和SINetV2" class="headerlink" title="初识SINet和SINetV2"></a>初识SINet和SINetV2</h1><p><img src="https://img-blog.csdnimg.cn/67e7bcfdfb624934a7d29ad8e486b868.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>我们都是穷尽自己仅有的一点天赋，来表达我们内心深处的感受。–乔布斯</p>
-<h2 id="闲谈"><a href="#闲谈" class="headerlink" title="闲谈"></a>闲谈</h2><p><strong>对问题/知识理解的深度和广度，哪个更重要？</strong></p>
-<p>如果一定要选一个，我会选深度。但是我常常做不到对某一东西的深刻专研，总是会被新的东西吸引，而后又忘记了原本的计划。对问题/知识的大概了解，也让我做什么都没有底气，有时又有一点不屑。嗯，我已经知道这个了。其实我只是了解了一点点东西，从此往复，我还是那个小菜鸟。我想让自己改变。钻研一件事并从头到尾的从计划到交付的一段经历，可以让你之后的旅程，尤其是你陷入一些困境的时候，给你去完成那些困住你的事情，走出泥沼的信心。了解很多事情的表面，是很难给你这样的底气的。然后，从深度到广度，可能比从广度到深度要相对容易。</p>
-<p>不是说广度不重要，保持开放的视野，可以迅速的连接不同的资源也很有用。但能给予自己不断向前的信心的，更多的还是要靠你对这件事情的理解和对事情的掌控力。</p>
-<p><strong>我总是很在意别人怎样了，而自己呢？</strong></p>
-<p>这里借助人民日报夜读里的一句话，给自己一缕阳光，也给有同样困惑的小可爱们一点动力。<strong>每个人都有属于自己的‘时区’，有些人走在你前面，也有人跟在你后面，其实没有成败之分，在属于自己的‘时区’里，只要今天的你总是优于过去的你，何尝不是成功？</strong></p>
-<h2 id="SINet"><a href="#SINet" class="headerlink" title="SINet"></a>SINet</h2><p><a target="_blank" rel="noopener" href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Fan_Camouflaged_Object_Detection_CVPR_2020_paper.pdf">Camouflaged Object Detection</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/DengPingFan/SINet/">代码</a></p>
-<p>他们在推出其COD10K数据集同时提出了一种简单但是有效的解决COD的网络SINet。COD10K同时具有大类和子类的分类，包含了大量全高清1080p图片，与此同时，检测目标的全局和局部对比度更加广，意味着对模型的泛化性要求更高，更难检测，是一不错的COD数据集。他们也将COD10K与已有的COD任务数据集做了对比，以此来佐证COD10K的优势。</p>
-<p>SINET网络整体的架构还是属于<strong>encoder-decoder</strong>的，其特点，结尾输出的loss有两个。第一个loss是用来衡量原图中有没有伪装物的，第二个loss是用来衡量模型预测的伪装物的位置准不准的，也是一个不错的想法。</p>
-<p>伪装检测系统 (CDS) 具有多种可能的应用。</p>
+                <p><img src="https://img-blog.csdnimg.cn/db5d72d3b4014d41b1c4ca3700f0d9eb.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_11,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>嘿，太累了，就休息一会吧。</p>
+<h1 id="闲谈"><a href="#闲谈" class="headerlink" title="闲谈"></a>闲谈</h1><p>转眼间2021年就剩下一个月了，回顾十一月，没有太多的收获，拖延症及其严重，总是在学习和不想学习之间徘徊。SGD的精髓就是梯度够大，可以一直跑，慢慢总是能收敛。我总不能找到某个方向一直去努力，总是来回波动。“简单，粗暴但效果很好”的东西，我很喜欢。非常符合我喜欢的话“规则简单易懂，粗暴却完美！“关注大的方向，而不局限于细节。</p>
+<h1 id="ViT"><a href="#ViT" class="headerlink" title="ViT"></a>ViT</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>回顾三个月前<a target="_blank" rel="noopener" href="https://blog.csdn.net/wuli_xin/article/details/119714680">初识ViT</a></p>
+<p>Paper：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2010.11929">https://arxiv.org/abs/2010.11929</a></p>
+<p>Code：<a target="_blank" rel="noopener" href="https://github.com/google-research/vision_transformer">https://github.com/google-research/vision_transformer</a></p>
+<p><img src="https://img-blog.csdnimg.cn/0c81801ac0d6409aa8752dbe4f70b754.webp"></p>
+<p>到现在为止这篇文章引用量为1629</p>
+<p>论文题目：An Image is Worth 16x16 Words:Transformers for Image Recognition at Scale</p>
+<p>为什么题目要叫16✖️16 word呢？</p>
+<p><img src="https://img-blog.csdnimg.cn/552e384d3c054d11a0597bfa3da87cc0.webp"></p>
+<p>N=224✖️224<br>W=224/16<br>H=14<br>N=14✖️14=196</p>
+<p>这就相当于把224✖️224的图片切分成196个16✖️16的patch，此时196个patch就相当于NLP的word组成一个整体。</p>
+<p>Transformer做大规模的图像识别。</p>
+<p>CNN常说的两种Inductive bias（归纳偏置）</p>
 <ul>
-<li>医学图像分割。如果医学图像分割方法配备了针对特定对象（例如息肉）训练的CDS，则它可以用于自动分割息肉。在自然界中寻找和保护稀有物种，甚至在灾区进行搜救。</li>
-<li>搜索引擎。搜索引擎无法检测到隐藏的蝴蝶，因此只能提供具有相似背景的图像。当搜索引擎配备了CDS（这里，我们只是简单地更改关键字）时，引擎可以识别出伪装对象，然后反馈几张蝴蝶图像。</li>
+<li>Locality（局部性）。即卷积神经网络是以滑动窗口进行滑动卷积的，所以假设图片相邻区域有相邻特征。这个假设非常合理。</li>
+<li>Translation equivariance（平移等价性）。即无论先做卷积还是先做平移，最后的结果是一样的。</li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/db0e0fdf922f49378f3cde028caa56b7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>COD与当前数据集有所不同：</p>
+<p>而Transformer 没有先验信息，都是自己学得到。</p>
+<p>Vit是在公开数据集ImageNet-21k和Google自家的数据集JFT-300M上做预训练。结果发现大规模的预训练毕归纳偏置好。</p>
+<h2 id="论文详解"><a href="#论文详解" class="headerlink" title="论文详解"></a>论文详解</h2><p>在大规模数据集上做预训练，然后迁移到中小型数据集使用，效果非常好。<br><img src="https://img-blog.csdnimg.cn/b7b1bbf75d3746d1828e7c3fc589f45c.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/7a7877e59c494db2829e616e318c0ed9.webp"></p>
+<p>以ViT-B/16为例，将输入图片（224✖️224）按照16✖️16大小的patch进行划分，划分后会得到（2242/162）=142=1961个patch，接着通过线性映射将每个patch映射到一维向量中，以ViT-B/16为例，每个patch数据shape为[16,16,3]通过映射得到一个长度为768的向量。</p>
+<p>对于标准的Transformer模块要求输入的是token（向量）序列，即二维矩阵[num_token,token_dim]。对于图像数据而言，其数据格式为[H,W,C]是三维矩阵。明显不是Transformer模块想要的。所以需要先通过一个Embedding层对数据做变换。</p>
+<p>在输入Transformer encoder之前需要加入class token以及position embedding。此时[196,768]–&gt; [197,768]。这里的class token参考了<strong>BERT网络</strong>（已经阅读了，还未更新文章，我是真的太懒了）。</p>
+<p><img src="https://img-blog.csdnimg.cn/5982ed563af34b42b165bc97a22cf6cb.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_12,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/a7ff6166157d4984984602430f5af1ed.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_10,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>ViT模型框架由三个模型块组成：</p>
 <ul>
-<li>它包含10K图像，涵盖78个被伪装的对象类别，例如水生，飞行，两栖动物和陆生等。</li>
-<li>所有被伪装的图像均按类别，范围和等级进行注释。框，对象级别和实例级别的标签，从而促进了许多视觉任务，例如本地化，对象提议，语义边缘检测，任务转移学习等。</li>
-<li>每个伪装的图像都被赋予了挑战性，可以在现实世界和消光等级标签中找到属性（每张图像大约需要60分钟）。</li>
+<li>Linear Projection of Flattened Patches（Embedding层）</li>
+<li>Transformer encoder</li>
+<li>MLP Head（最终用于分类的层结构）</li>
 </ul>
-<p>结构可分为<strong>Search Module</strong>和<strong>Identification Module</strong>两部分，即先对图片中的伪装目标对象进行搜索（Search），然后对所有搜集到的的目标对象进行身份确（Identification）。</p>
-<p>SINet可分为两个部分：</p>
-<p><strong>感受野组件（Receptive Field）和部分解码器组件（PDC）</strong>。</p>
-<p>在人类视觉中，存在一组有各种大小的感受野，有助于突出靠近视网膜中央凹的区域，该区域对微小的空间位移十分敏感。借鉴于此，该论文设计了RF模块在搜索阶段获得更多更具区分性的特征。首先，我们通过ResNet-50从输入图像中获取5个特征。</p>
-<p>SINet利用密集连接的来保存来自不同层的更多信息，然后使用RF组件来扩大感受野。</p>
-<p><strong>由于注意力机制可以有效地消除无关特征的干扰。</strong></p>
-<p>本文又引入了<strong>搜索注意（Search Attention，SA）</strong>模块来增强X2的中层特征并获得增强的伪装图。</p>
-<h2 id="SINetV2–改进版"><a href="#SINetV2–改进版" class="headerlink" title="SINetV2–改进版"></a>SINetV2–改进版</h2><p><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/9444794">Concealed Object Detection</a><br><a target="_blank" rel="noopener" href="https://github.com/GewelsJI/SINet-V2">代码</a></p>
-<p>这篇文章是SINet的改进版，网络结构变化改进了很多，效果提升还不错。</p>
-<p><img src="https://img-blog.csdnimg.cn/abf5470ed9ce49a39e256663c337d0d9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>SINet模型包括搜索的前两个阶段，即<strong>搜索（负责搜索隐藏对象）和识别（用于以级联方式精确检测隐藏对象）</strong>。</p>
-<p>**与上个版本相比，通过两个精心设计的子模块在COD领域实现了新的SOTA，包括邻居连接解码器(NCD)和组反转注意(GRA)**。</p>
-<p><strong>三个主要模块</strong>：</p>
-<ul>
-<li>纹理增强模块(TEM)，用于捕获具有放大上下文线索的细粒度纹理；</li>
-<li>邻居连接解码器（NCD），能够提供位置信息；</li>
-<li>级联组反转注意(GRA)块，它们协同工作以改进来自更深层的粗略预测。</li>
+<h3 id="MLP-Head"><a href="#MLP-Head" class="headerlink" title="MLP Head"></a>MLP Head</h3><p><img src="https://img-blog.csdnimg.cn/00e055a2869e4b71baaf8db5c4e85115.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>注意⚠️，在Transformer Encoder前有个Dropout层，后有一个Layer。<br>训练ImageNet-21K时是由Linear+TanH激活函数+Linear，但是迁移到ImageNet-1K上或者你自己的数据集上，只有一个Linear。</p>
+<p>为什么不能在N个输出上<strong>GAP（Globally Average Pooling）</strong>得到最后的特征，为什么要加 class token去输出呢？</p>
+<p>通过实验，得出这两种方法都可以，你可以做GAP得到一个全局特征做分类，也可用class token。作者是为了说明标准的Transformer也一样可以做视觉。</p>
+<p><img src="https://img-blog.csdnimg.cn/0ab9191862e642cca67337fc98a27a72.webp"></p>
+<p>公式（1）是加入class token后的结果；公式（2）是多头自注意力得出的结果；公式（3）是整体的结果；公式（4）就是class token所对应的输出当作整体图像的一个特征，做最后的分类。</p>
+<h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><ul>
+<li>Layers是Transformer Encoder中重复堆叠Encoder Block的次数；</li>
+<li>Hidden Size是通过Embedding层后每个token的dim（向量的长度）;</li>
+<li>MLP Size 是Transformer Encoder中MLP Block第一个全连接的节点个数（是Hidden Size的四倍）；</li>
+<li>Heads代表Transformer中Multi-Head Attention的Head数。</li>
 </ul>
-<p><strong>纹理增强模块(TEM)</strong><br>在人类视觉系统中，一组不同大小的人群感受野有助于突出靠近视网膜中央凹的区域，该区域对小空间位移敏感。这促使我们在搜索阶段（通常在小/局部空间中）使用TEM来合并更具辨别力的特征表示。</p>
-<p>第一个卷积层利用1×1卷积操作（Conv1×1）将通道大小减少到32。接下来是另外两个层：一个(2i-1)×(2i-1)卷积层和一个3×3卷积层，当i &gt;1时具有特定的膨胀率(2i-1)。</p>
-<p>然后，将前四个分支{bi,i=1,2,3,4}连接起来，并通过3×3卷积操作将通道大小减小到C。网络的默认设置C =32。最后，加入恒等shortcut分支，然后将整个模块馈送到ReLU函数以获得输出特征f’k。此外，一些工作（例如，Inception-V3）已经表明，大小为(2i-1)×(2i-1)的标准卷积运算可以分解为两个步骤的序列，其中(2i-1)×1和1×(2i-1)，在不降低表示能力的情况下加快推理效率。</p>
-<p><strong>邻居连接解码器(NCD)</strong><br>仅聚合前三个最高级别的特征{fk∈RW /2k×H/2k×C,k=3,4,5})以获得更有效的学习能力，而不是考虑所有特征金字塔。具体来说，在获得前三个TEMs的候选特征后，在搜索阶段，我们需要定位隐藏物体。</p>
-<p>使用邻居连接解码器(NCD)，解决聚合多个特征金字塔时仍然存在两个关键问题；即，如何保持层内的语义一致性以及如何跨层桥接上下文。</p>
-<p><strong>Group-Reversal Attention(GRA)</strong><br><img src="https://img-blog.csdnimg.cn/05abbe1966ae4e92aa26709e978fd324.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>组合多个GRA块（例如，Gki,i∈{1,2,3},k∈{3,4,5}）以通过不同的特征金字塔逐步细化粗略预测。总体而言，每个GRA块都有三个残差学习过程。详细请看论文。</p>
-<p><img src="https://img-blog.csdnimg.cn/b84dc53988334236a91995c273760ea2.png"></p>
-<p><img src="https://img-blog.csdnimg.cn/130f5bcfdbb04d3cb4564f6e4d14a3f6.png"></p>
-<p><img src="https://img-blog.csdnimg.cn/ec49651b907d4678b90a0ee3cd422745.webp"></p>
-<h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p>直接上图，就不多说了</p>
-<p><img src="https://img-blog.csdnimg.cn/5df94c029eae4eaf8f63ecc5ead31814.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p><img src="https://img-blog.csdnimg.cn/46eecf059af34abfbe83b9c0dc3e9af7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>应用：医学（息肉分割和肺部感染分割）、制造业（表面缺陷检测）、农业（有害生物检测和水果成熟度检测）、艺术（休闲艺术和从隐蔽的物体到显眼的物体）、日常生活（透明物品/物体检测、搜索引擎）</p>
-<p>潜在的研究方向：</p>
-<p><strong>1、弱/半监督学习</strong><br>现有的基于深度的方法以完全监督的方式从带有对象级标签的图像中提取特征。但是，像素级标注通常由LabelMe或Adobe Photoshop工具手动标记，具有密集的专业交互，要耗费大量的精力。因此，必须利用弱/半(部分)标注数据进行训练，以避免巨大的标注成本。</p>
-<p><strong>2、自监督学习</strong></p>
-<p>3、其他模态的伪装目标检测<br>现有的伪装数据仅基于静态图像或动态视频。然而，其他形式的伪装对象检测可能与诸如黑夜害虫监测、机器人和艺术家设计等领域密切相关。与RGB-D SOD、RGB-T SOD和VSOD中的类似，这些模式可以是音频、热或深度数据，在特定场景下提出了新的挑战。</p>
-<p><strong>4、伪装目标分类</strong><br>通用目标分类是计算机视觉中的一项基本任务。因此，隐蔽对象分类在未来也可能获得关注。利用COD10K提供的类和子类标签，可以构建大规模、细粒度的分类任务。</p>
-<p><strong>5、伪装目标跟踪</strong></p>
-<p><strong>6、伪装对象排序</strong><br>目前，伪装目标检测算法都是建立在二值化的基础上，生成伪装目标的掩模，而不分析伪装程度。然而，了解伪装的程度有助于更好地探索模型背后的机制，提供对它们的更深层次的洞察力。</p>
-<p><strong>7、伪装对象实例分割</strong></p>
-<p><strong>8、多任务通用网络</strong><br>不同的视觉任务之间有很强的联系。因此，它们的监管可以在一个通用系统中重用，而不会增加复杂性。考虑设计一个通用网络来同时定位、分割和排序隐藏对象是很自然的。</p>
-<p><strong>9、神经网络搜索</strong><br>无论是传统算法还是基于深度学习的隐蔽目标检测模型，都需要具有强大先验知识或熟练专业知识的人类专家。有时，由算法工程师设计的手工制作的功能和体系结构可能不是最优的。因此，神经结构搜索技术，如流行的自动机器学习，提供了一个潜在的方向。</p>
-<p><strong>10、将突出对象转换为隐藏对象</strong><br>将显著对象转换为隐藏对象以增加训练数据，以及在SOD和COD任务之间引入生成性对抗机制以提高网络的特征提取能力。</p>
-<p><strong>这让我想到了ResNext是ResNet的改进版，但感觉用得ResNext没有ResNet多呢？</strong></p>
-<p>这是因为RestNet太经典了，大家都都知道它，人们都以它为标准(属于它类型的)，一般来说如果任何人弄一个网络算法出来不以那些经典算法比较是难被认可的。即使后来的人改进ResNet且针对其不足有了很大的突破也无济于事。所以对于初学者，要将那些经典算法弄通能跑出来，今后开发的算法也要做这些比较。</p>
-<p><strong>所以要多读文章，从一好文章找它的经典读然后再读它近期的改进文章，但要多重现好文章的算法实验。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/24b24651b1344afaba86e3a9cac5b1c3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>更小的Patch size计算更贵，因为序列长度增加了。</p>
+<p><img src="https://img-blog.csdnimg.cn/65effe4069ec43f38fb1b7c71e0ec09a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>在Google JFT数据集或在ImageNet-21K进行预训练，发现结果差别不大。作者从另一个角度，即在TPUv3上的训练天数来进行对比。</p>
+<p><img src="https://img-blog.csdnimg.cn/dc8b8f0de61b44b0ad27d8301a620534.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_12,color_FFFFFF,t_70,g_se,x_16"></p>
+<p><img src="https://img-blog.csdnimg.cn/e9ca182fa60049cd9d1902236b23fe82.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_11,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>随着数据集的大小不断增加，Vit的表现越来越来好。得出：小数据集用CNN较好，当数据集大小到达ImageNet-21k时，用Vit更好。</p>
+<p><strong>用vision transformer作小样本学习是非常有前途的方向</strong>。</p>
+<p><img src="https://img-blog.csdnimg.cn/79e2b7ed060143398438a93c1dbdfb32.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>左边是在五个数据集上的平均效果，发现模型现在也未到达饱和。右边是在ImageNet数据集上的表现。Hybrid是传统CNN和Transformer混合模型。</p>
+<p><img src="https://img-blog.csdnimg.cn/781306f8bb2c4a5781b8a8f5b455ed16.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>头28个主成分。</p>
+<p><img src="https://img-blog.csdnimg.cn/71084005cca64ce9a8bf14fe0c6f3177.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_12,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>余弦相似度。这里的patches大小是32✖️32的224/32=7，所以是7✖️7大小。</p>
+<p><img src="https://img-blog.csdnimg.cn/821d3652a27549a6a92159ce1caabed2.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_12,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>这里有16个Head，也就是每层对应有16个点，一共有24层。</p>
+<p><img src="https://img-blog.csdnimg.cn/f6bcd86fcf544b56bd974535ceca33cf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>如果训练次数比较少，混合模型的精确度略高一点；在迭代更多的epoch后，ViT精度会超过ViT混合模型。</p>
+<p><img src="https://img-blog.csdnimg.cn/31b06a78ebc54caebcb1b0734d07a230.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>注意⚠️，在最后效果一样的地方，学习率不同，所以需要好好调参，<strong>做一个优秀的练丹师</strong>。</p>
+<p><img src="https://img-blog.csdnimg.cn/ed509b85430f4969b7dba981ea219f47.png"></p>
+<p>不使用位置编码比使用位置编码效果差很多，但是使用相对位置编码和绝对位置编码效果差不多，所以既可用相对位置编码，也可用绝对位置编码。因为图像块小，所以排列组合小块区别不大。</p>
+<p>用1D和2D效果区别也不大。在源码中使用的是1D。</p>
+<p>这篇文章还进行了大规模自监督训练。</p>
+<h2 id="ViT的应用"><a href="#ViT的应用" class="headerlink" title="ViT的应用"></a>ViT的应用</h2><ul>
+<li>目标检测：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2012.09958">ViT-FRCNN</a>  </li>
+<li>图像分割：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2012.15840">SETR</a>  </li>
+<li>多尺度融合：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2103.14030">Swin Transformer</a>  </li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/e95c16dcd2ed41f58cf255dc3c312a49.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
 
                 
             </div>
@@ -570,7 +584,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wuliwuxin.github.io/2021/11/20/chu-shi-sinet-he-sinetv2/">http://wuliwuxin.github.io/2021/11/20/chu-shi-sinet-he-sinetv2/</a>
+                    <a href="http://wuliwuxin.github.io/2021/12/02/shi-ge-san-yue-zai-shi-vit/">http://wuliwuxin.github.io/2021/12/02/shi-ge-san-yue-zai-shi-vit/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -779,9 +793,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/12/02/shi-ge-san-yue-zai-shi-vit/">
                     <div class="card-image">
@@ -799,9 +814,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -814,6 +829,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -832,13 +848,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/12/sknet/">
+                <a href="/2021/11/20/chu-shi-sinet-he-sinetv2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="SKNet">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="初识SINet和SINetV2">
                         
-                        <span class="card-title">SKNet</span>
+                        <span class="card-title">初识SINet和SINetV2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -849,16 +865,12 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-20
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
-                                    计算机视觉
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            wuliwuxin
                             
                         </span>
                     </div>
