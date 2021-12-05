@@ -506,7 +506,7 @@
 <p>Vit是在公开数据集ImageNet-21k和Google自家的数据集JFT-300M上做预训练。结果发现大规模的预训练毕归纳偏置好。</p>
 <h2 id="论文详解"><a href="#论文详解" class="headerlink" title="论文详解"></a>论文详解</h2><p>在大规模数据集上做预训练，然后迁移到中小型数据集使用，效果非常好。<br><img src="https://img-blog.csdnimg.cn/b7b1bbf75d3746d1828e7c3fc589f45c.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
 <p><img src="https://img-blog.csdnimg.cn/7a7877e59c494db2829e616e318c0ed9.webp"></p>
-<p>以ViT-B/16为例，将输入图片（224✖️224）按照16✖️16大小的patch进行划分，划分后会得到（224^2^/16^2^）=14^2^=196个patch，接着通过线性映射将每个patch映射到一维向量中，以ViT-B/16为例，每个patch数据shape为[16,16,3]通过映射得到一个长度为768的向量。</p>
+<p>以ViT-B/16为例，将输入图片（224✖️224）按照16✖️16大小的patch进行划分，划分后会得到（224^2/16^2）=14^2=196个patch，接着通过线性映射将每个patch映射到一维向量中，以ViT-B/16为例，每个patch数据shape为[16,16,3]通过映射得到一个长度为768的向量。</p>
 <p>对于标准的Transformer模块要求输入的是token（向量）序列，即二维矩阵[num_token,token_dim]。对于图像数据而言，其数据格式为[H,W,C]是三维矩阵。明显不是Transformer模块想要的。所以需要先通过一个Embedding层对数据做变换。</p>
 <p>在输入Transformer encoder之前需要加入class token以及position embedding。此时[196,768]–&gt; [197,768]。这里的class token参考了<strong>BERT网络</strong>（已经阅读了，还未更新文章，我是真的太懒了）。</p>
 <p><img src="https://img-blog.csdnimg.cn/5982ed563af34b42b165bc97a22cf6cb.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_12,color_FFFFFF,t_70,g_se,x_16"></p>
