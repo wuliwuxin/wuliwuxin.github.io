@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ViT, Hexo">
+    <meta name="keywords" content="ViT, W&amp;X">
     <meta name="description" content="初识 CV Transformer 之Vision Transformer (ViT)
 0 回顾
 
@@ -27,7 +27,7 @@ RNN、LSTM时序网络，存在一定的问题：
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ViT | Hexo</title>
+    <title>ViT | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -62,7 +62,10 @@ RNN、LSTM时序网络，存在一定的问题：
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="W&X" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -74,7 +77,7 @@ RNN、LSTM时序网络，存在一定的问题：
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">W&amp;X</span>
                 </a>
             </div>
             
@@ -88,7 +91,7 @@ RNN、LSTM时序网络，存在一定的问题：
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -99,7 +102,7 @@ RNN、LSTM时序网络，存在一定的问题：
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -110,7 +113,7 @@ RNN、LSTM时序网络，存在一定的问题：
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -121,7 +124,7 @@ RNN、LSTM时序网络，存在一定的问题：
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -132,36 +135,14 @@ RNN、LSTM时序网络，存在一定的问题：
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>Contact</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>Friends</span>
+      <span>关于</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
   <li>
@@ -178,7 +159,7 @@ RNN、LSTM时序网络，存在一定的问题：
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">W&amp;X</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -194,7 +175,7 @@ RNN、LSTM时序网络，存在一定的问题：
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -205,7 +186,7 @@ RNN、LSTM时序网络，存在一定的问题：
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -216,7 +197,7 @@ RNN、LSTM时序网络，存在一定的问题：
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -227,7 +208,7 @@ RNN、LSTM时序网络，存在一定的问题：
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -238,29 +219,7 @@ RNN、LSTM时序网络，存在一定的问题：
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			Contact
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			Friends
+			关于
 		</a>
           
         </li>
@@ -268,7 +227,7 @@ RNN、LSTM时序网络，存在一定的问题：
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="hhttps://github.com/wuliwuxin" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -325,7 +284,7 @@ RNN、LSTM时序网络，存在一定的问题：
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="hhttps://github.com/wuliwuxin" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -401,7 +360,7 @@ RNN、LSTM时序网络，存在一定的问题：
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2021-08-15
                 </div>
                 
@@ -417,6 +376,9 @@ RNN、LSTM时序网络，存在一定的问题：
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
         
 
         
@@ -463,7 +425,7 @@ RNN、LSTM时序网络，存在一定的问题：
 <h3 id="研究成果及意义"><a href="#研究成果及意义" class="headerlink" title="研究成果及意义"></a>研究成果及意义</h3><p>ViT和ResNet Baseline取得了不相上下的结果</p>
 <p><img src="https://img-blog.csdnimg.cn/48aec390c8c04ea898f7285df442b937.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>JFT：谷歌闭源数据集，规模是ImageNet的30倍左右</p>
-<p>ViT-H&#x2F;14：ViT-Huge模型，输入序列14x14</p>
+<p>ViT-H/14：ViT-Huge模型，输入序列14x14</p>
 <p>ViT的历史意义：展示了在计算机视觉中使用纯Transformer结构的可能。</p>
 <p>   图片→Backbone(CNNs)→Transformer→结果</p>
 <p>   图片→Transformer→结果</p>
@@ -489,8 +451,8 @@ RNN、LSTM时序网络，存在一定的问题：
 <p>Value：价值，数值。</p>
 <p><img src="https://img-blog.csdnimg.cn/a4af820b319d43bb9728f42680440ad2.png"></p>
 <p><strong>点积为什么可以衡量q与k的相似度？</strong></p>
-<p>公式：<br>q1·k1&#x3D; |q1| x |k1| x cos</p>
-<p>q1·k2&#x3D; |q1| x |k2| x cos</p>
+<p>公式：<br>q1·k1= |q1| x |k1| x cos</p>
+<p>q1·k2= |q1| x |k2| x cos</p>
 <p><img src="https://img-blog.csdnimg.cn/b667aa4f28cf490da7844cb3b930f981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <h3 id="Attention计算"><a href="#Attention计算" class="headerlink" title="Attention计算"></a>Attention计算</h3><p><img src="https://img-blog.csdnimg.cn/0c8fa648024648f8a930e7f3331ecc53.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/55b44b5dca624b96a2a220ede0f7f245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>假设的input是x1-x4，是一个sequence，每一个input (vector)先乘以矩阵W得到embedding，即向量a1-a4。接着这个embedding进入self-attention层，每一个向量a1-a4分别乘上3个不同的transformation matrix Wq，Wk，Wv，以向量a1为例，分别得到3个不同的向量q1，k1，v1；接下来使用每个query q去对每个key k做attention，attention就是做点积，匹配这2个向量有多接近，然后除以q和k的维度的开平方。</p>
@@ -509,12 +471,12 @@ RNN、LSTM时序网络，存在一定的问题：
 </li>
 </ol>
 <h3 id="位置编码-Positional-Encoding"><a href="#位置编码-Positional-Encoding" class="headerlink" title="位置编码 Positional Encoding"></a>位置编码 Positional Encoding</h3><p><strong>为什么要位置编码？</strong></p>
-<p>图像切分重排（由二维变一维）后失去了位置&#x2F;空间信息，并且Transformer的内部运算是空间信息无关的，所以需要把位置信息编码重新传进网络；</p>
+<p>图像切分重排（由二维变一维）后失去了位置/空间信息，并且Transformer的内部运算是空间信息无关的，所以需要把位置信息编码重新传进网络；</p>
 <p>ViT使用了一个可学习的vector（Xclass）来编码，编码vector和patch vector直接相加组成输入；</p>
 <p><strong>为什么直接相加，而不是concat？</strong><br>因为相加是concat的一种特例</p>
-<p>相加形式：W(I+P)&#x3D;WI+WP</p>
+<p>相加形式：W(I+P)=WI+WP</p>
 <p>concat形式：</p>
-<p>当W1&#x3D;W2时，两式内涵一致</p>
+<p>当W1=W2时，两式内涵一致</p>
 <p><img src="https://img-blog.csdnimg.cn/c87ccc3762744bbf9c6be90a363ea809.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <h3 id="BN和LN的区别"><a href="#BN和LN的区别" class="headerlink" title="BN和LN的区别"></a>BN和LN的区别</h3><p><strong>为什么采用LN？</strong><br>LN其实就是在每个样本上都计算均值和方差，将输入数据转化成均值为0，方差为1的数据。而不采用BN是因为，Batch Normalization的处理对象是对一批样本，是对这批样本的同一维度特征做归一化，Layer Normalization 的处理对象是单个样本，是对这单个样本的所有维度特征做归一化，而此处输入的N+1个序列，每个序列的长度可能是不同的。</p>
 <p><img src="https://img-blog.csdnimg.cn/ca26391ef5df4f52b8acec154421a3af.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
@@ -525,7 +487,7 @@ RNN、LSTM时序网络，存在一定的问题：
 <p>而当数据集的规模扩大，transformer模型的效果接近或者超过了目前的一些<strong>SOTA</strong>(state of the art)结果。</p>
 <p>BiT : 一个大ResNet进行监督+迁移学习的模型</p>
 <p>Noisy Student：一个半监督学习的EfficientNet-L2</p>
-<p>ViT-H&#x2F;14：ViT-Huge模型，输入序列14x14</p>
+<p>ViT-H/14：ViT-Huge模型，输入序列14x14</p>
 <p><img src="https://img-blog.csdnimg.cn/519063363a2e47839286b0bf63c38a79.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p><img src="https://img-blog.csdnimg.cn/976c9bc250f344309cd3e86a9e19d29f.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>Attention距离和网络层数的关系。Attention的距离可以等价为Conv中的感受野大小，层数越深，Attention跨越的距离越远，但是在最底层，也有的head可以覆盖到很远的距离。这说明Transformer可以进行Global信息整合。</p>
@@ -542,34 +504,34 @@ RNN、LSTM时序网络，存在一定的问题：
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">wuliwuxin</a>
                 </span>
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/08/15/ViT/">http://example.com/2021/08/15/ViT/</a>
+                    <a href="http://wuliwuxin.github.io/2021/08/15/vit/">http://wuliwuxin.github.io/2021/08/15/vit/</a>
                 </span>
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">wuliwuxin</a>
                     !
                 </span>
             </div>
@@ -578,7 +540,7 @@ RNN、LSTM时序网络，存在一定的问题：
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -682,9 +644,9 @@ RNN、LSTM时序网络，存在一定的问题：
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/08/27/ResNet%E5%92%8CResNeXt/">
+                <a href="/2021/08/27/resnet-he-resnext/">
                     <div class="card-image">
                         
                         
@@ -730,10 +692,10 @@ RNN、LSTM时序网络，存在一定的问题：
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/08/DeepLab/">
+                <a href="/2021/08/08/deeplab/">
                     <div class="card-image">
                         
                         
@@ -791,6 +753,9 @@ RNN、LSTM时序网络，存在一定的问题：
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -811,7 +776,7 @@ RNN、LSTM时序网络，存在一定的问题：
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -914,7 +879,7 @@ RNN、LSTM时序网络，存在一定的问题：
         display: none;
         
         font-size: 15px;
-        color: #42b983;
+        color: #eef9f4;
     }
 
     
@@ -937,7 +902,7 @@ RNN、LSTM时序网络，存在一定的问题：
                    id="503838841"
                    fixed='true'
                    autoplay='false'
-                   theme='#42b983'
+                   theme='#eef9f4'
                    loop='all'
                    order='random'
                    preload='auto'
@@ -960,7 +925,7 @@ RNN、LSTM时序网络，存在一定的问题：
             
                 <span id="year">2019-2022</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">wuliwuxin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -971,13 +936,13 @@ RNN、LSTM时序网络，存在一定的问题：
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -989,13 +954,13 @@ RNN、LSTM时序网络，存在一定的问题：
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/wuliwuxin" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:wu1351658806@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1005,7 +970,7 @@ RNN、LSTM时序网络，存在一定的问题：
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1351658806" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1351658806" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1030,8 +995,8 @@ RNN、LSTM时序网络，存在一定的问题：
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>

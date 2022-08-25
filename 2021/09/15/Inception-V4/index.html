@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Inception-V4, Hexo">
+    <meta name="keywords" content="Inception-V4, W&amp;X">
     <meta name="description" content="带你读论文系列之计算机视觉–Inception V4
  一直在路上,不是在奔跑,就是在漫步。
 前言论文：Inception-v4, Inception-ResNet and the Impact of Residual Connection">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Inception-V4 | Hexo</title>
+    <title>Inception-V4 | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -54,7 +54,10 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="W&X" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -66,7 +69,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">W&amp;X</span>
                 </a>
             </div>
             
@@ -80,7 +83,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -91,7 +94,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -102,7 +105,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -113,7 +116,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -124,36 +127,14 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>Contact</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>Friends</span>
+      <span>关于</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
   <li>
@@ -170,7 +151,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">W&amp;X</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -186,7 +167,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -197,7 +178,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -208,7 +189,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -219,7 +200,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -230,29 +211,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			Contact
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			Friends
+			关于
 		</a>
           
         </li>
@@ -260,7 +219,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="hhttps://github.com/wuliwuxin" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -317,7 +276,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="hhttps://github.com/wuliwuxin" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -389,7 +348,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2021-09-15
                 </div>
                 
@@ -405,6 +364,9 @@
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
         
 
         
@@ -424,7 +386,7 @@
 <li>使用三个残差和一个Inception-v4的集合，在ImageNet classification (CLS)挑战的测试集上实现3.08%的top-5 错误。</li>
 </ol>
 <p><strong>残差Inception网络在没有残差连接的情况下比同样的Inception网络表现出色。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/">回顾Res Net</a></p>
+<p><a href="https://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/">回顾Res Net</a></p>
 <p>主要思想就是将residual和inception结构相结合，以获得residual带来的好处。</p>
 <h2 id="论文详情"><a href="#论文详情" class="headerlink" title="论文详情"></a>论文详情</h2><p>由于Inception网络往往非常深，因此用残差连接替换Inception架构的过滤器级联阶段。</p>
 <p><strong>ResNet网络的亮点</strong>：</p>
@@ -434,9 +396,9 @@
 <li>使用Batch Normalization加速训练（丢弃Dropput）；</li>
 </ul>
 <p><strong>因此Inception获得残差方法的所有好处，同时保持其计算效率。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://wuliwuxin.github.io/2021/07/14/googlenet/">带你读论文系列之计算机视觉–GoogLeNet</a></p>
-<p><a target="_blank" rel="noopener" href="https://wuliwuxin.github.io/2021/09/12/inception-v2-bn-inception/">带你读论文系列之计算机视觉–Inception v2&#x2F;BN-Inception</a></p>
-<p><a target="_blank" rel="noopener" href="https://wuliwuxin.github.io/2021/09/13/googlenet-v3/">带你读论文系列之计算机视觉–GoogLeNet V3</a></p>
+<p><a href="https://wuliwuxin.github.io/2021/07/14/googlenet/">带你读论文系列之计算机视觉–GoogLeNet</a></p>
+<p><a href="https://wuliwuxin.github.io/2021/09/12/inception-v2-bn-inception/">带你读论文系列之计算机视觉–Inception v2/BN-Inception</a></p>
+<p><a href="https://wuliwuxin.github.io/2021/09/13/googlenet-v3/">带你读论文系列之计算机视觉–GoogLeNet V3</a></p>
 <p>模型的参数和计算复杂性束缚了Inception V3 的性能。而Inception V4它具有比Inception V3更统一的简化架构和更多的Inception模块。</p>
 <p>Inception V4和Inception-ResNet V2的表现相似，超过了最先进的单帧性能ImageNet验证集。</p>
 <p><img src="https://img-blog.csdnimg.cn/8c352b66ae574ea6997a32418089f249.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_14,color_FFFFFF,t_70,g_se,x_16"></p>
@@ -497,9 +459,9 @@
 <p><img src="https://img-blog.csdnimg.cn/ff3548b233dc467cbc153aefdb1ef8d2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
 <p>可以看出Inception-V4和Inception-ResNet-V2的差别并不大，但是都比Inception-V3和Inception-ResNet-V1都好很多。</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
-<li><strong>Inception-ResNet-v1</strong>：一个混合的Inception版本</li>
-<li><strong>Inception-ResNet-v2</strong>：一个成本较高的混合Inception版本，其识别能力显著提高。</li>
-<li><strong>Inception-V4</strong>：纯粹的Inception变体，无残余连接，其识别能力与Inception-ResNet-v2 大致相同。</li>
+<li> <strong>Inception-ResNet-v1</strong>：一个混合的Inception版本</li>
+<li> <strong>Inception-ResNet-v2</strong>：一个成本较高的混合Inception版本，其识别能力显著提高。</li>
+<li> <strong>Inception-V4</strong>：纯粹的Inception变体，无残余连接，其识别能力与Inception-ResNet-v2 大致相同。</li>
 </ol>
 <p>主要研究了如何用residual learning 来提升inception的训练速度（紧扣主题，residual learning 只能加快训练，对精度提升没什么用）。此外，我们最新的模型（有和没有残差连接）优于我们以前的所有网络，仅因为模型尺寸的增加。</p>
 <p><img src="https://img-blog.csdnimg.cn/634f90ba54414607b8c292b48ab3df77.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
@@ -515,34 +477,34 @@
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">wuliwuxin</a>
                 </span>
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/15/Inception-V4/">http://example.com/2021/09/15/Inception-V4/</a>
+                    <a href="http://wuliwuxin.github.io/2021/09/15/inception-v4/">http://wuliwuxin.github.io/2021/09/15/inception-v4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">wuliwuxin</a>
                     !
                 </span>
             </div>
@@ -551,7 +513,7 @@
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -651,9 +613,9 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/17/DenseNet/">
+                <a href="/2021/09/17/densenet/">
                     <div class="card-image">
                         
                         
@@ -699,10 +661,10 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/13/GoogLeNet%20V3/">
+                <a href="/2021/09/13/googlenet-v3/">
                     <div class="card-image">
                         
                         
@@ -756,6 +718,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -776,7 +741,7 @@
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -879,7 +844,7 @@
         display: none;
         
         font-size: 15px;
-        color: #42b983;
+        color: #eef9f4;
     }
 
     
@@ -902,7 +867,7 @@
                    id="503838841"
                    fixed='true'
                    autoplay='false'
-                   theme='#42b983'
+                   theme='#eef9f4'
                    loop='all'
                    order='random'
                    preload='auto'
@@ -925,7 +890,7 @@
             
                 <span id="year">2019-2022</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">wuliwuxin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -936,13 +901,13 @@
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -954,13 +919,13 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/wuliwuxin" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:wu1351658806@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -970,7 +935,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1351658806" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1351658806" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -995,8 +960,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>

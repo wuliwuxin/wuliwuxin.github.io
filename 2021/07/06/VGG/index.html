@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="VGG, Hexo">
+    <meta name="keywords" content="VGG, W&amp;X">
     <meta name="description" content="文章主要讨论深度。为此，我们固定了架构的其他参数，并通过添加更多的卷积层来稳步增加网络的深度。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>VGG | Hexo</title>
+    <title>VGG | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -52,7 +52,10 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="W&X" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -64,7 +67,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">W&amp;X</span>
                 </a>
             </div>
             
@@ -78,7 +81,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -89,7 +92,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -100,7 +103,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -111,7 +114,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -122,36 +125,14 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>Contact</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>Friends</span>
+      <span>关于</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
   <li>
@@ -168,7 +149,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">W&amp;X</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -184,7 +165,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -195,7 +176,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -206,7 +187,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -217,7 +198,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -228,29 +209,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			Contact
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			Friends
+			关于
 		</a>
           
         </li>
@@ -258,7 +217,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="hhttps://github.com/wuliwuxin" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -315,7 +274,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="hhttps://github.com/wuliwuxin" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -387,7 +346,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2021-07-06
                 </div>
                 
@@ -404,6 +363,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
@@ -411,7 +373,7 @@
             <div id="articleContent">
                 <h1 id="带你读论文系列之计算机视觉–VGG"><a href="#带你读论文系列之计算机视觉–VGG" class="headerlink" title="带你读论文系列之计算机视觉–VGG"></a>带你读论文系列之计算机视觉–VGG</h1><h1 id="1-卷积和池化"><a href="#1-卷积和池化" class="headerlink" title="1 卷积和池化"></a>1 卷积和池化</h1><h2 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h2><p><strong>卷积只改变图片的深度</strong>（深度与卷积核个数相同），不改变图片的深度和高度（padding方式为SAME，即补零）</p>
 <p><strong>卷积核的作用：</strong><br>input image –&gt; convolution kernel –&gt; Feature map<br>图像处理时。给定输入图像，输入突袭那个中一个小区域中像素加权平均后成为输出图像中的</p>
-<p>每一个对应像素。即最后feature map中的一个像素值<br>经过卷积核后图片大小计算公式：<br><strong>out_size&#x3D;（in_size-F_size+2P）&#x2F;S+1</strong><br>其中：F_size为卷积核大小；P为padding的大小；S为stride步长</p>
+<p>每一个对应像素。即最后feature map中的一个像素值<br>经过卷积核后图片大小计算公式：<br><strong>out_size=（in_size-F_size+2P）/S+1</strong><br>其中：F_size为卷积核大小；P为padding的大小；S为stride步长</p>
 <h2 id="池化"><a href="#池化" class="headerlink" title="池化"></a>池化</h2><p><strong>池化只改变图片的深度核高度</strong>，不改变图片深度</p>
 <p><strong>池化作用：</strong><br>图片中的相邻像素倾向具有相似的值，因此通常卷积层相邻的输出像素也具有相似的值，这意味着卷积层输出中包含的大部分信息都是冗余的。</p>
 <p>池化：通过减小输入的大小来降低输出的数量</p>
@@ -436,23 +398,23 @@
 </ol>
 <p><strong>好处</strong>：可以减少参数量</p>
 <p>假设输入特征矩阵和输出特征矩阵的深度（channel）为C</p>
-<p>使用一个7<em>7卷积核所需参数：<br>7</em>7<em>C</em>C&#x3D;49<em>C</em>C</p>
-<p>使用三个3<em>3卷积核所需参数：<br>3</em>3<em>C</em>C+3<em>3</em>C<em>C+3</em>3<em>C</em>C&#x3D;27<em>C</em>C</p>
-<p>3个3<em>3比1个7</em>7节省(49-27)&#x2F;27&#x3D;81%参数。</p>
+<p>使用一个7<em>7卷积核所需参数：<br>7</em>7<em>C</em>C=49<em>C</em>C</p>
+<p>使用三个3<em>3卷积核所需参数：<br>3</em>3<em>C</em>C+3<em>3</em>C<em>C+3</em>3<em>C</em>C=27<em>C</em>C</p>
+<p>3个3<em>3比1个7</em>7节省(49-27)/27=81%参数。</p>
 <h2 id="感受野的计算"><a href="#感受野的计算" class="headerlink" title="感受野的计算"></a>感受野的计算</h2><p><strong>感受野（receptive fields）</strong>：输出feature map上的一个单元对应的输入层的区域大小。</p>
-<p>计算公式：F(i) &#x3D;  [F(i+1)-1]*stride+ksize</p>
+<p>计算公式：F(i) =  [F(i+1)-1]*stride+ksize</p>
 <p>其中：F(i)为第i层的感受野；stride为 第i的步距；ksize为卷积核的大小。</p>
-<p>例如：最后一层输出为一个单元：F &#x3D; 1</p>
-<p>conv3：F &#x3D; (1-1)*1 + 3 &#x3D;3</p>
-<p>conv3：F &#x3D; (3-1)*1 +3 &#x3D;5</p>
+<p>例如：最后一层输出为一个单元：F = 1</p>
+<p>conv3：F = (1-1)*1 + 3 =3</p>
+<p>conv3：F = (3-1)*1 +3 =5</p>
 <p>此时为两个3<em>3的卷积核代替一个5</em>5的卷积核。</p>
-<p>conv3：F &#x3D; (5-1)*1 +3 &#x3D;7</p>
+<p>conv3：F = (5-1)*1 +3 =7</p>
 <p>此时为三个3<em>3的卷积核代替一个7</em>7的卷积核。</p>
 <p><img src="https://img-blog.csdnimg.cn/20210706123502806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt="网络结构"></p>
 <h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><ol>
 <li>固定大小224*224RGB输入；</li>
 <li>唯一预处理是从每个像素中减去在训练集上计算的平均RGB值；</li>
-<li>用具有非常小的感受野的过滤器：3×3（这是捕捉左&#x2F;右、上&#x2F;下、中心概念的最小尺寸）；</li>
+<li>用具有非常小的感受野的过滤器：3×3（这是捕捉左/右、上/下、中心概念的最小尺寸）；</li>
 <li>使用了1×1卷积滤波器，可以将其视为输入通道的线性变换（后跟非线性）；</li>
 <li>卷积步长固定为1像素；conv的空间填充，即卷积后保留空间分辨率，即填充为1像素，3×3卷积；</li>
 <li>空间池化是由五个最大池化层，最大池化在一个2×2像素的窗口上执行，步幅为2；</li>
@@ -462,10 +424,10 @@
 <p><img src="https://img-blog.csdnimg.cn/20210706123615955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>卷积层参数表示为“*conv(感受野大小)-(通道数)*”。为简洁，未显示ReLU激活函数.</p>
 <p>例如：conv3-64表示64个大小3*3的卷积核</p>
-<p>conv3：卷积核大小3*3；stride&#x3D;1；padding&#x3D;1</p>
-<p>maxpool：池化尺寸2*2；stride&#x3D;2</p>
+<p>conv3：卷积核大小3*3；stride=1；padding=1</p>
+<p>maxpool：池化尺寸2*2；stride=2</p>
 <p>只在深度上有所不同：从网络A的11个权重层（8个conv.和3个FC层）到网络E的19个权重层（16个conv.和3个FC层）。</p>
-<p>网络D：conv3+FC&#x3D;2+2+3+3+3+3&#x3D;16</p>
+<p>网络D：conv3+FC=2+2+3+3+3+3=16</p>
 <p><strong>maxpool和softmax不计入层数</strong></p>
 <p>max pool和全连接层之间有一个flatten函数，把多维像素展平成一维像素，便于全连接层进行处理。</p>
 <p>前两个全连接层：ReLU和Dropout</p>
@@ -476,9 +438,9 @@
 <p><strong>网络A</strong>足够浅，可以用<strong>随机初始化</strong>进行训练。然后，在训练更深的架构时，我们用网络A的层初始化前四个卷积层和最后三个全连接层（中间层随机初始化）。</p>
 <h2 id="图像处理"><a href="#图像处理" class="headerlink" title="图像处理"></a>图像处理</h2><p>为了获得固定尺寸的<strong>224×224ConvNet 输入图像</strong>，它们被随机地从重新缩放的训练图像中裁剪出来（每个SGD迭代的图像裁剪一次）。为了进一步增加训练集，<strong>将图像随机水平翻转和随机RGB颜色移动。</strong></p>
 <p>S为resize后最小边，并且裁剪大小224*224。</p>
-<p>虽然裁剪尺寸固定为224×224，但原则上S可以取不低于224的任何值：对于S&#x3D;224，裁剪将捕获整个图像的统计数据，完全覆盖训练图像的最小一面；对于S远大于224，裁剪将对应于图像的一小部分，包含一个小物体或一个物体部分。</p>
+<p>虽然裁剪尺寸固定为224×224，但原则上S可以取不低于224的任何值：对于S=224，裁剪将捕获整个图像的统计数据，完全覆盖训练图像的最小一面；对于S远大于224，裁剪将对应于图像的一小部分，包含一个小物体或一个物体部分。</p>
 <p><strong>两种方法来设置训练尺度S。</strong></p>
-<p><strong>第一种是固定S</strong>，对应于单尺度训练。两个固定尺寸：S&#x3D;256和S&#x3D;384；首先用S &#x3D;256来训练网络。为了加快S&#x3D;384 网络的训练，我们用S&#x3D;256的权重进行初始化，并使用较小的初始学习率10的-3次方。</p>
+<p><strong>第一种是固定S</strong>，对应于单尺度训练。两个固定尺寸：S=256和S=384；首先用S =256来训练网络。为了加快S=384 网络的训练，我们用S=256的权重进行初始化，并使用较小的初始学习率10的-3次方。</p>
 <p><strong>第二种设置S</strong>多尺度训练的方法其中每个训练图像通过从一定<strong>范围[256，512]中随机采样</strong>S来单独重新缩放。因为图像中的对象可能具有不同的大小。</p>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p><strong>1. 等比例缩放至Q，Q可以≠S<br>2. 稠密测试法：FC变卷积<br>3. 类分数图平均池化<br>4. 水平镜像</strong></p>
 <p>在测试时，给定一个训练好的ConvNet和一个输入图像，按以下方式分类。首先，被重新<strong>缩放到一个预先定义的最小图像边</strong>，用Q表示（我们也把它称为测试尺度）。我们注意到<strong>Q不一定等于训练规模S</strong>。然后，网络以密集地应用于重新缩放的测试图像。即全连接层首先转换为卷积层（第一个FC层转换为7×7卷积层，最后两个FC层转换为1×1卷积层）。然后将所得的全卷积网络应用于整个（未裁剪的）图像。结果是一个类分数图，其通道数等于类数，空间分辨率可变，取决于输入图像的大小。最后，为了获得图像的类分数的固定大小向量，<strong>对类分数图进行平均池化</strong>。还通过图像的水平翻转来扩充测试集。对<strong>原始图像和翻转图像</strong>的soft-max类后验求平均以获得图像的最终分数。</p>
@@ -487,10 +449,10 @@
 <p>其次，我们观察到<strong>分类误差随着ConvNet深度的增加而降低</strong>：从A中的11层到E中的19层。</p>
 <p>值得注意的是，尽管深度相同，配置C（包含三个1×1卷积层）的性能比配置D在整个网络中使用3×3conv layers差<strong>（D优于C）</strong>。上图也表明<strong>非线性确实有帮助（C比B 好）</strong>，但使用conv捕获空间上下文也很重要。<strong>当深度达到19层时，我们架构的错误率会饱和，但更深的模型可能对更大的数据集有益。证实了具有小过滤器的深网优于具有较大过滤器的浅网。</strong></p>
 <p><img src="https://img-blog.csdnimg.cn/20210706124109863.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p>测试时的尺度抖动导致更好的性能。最深的配置（D和E）表现最好，并且尺度抖动比固定最小边S的训练更好。在验证集上的最佳单网络性能是24.8%&#x2F;7.5%top-1&#x2F;top-5错误（在上表中以粗体突出显示）。在测试集上，配置E 实现了7.3%的top-5错误。</p>
+<p>测试时的尺度抖动导致更好的性能。最深的配置（D和E）表现最好，并且尺度抖动比固定最小边S的训练更好。在验证集上的最佳单网络性能是24.8%/7.5%top-1/top-5错误（在上表中以粗体突出显示）。在测试集上，配置E 实现了7.3%的top-5错误。</p>
 <p><img src="https://img-blog.csdnimg.cn/20210706124128761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p><img src="https://img-blog.csdnimg.cn/20210706124132575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
-<p>上表可以看出，使用<strong>multi-crop比dense评估略好</strong>，但它们的组合优于单一方式（multi-crop与dense互为补充）。multi-crop：150张（5<em>5</em>2*3&#x3D;150）。</p>
+<p>上表可以看出，使用<strong>multi-crop比dense评估略好</strong>，但它们的组合优于单一方式（multi-crop与dense互为补充）。multi-crop：150张（5<em>5</em>2*3=150）。</p>
 <p><img src="https://img-blog.csdnimg.cn/20210706124159826.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>表明深的ConvNets显着优于前一代模型。</p>
 <h2 id="发展分析"><a href="#发展分析" class="headerlink" title="发展分析"></a>发展分析</h2><p><strong>瓶颈</strong></p>
@@ -510,7 +472,7 @@
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -520,23 +482,23 @@
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/06/VGG/">http://example.com/2021/07/06/VGG/</a>
+                    <a href="http://wuliwuxin.github.io/2021/07/06/vgg/">http://wuliwuxin.github.io/2021/07/06/vgg/</a>
                 </span>
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
+                    许可协议。转载请注明来源
                     <a href="/about" target="_blank">wulixin</a>
                     !
                 </span>
@@ -546,7 +508,7 @@
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -646,9 +608,9 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/14/GoogLeNet/">
+                <a href="/2021/07/14/googlenet/">
                     <div class="card-image">
                         
                         
@@ -694,10 +656,10 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/29/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88%E5%A4%87%E8%80%83%E7%BB%8F%E9%AA%8C/">
+                <a href="/2021/06/29/xin-xi-xi-tong-xiang-mu-guan-li-shi-bei-kao-jing-yan/">
                     <div class="card-image">
                         
                         
@@ -751,6 +713,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -771,7 +736,7 @@
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -874,7 +839,7 @@
         display: none;
         
         font-size: 15px;
-        color: #42b983;
+        color: #eef9f4;
     }
 
     
@@ -897,7 +862,7 @@
                    id="503838841"
                    fixed='true'
                    autoplay='false'
-                   theme='#42b983'
+                   theme='#eef9f4'
                    loop='all'
                    order='random'
                    preload='auto'
@@ -920,7 +885,7 @@
             
                 <span id="year">2019-2022</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">wuliwuxin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -931,13 +896,13 @@
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -949,13 +914,13 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/wuliwuxin" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:wu1351658806@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -965,7 +930,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1351658806" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1351658806" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -990,8 +955,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>

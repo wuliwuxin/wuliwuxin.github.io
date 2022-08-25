@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DenseNet, Hexo">
+    <meta name="keywords" content="DenseNet, W&amp;X">
     <meta name="description" content="带你读论文系列之计算机视觉–DenseNet
 情若能自控，我定会按捺住我那颗吃货的心。
 闲谈今天听了师兄申请博士的经验。第一是感觉历程很心累，压力也很大；二是成功后很喜悦；三是成果很重要，其次是关系，努力和运气。漫长的时间等待与艰辛的的经历">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DenseNet | Hexo</title>
+    <title>DenseNet | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -54,7 +54,10 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="W&X" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -66,7 +69,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">W&amp;X</span>
                 </a>
             </div>
             
@@ -80,7 +83,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -91,7 +94,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -102,7 +105,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -113,7 +116,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -124,36 +127,14 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>Contact</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>Friends</span>
+      <span>关于</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
   <li>
@@ -170,7 +151,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">W&amp;X</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -186,7 +167,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -197,7 +178,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -208,7 +189,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -219,7 +200,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -230,29 +211,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			Contact
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			Friends
+			关于
 		</a>
           
         </li>
@@ -260,7 +219,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="hhttps://github.com/wuliwuxin" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -317,7 +276,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="hhttps://github.com/wuliwuxin" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -389,7 +348,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2021-09-17
                 </div>
                 
@@ -406,6 +365,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
@@ -417,14 +379,14 @@
 <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><strong>论文</strong>：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1608.06993">Densely Connected Convolutional Networks</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/liuzhuang13/DenseNet"><strong>代码</strong></a></p>
 <p><strong>本文是重新思考认识short path和feature reuse的意义，引入稠密连接思想。</strong></p>
-<p>DenseNet在ResNet的基础上(<a target="_blank" rel="noopener" href="https://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/">回顾ResNet</a>🐂，ResNet 经典！！！)，进一步扩展网络连接，对于网络的任意一层，该层前面所有层的feature map都是这层的输入，该层的feature map是后面所有层的输入。</p>
+<p>DenseNet在ResNet的基础上(<a href="https://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/">回顾ResNet</a>🐂，ResNet 经典！！！)，进一步扩展网络连接，对于网络的任意一层，该层前面所有层的feature map都是这层的输入，该层的feature map是后面所有层的输入。</p>
 <p><strong>摘要</strong>：</p>
 <ol>
 <li><p>残差连接使CNN更深、更强、更高效；</p>
 </li>
 <li><p>本文提出DenseNet，特点是前层作为后面所有层的连接；</p>
 </li>
-<li><p>通常L层有L个连接，DenseNet有L*（L+1）&#x2F;2 ；</p>
+<li><p>通常L层有L个连接，DenseNet有L*（L+1）/2 ；</p>
 </li>
 <li><p>靠前的层作为靠后所有层的输入；</p>
 </li>
@@ -433,7 +395,7 @@
 <li><p>在4个数据集上进行验证，表现SOTA。</p>
 </li>
 </ol>
-<p>如果将接近输入和输出的层之间短接，卷积神经网络可以更深、精度更高且高效。最后提出了密集卷积网络(DenseNet)，它的每一层在前向反馈模式中都和后面的层有连接，与L层传统卷积神经网络有L个连接不同，DenseNet中每个层都和其之后的层有连接，因此L层的DenseNet有 L(L+1)&#x2F;2 个连接关系。</p>
+<p>如果将接近输入和输出的层之间短接，卷积神经网络可以更深、精度更高且高效。最后提出了密集卷积网络(DenseNet)，它的每一层在前向反馈模式中都和后面的层有连接，与L层传统卷积神经网络有L个连接不同，DenseNet中每个层都和其之后的层有连接，因此L层的DenseNet有 L(L+1)/2 个连接关系。</p>
 <p>在四个目标识别的基准测试集（CIFAR-10、CIFAR-100、SVHN 和 ImageNet）上评估了我们的结构，可以发现DenseNet在减少计算量的同时取得了更好的表现。</p>
 <h2 id="论文详情"><a href="#论文详情" class="headerlink" title="论文详情"></a>论文详情</h2><p>稠密连接（Dense connectivity）</p>
 <p><img src="https://img-blog.csdnimg.cn/189e3d35498f409d8f4c4e5e94557bca.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
@@ -479,30 +441,30 @@
 </ul>
 <ol>
 <li>若每层计算后得到k个特征图，那么第l 层会有k0+k*(l-1)个特征<br>图，因此k不能太大；</li>
-<li>DenseNet的每层就非常的窄，非常的薄，例如k&#x3D;12；</li>
+<li>DenseNet的每层就非常的窄，非常的薄，例如k=12；</li>
 <li>这里的k就是超参数Growth Rat；</li>
 <li>k越小，结果越好；</li>
 <li>从state的角度讲解DenseNet；</li>
 </ol>
 <p>这篇文章又一个比较清晰的bottleneck解释。</p>
 <p>每个3×3卷积之前引入1×1卷积作为bottleneck，以减少输入特征图的数量，从而提高计算效率。</p>
-<p>为了进一步提高模型的紧凑性，我们可以减少过渡层的特征图的数量。如果一个密集块包含m个特征图，我们让下面的过渡层生成bθmc输出特征图，其中0&lt;θ≤1称为压缩因子。当θ&#x3D;1时，跨过渡层的特征图数量保持不变。我们将θ&lt;1的DenseNet称为DenseNet-C，我们在实验中设置θ&#x3D;0.5。当同时使用θ&lt;1的Bottleneck和过渡层时，我们将我们的模型称为DenseNet-BC。</p>
-<p>在除ImageNet之外的所有数据集上，我们实验中使用的DenseNet具有三个密集块，每个块都有相同的层数。在进入第一个密集块之前，对输入图像执行具有16 个（或DenseNet-BC增长率的两倍）输出通道的卷积。对于内核大小为3×3的卷积层，输入的每一侧都填充了一个像素以保持特征图大小固定。我们使用1×1 卷积，然后是2×2平均池化作为两个连续密集块之间的过渡层。在最后一个密集块的末尾，进行全局平均池化，然后附加一个softmax 分类器。三个密集块中的特征图大小分别为32×32、16×16和8×8。我们用配置{L&#x3D;40,k&#x3D;12}、{L&#x3D;100,k &#x3D;12}和{L&#x3D;100,k&#x3D;24}对基本的DenseNet结构进行实验。对于DenseNet-BC，评估具有配置{L&#x3D;100,k&#x3D;12},{L&#x3D;250,k&#x3D;24}和{L&#x3D;190,k&#x3D;40}的网络。</p>
+<p>为了进一步提高模型的紧凑性，我们可以减少过渡层的特征图的数量。如果一个密集块包含m个特征图，我们让下面的过渡层生成bθmc输出特征图，其中0&lt;θ≤1称为压缩因子。当θ=1时，跨过渡层的特征图数量保持不变。我们将θ&lt;1的DenseNet称为DenseNet-C，我们在实验中设置θ=0.5。当同时使用θ&lt;1的Bottleneck和过渡层时，我们将我们的模型称为DenseNet-BC。</p>
+<p>在除ImageNet之外的所有数据集上，我们实验中使用的DenseNet具有三个密集块，每个块都有相同的层数。在进入第一个密集块之前，对输入图像执行具有16 个（或DenseNet-BC增长率的两倍）输出通道的卷积。对于内核大小为3×3的卷积层，输入的每一侧都填充了一个像素以保持特征图大小固定。我们使用1×1 卷积，然后是2×2平均池化作为两个连续密集块之间的过渡层。在最后一个密集块的末尾，进行全局平均池化，然后附加一个softmax 分类器。三个密集块中的特征图大小分别为32×32、16×16和8×8。我们用配置{L=40,k=12}、{L=100,k =12}和{L=100,k=24}对基本的DenseNet结构进行实验。对于DenseNet-BC，评估具有配置{L=100,k=12},{L=250,k=24}和{L=190,k=40}的网络。</p>
 <p>在我们在ImageNet上的实验中，我们在224×224 输入图像上使用具有4个密集块的DenseNet-BC结构。初始卷积层包括2k个大小为7×7、步幅为2的卷积；所有其他层中特征图的数量也来自设置k。我们在ImageNet上使用的确切网络配置如下图所示：<br><img src="https://img-blog.csdnimg.cn/518c202e9b7a40a7bd42d7711e0144ff.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>DenseNet-121是指网络总共有121层：(6+12+24+16)*2 + 3(transition layer) + 1(7x7 Conv) + 1(Classification layer) &#x3D; 121。</p>
+<p>DenseNet-121是指网络总共有121层：(6+12+24+16)*2 + 3(transition layer) + 1(7x7 Conv) + 1(Classification layer) = 121。</p>
 <p>过渡层；<br>1×1卷积，然后是2×2平均池化。</p>
 <h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><p><img src="https://img-blog.csdnimg.cn/22669fc3916a4a8d85cd66a9820c3da9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
 <p>L表示网络深度，k为growth rate。蓝色字体表示最优结果，+表示对原数据集进行data augmentation。DenseNet相比ResNet取得更低的错误率，且参数更少。</p>
 <p><strong>讨论DenseNet的优点</strong><br><img src="https://img-blog.csdnimg.cn/c93aad26941d4d568f7870b729bf34d9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"><br><img src="https://img-blog.csdnimg.cn/efaa94bbd3ff4a87b5f5347a7e69fc6c.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16"></p>
 <p>结论：加B，加C更省参数。</p>
 <p><img src="https://img-blog.csdnimg.cn/a6568b3368f2497b8b5f39e2ef3fa06b.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>同样精度时，densenet-bc仅用1&#x2F;3参数。</p>
+<p>同样精度时，densenet-bc仅用1/3参数。</p>
 <p><img src="https://img-blog.csdnimg.cn/2e3fc616fe24446dbace6e5145ca08d5.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
 <p>同样精度，相差十几倍的参数量。</p>
-<p>将输入进行连接的直接结果是，DenseNets每一层学到的特征图都可以被以后的任一层利用。该方式有助于网络特征的重复利用，也因此得到了更简化的模型。DenseNet-BC仅仅用了大概ResNets 1&#x2F;3的参数量就获得了相近的准确率</p>
+<p>将输入进行连接的直接结果是，DenseNets每一层学到的特征图都可以被以后的任一层利用。该方式有助于网络特征的重复利用，也因此得到了更简化的模型。DenseNet-BC仅仅用了大概ResNets 1/3的参数量就获得了相近的准确率</p>
 <p>三个dense block的热度图如下图所示：</p>
 <p><img src="https://img-blog.csdnimg.cn/7a8248450c7843e9a6c1cc7b8598ff1b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-<p>在一个训练有素的密集网络中，卷积层的平均绝对滤波权重。像素(s)的颜色编码了连接卷积层和&#96;密集区的权重的平均水平（按输入特征图的数量归一化）。由黑色矩形突出的三列对应于两个过渡层和分类层。第一行是连接到密集块输入层的权重。</p>
+<p>在一个训练有素的密集网络中，卷积层的平均绝对滤波权重。像素(s)的颜色编码了连接卷积层和`密集区的权重的平均水平（按输入特征图的数量归一化）。由黑色矩形突出的三列对应于两个过渡层和分类层。第一行是连接到密集块输入层的权重。</p>
 <p><strong>可以得出以下结论</strong></p>
 <ol>
 <li><p>在同一个block中，所有层都将它的权重传递给其他层作为输入。这表明早期层提取的特征可以被同一个dense block下深层所利用；</p>
@@ -530,34 +492,34 @@
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">wuliwuxin</a>
                 </span>
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/17/DenseNet/">http://example.com/2021/09/17/DenseNet/</a>
+                    <a href="http://wuliwuxin.github.io/2021/09/17/densenet/">http://wuliwuxin.github.io/2021/09/17/densenet/</a>
                 </span>
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">wuliwuxin</a>
                     !
                 </span>
             </div>
@@ -566,7 +528,7 @@
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -666,9 +628,9 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/21/SENet/">
+                <a href="/2021/09/21/senet/">
                     <div class="card-image">
                         
                         
@@ -714,10 +676,10 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/15/Inception-V4/">
+                <a href="/2021/09/15/inception-v4/">
                     <div class="card-image">
                         
                         
@@ -771,6 +733,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -791,7 +756,7 @@
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -894,7 +859,7 @@
         display: none;
         
         font-size: 15px;
-        color: #42b983;
+        color: #eef9f4;
     }
 
     
@@ -917,7 +882,7 @@
                    id="503838841"
                    fixed='true'
                    autoplay='false'
-                   theme='#42b983'
+                   theme='#eef9f4'
                    loop='all'
                    order='random'
                    preload='auto'
@@ -940,7 +905,7 @@
             
                 <span id="year">2019-2022</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">wuliwuxin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -951,13 +916,13 @@
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -969,13 +934,13 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/wuliwuxin" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:wu1351658806@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -985,7 +950,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1351658806" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1351658806" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1010,8 +975,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>

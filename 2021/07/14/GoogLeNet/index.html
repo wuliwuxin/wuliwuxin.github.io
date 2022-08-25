@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="GoogLeNet, Hexo">
+    <meta name="keywords" content="GoogLeNet, W&amp;X">
     <meta name="description" content="带你读论文系列之计算机视觉–GoogLeNet
 0 闲谈玩起手机，看着电视，所有的计划都被抛之脑后，此时的快乐是深夜不舍睡下的愧疚。我总是想着明天怎么，而有时不知珍惜当下；总想着那些离开的朋友，而对现在不满；总想着如果这样，而不是我做了会如">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>GoogLeNet | Hexo</title>
+    <title>GoogLeNet | W&amp;X</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -53,7 +53,10 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="W&X" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -65,7 +68,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">W&amp;X</span>
                 </a>
             </div>
             
@@ -79,7 +82,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -90,7 +93,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -101,7 +104,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -112,7 +115,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -123,36 +126,14 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>Contact</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>Friends</span>
+      <span>关于</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
   <li>
@@ -169,7 +150,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">W&amp;X</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -185,7 +166,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -196,7 +177,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -207,7 +188,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -218,7 +199,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -229,29 +210,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			Contact
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			Friends
+			关于
 		</a>
           
         </li>
@@ -259,7 +218,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="hhttps://github.com/wuliwuxin" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -316,7 +275,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="hhttps://github.com/wuliwuxin" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -388,7 +347,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2021-07-14
                 </div>
                 
@@ -404,6 +363,9 @@
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
         
 
         
@@ -456,7 +418,7 @@
 </ol>
 <p><strong>Inception模块中1*1卷积作用：</strong></p>
 <ul>
-<li><strong>降维</strong>；</li>
+<li> <strong>降维</strong>；</li>
 <li><strong>减少参数量和运算量</strong>；</li>
 <li><strong>增加模型深度提高非线性表达能力</strong>。</li>
 </ul>
@@ -503,8 +465,8 @@
 <p>3<em>3，5</em>5卷积层之前应于1*1卷积降维。</p>
 <p><strong>1*1卷积作用：</strong></p>
 <ul>
-<li>升维&#x2F;降维 </li>
-<li>减少参数量&#x2F;计算量 </li>
+<li>升维/降维 </li>
+<li>减少参数量/计算量 </li>
 <li>增加非线性，增加模型深度</li>
 </ul>
 <p>在计算要求会增加太多的地方应用降维和投影。然而，嵌入以密集、压缩的形式表示信息，压缩信息更难建模。我们希望在大多数地方保持我们的表示稀疏，并且仅在信号必须集体聚合时才压缩信号。也就是说，在3×3和5×5卷积之前，使用1×1卷积来计算缩减。</p>
@@ -519,7 +481,7 @@
 <p>计算资源的改进使用允许增加每个阶段的宽度和数量，而不会陷入计算上的困难。另一种方法是创建稍差的、但计算上更便宜的初始架构。我们发现，包括所有的旋钮和杠杆都可以实现计算资源的可控平衡，从而使网络比非Inception 架构的类似性能的网络快2-3倍，然而这需要进行仔细的设计。</p>
 <p><strong>GoogLeNet名字致敬LeNet。</strong></p>
 <p>用了更深更广的Inception网络，其质量稍差，但将其添加到集成中似乎对结果略有改善。<img src="https://img-blog.csdnimg.cn/20210714190200150.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>512&#x3D;192+208+48+64</p>
+<p>512=192+208+48+64</p>
 <p>权重和计算量均匀分配给各层</p>
 <p>所有卷积适用ReLU激活函数</p>
 <p>上表中描述了最成功的特定实例（名为GoogLeNet）。在我们组合的7个模型中，有6个使用了完全相同的拓扑结构（用不同的采样方法训练）。</p>
@@ -534,12 +496,12 @@
 <p>该网络的设计考虑到了计算效率和实用性，可在个人设备上运行，甚至包括那些计算资源有限的设备，特别是在低内存占用方面。<strong>如果只计算有参数的层，网络有22层深度（如果我们也计算池化，则有27层）。</strong>用于构建网络的总层数（独立构建块）约为100，取决于所使用的机器学习基础设施系统。在分类器之前使用平均池，还用了一个额外的线性层。这使得我们可以很容易地对其他标签集的网络进行调整和微调。从全连接层到平均集合层的转变将top-1的准确性提高了大约0.6 %。即使在去除全连接层后，仍要使用dropout的使用。</p>
 <p>对于网络有相对较大的深度，存在一个问题，即有效方式将梯度传播回所有层。一个有趣的见解是，相对较浅的网络在此任务上的强大性能表明，网络中间的层产生的特征应该具有很强的辨别力。通过添加连接到这些中间层的辅助分类器，我们希望在分类器的较低阶段鼓励区分，增加传播回来的梯度信号，并提供额外的正则化。这些分类器采用较小卷积网络的形式。在训练期间，它们的损失以折扣权重添加到网络的总损失中（辅助分类器的损失权重为0.3）。</p>
 <blockquote>
-<p>注：浅层的辅助分类器后面被证实没太大用处。作者在InceptionV2&#x2F;V3 的论文里去掉了浅层辅助分类器。</p>
+<p>注：浅层的辅助分类器后面被证实没太大用处。作者在InceptionV2/V3 的论文里去掉了浅层辅助分类器。</p>
 </blockquote>
 <p>浅层特征对分类已经有足够的区分性</p>
 <p>在4a和4d模块后面加辅助分类层</p>
 <p>训练时的损失函数：</p>
-<p>L&#x3D;L最后+0.3<em>L辅1+0.3</em>L辅2</p>
+<p>L=L最后+0.3<em>L辅1+0.3</em>L辅2</p>
 <p>测试阶段：去掉辅助分类器</p>
 <p><img src="https://img-blog.csdnimg.cn/2021071419033425.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/20210714190341441.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/20210714190347761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70"></p>
 <p>上图说明如下：</p>
@@ -553,10 +515,10 @@
 <p>结论：训练过程复杂</p>
 <ol>
 <li>会基于训练好的模型，再调整超参，样本大小进行训练；</li>
-<li>最佳的是8%-100%尺⼨，⻓宽⽐是[3&#x2F;4,4&#x2F;3]之间；</li>
+<li>最佳的是8%-100%尺⼨，⻓宽⽐是[3/4,4/3]之间；</li>
 <li>光度畸变可减轻过拟合；</li>
 </ol>
-<p>在比赛后被证明效果很好的方法包括对图像的各种大小块进行采样，大小均匀分布在图像区域的8%和100%之间，其纵横比在3&#x2F;4和4&#x2F;3之间随机选择。此外，我们发现Andrew Howard的光度失真在一定程度上有助于对抗过度拟合。此外，我们开始使用随机插值方法（双线性，面积，最近邻和三次，等概率）调整大小相对较晚并结合其他超参数变化，因此我们无法确定最终结果是否受到它们的积极影响。</p>
+<p>在比赛后被证明效果很好的方法包括对图像的各种大小块进行采样，大小均匀分布在图像区域的8%和100%之间，其纵横比在3/4和4/3之间随机选择。此外，我们发现Andrew Howard的光度失真在一定程度上有助于对抗过度拟合。此外，我们开始使用随机插值方法（双线性，面积，最近邻和三次，等概率）调整大小相对较晚并结合其他超参数变化，因此我们无法确定最终结果是否受到它们的积极影响。</p>
 <p>说不清这些调参和图像增强技巧对最后结果有没有用。</p>
 <h3 id="ILSVRC-2014分类任务"><a href="#ILSVRC-2014分类任务" class="headerlink" title="ILSVRC 2014分类任务"></a>ILSVRC 2014分类任务</h3><ol>
 <li>没有使用额外的数据</li>
@@ -580,34 +542,34 @@
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">wuliwuxin</a>
                 </span>
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/14/GoogLeNet/">http://example.com/2021/07/14/GoogLeNet/</a>
+                    <a href="http://wuliwuxin.github.io/2021/07/14/googlenet/">http://wuliwuxin.github.io/2021/07/14/googlenet/</a>
                 </span>
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">wuliwuxin</a>
                     !
                 </span>
             </div>
@@ -616,7 +578,7 @@
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -716,9 +678,9 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%85%A5%E9%97%A8/">
+                <a href="/2021/07/17/ji-suan-ji-shi-jue-ru-men/">
                     <div class="card-image">
                         
                         
@@ -764,10 +726,10 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/06/VGG/">
+                <a href="/2021/07/06/vgg/">
                     <div class="card-image">
                         
                         
@@ -821,6 +783,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -841,7 +806,7 @@
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -944,7 +909,7 @@
         display: none;
         
         font-size: 15px;
-        color: #42b983;
+        color: #eef9f4;
     }
 
     
@@ -967,7 +932,7 @@
                    id="503838841"
                    fixed='true'
                    autoplay='false'
-                   theme='#42b983'
+                   theme='#eef9f4'
                    loop='all'
                    order='random'
                    preload='auto'
@@ -990,7 +955,7 @@
             
                 <span id="year">2019-2022</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">wuliwuxin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -1001,13 +966,13 @@
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -1019,13 +984,13 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/wuliwuxin" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:wu1351658806@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1035,7 +1000,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1351658806" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1351658806" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1060,8 +1025,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
