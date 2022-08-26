@@ -6,7 +6,7 @@
   <link href="http://wuliwuxin.github.io/atom.xml" rel="self"/>
   
   <link href="http://wuliwuxin.github.io/"/>
-  <updated>2022-08-26T03:00:34.479Z</updated>
+  <updated>2022-08-26T03:25:17.897Z</updated>
   <id>http://wuliwuxin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wuliwuxin.github.io/2022/08/23/pandas-ji-chu-yu-shi-zhan/"/>
     <id>http://wuliwuxin.github.io/2022/08/23/pandas-ji-chu-yu-shi-zhan/</id>
     <published>2022-08-23T06:43:37.000Z</published>
-    <updated>2022-08-26T03:00:34.479Z</updated>
+    <updated>2022-08-26T03:25:17.897Z</updated>
     
     
       
@@ -34,6 +34,12 @@
     
     
     
+    <category term="基础知识" scheme="http://wuliwuxin.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="小样本学习" scheme="http://wuliwuxin.github.io/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="元学习" scheme="http://wuliwuxin.github.io/tags/%E5%85%83%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -92,11 +98,11 @@
   </entry>
   
   <entry>
-    <title>skeet</title>
+    <title>SKNet</title>
     <link href="http://wuliwuxin.github.io/2021/11/12/sknet/"/>
     <id>http://wuliwuxin.github.io/2021/11/12/sknet/</id>
     <published>2021-11-12T13:07:55.000Z</published>
-    <updated>2022-08-26T02:54:40.690Z</updated>
+    <updated>2022-08-26T03:29:16.871Z</updated>
     
     
       
@@ -111,8 +117,12 @@
     
     <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="注意力机制" scheme="http://wuliwuxin.github.io/tags/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/"/>
     
   </entry>
   
@@ -149,7 +159,7 @@
     <link href="http://wuliwuxin.github.io/2021/09/30/xiao-yang-ben-xue-xi-he-yuan-xue-xi-ji-chu-zhi-shi/"/>
     <id>http://wuliwuxin.github.io/2021/09/30/xiao-yang-ben-xue-xi-he-yuan-xue-xi-ji-chu-zhi-shi/</id>
     <published>2021-09-30T15:52:49.000Z</published>
-    <updated>2022-08-26T03:11:39.744Z</updated>
+    <updated>2022-08-26T03:24:01.240Z</updated>
     
     
       
@@ -176,7 +186,7 @@
     <link href="http://wuliwuxin.github.io/2021/09/21/senet/"/>
     <id>http://wuliwuxin.github.io/2021/09/21/senet/</id>
     <published>2021-09-20T16:15:19.000Z</published>
-    <updated>2022-08-26T02:55:59.113Z</updated>
+    <updated>2022-08-26T03:28:07.327Z</updated>
     
     
       
@@ -191,8 +201,12 @@
     
     <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="注意力机制" scheme="http://wuliwuxin.github.io/tags/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/"/>
     
   </entry>
   
@@ -201,7 +215,7 @@
     <link href="http://wuliwuxin.github.io/2021/09/17/densenet/"/>
     <id>http://wuliwuxin.github.io/2021/09/17/densenet/</id>
     <published>2021-09-17T15:36:20.000Z</published>
-    <updated>2021-09-17T15:39:08.651Z</updated>
+    <updated>2022-08-26T03:16:07.300Z</updated>
     
     
     <summary type="html">本文是重新思考认识short path和feature reuse的意义，引入稠密连接思想。</summary>
@@ -210,8 +224,10 @@
     
     <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
@@ -220,17 +236,25 @@
     <link href="http://wuliwuxin.github.io/2021/09/15/inception-v4/"/>
     <id>http://wuliwuxin.github.io/2021/09/15/inception-v4/</id>
     <published>2021-09-15T09:08:30.000Z</published>
-    <updated>2021-09-15T09:25:31.941Z</updated>
+    <updated>2022-08-26T03:22:41.769Z</updated>
     
     
-    <summary type="html">CNN很强，例如我们的Inception；最近的resnet也很强。那强强联手会怎么样呢？</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–Inception-V4&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–Inception-V4&quot; class=&quot;headerlink&quot; title=&quot;带你读论文系列之计算机视觉–Inception</summary>
+        
+      
     
     
     
     <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
@@ -239,7 +263,7 @@
     <link href="http://wuliwuxin.github.io/2021/09/13/googlenet-v3/"/>
     <id>http://wuliwuxin.github.io/2021/09/13/googlenet-v3/</id>
     <published>2021-09-13T15:57:14.000Z</published>
-    <updated>2022-08-26T02:56:33.008Z</updated>
+    <updated>2022-08-26T03:17:17.094Z</updated>
     
     
       
@@ -254,8 +278,10 @@
     
     <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
@@ -264,17 +290,25 @@
     <link href="http://wuliwuxin.github.io/2021/09/12/inception-v2-bn-inception/"/>
     <id>http://wuliwuxin.github.io/2021/09/12/inception-v2-bn-inception/</id>
     <published>2021-09-12T10:48:14.000Z</published>
-    <updated>2021-09-15T09:13:41.707Z</updated>
+    <updated>2022-08-26T03:22:49.623Z</updated>
     
     
-    <summary type="html">Inception-v2结构的改进就是将原来的Inception-v1结构中的5✖️5卷积层进行修改，用两个3✖️3卷积层代替。</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–Inception-v2-BN-Inception&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–Inception-v2-BN-Inception&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
     <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
@@ -283,17 +317,25 @@
     <link href="http://wuliwuxin.github.io/2021/09/01/rcnn/"/>
     <id>http://wuliwuxin.github.io/2021/09/01/rcnn/</id>
     <published>2021-09-01T00:33:47.000Z</published>
-    <updated>2021-09-12T03:04:45.684Z</updated>
+    <updated>2022-08-26T03:26:20.556Z</updated>
     
     
-    <summary type="html">RCNN系列的文章主要是RCNN，Fast RCNN， Faster RCNN， Mask RCNN, Cascade RCNN,这一系列的文章是目标检测two-stage算法的代表，这系列的算法精度高，效果好，是一类重要的方法。</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉RCNN&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉RCNN&quot; class=&quot;headerlink&quot; title=&quot;带你读论文系列之计算机视觉RCNN&quot;&gt;&lt;/a&gt;带你读论文系列之计算机视觉RCNN&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
     
     
     
     <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
@@ -302,14 +344,16 @@
     <link href="http://wuliwuxin.github.io/2021/08/27/botnet/"/>
     <id>http://wuliwuxin.github.io/2021/08/27/botnet/</id>
     <published>2021-08-27T05:07:55.000Z</published>
-    <updated>2021-11-12T13:26:41.234Z</updated>
+    <updated>2022-08-26T03:15:05.656Z</updated>
     
     
     <summary type="html">一种简单却功能强大的backbone，该架构将自注意力纳入了多种计算机视觉任务，包括图像分类，目标检测和实例分割。</summary>
     
     
     
-    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
     
     <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
@@ -323,17 +367,25 @@
     <link href="http://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/"/>
     <id>http://wuliwuxin.github.io/2021/08/27/resnet-he-resnext/</id>
     <published>2021-08-27T04:41:50.000Z</published>
-    <updated>2021-09-12T03:08:44.684Z</updated>
+    <updated>2022-08-26T03:26:54.171Z</updated>
     
     
-    <summary type="html">ResNet发布于2015年，目前仍有大量CV任务用其作为backbone（尤其是顶会实验比较），而且当前很多网络都在使用残差模块。</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;带你读论文系列之计算机视觉–ResNet和ResNeXt&quot;&gt;&lt;a href=&quot;#带你读论文系列之计算机视觉–ResNet和ResNeXt&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
     <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
@@ -342,17 +394,25 @@
     <link href="http://wuliwuxin.github.io/2021/08/15/vit/"/>
     <id>http://wuliwuxin.github.io/2021/08/15/vit/</id>
     <published>2021-08-15T07:59:54.000Z</published>
-    <updated>2021-09-12T03:16:43.824Z</updated>
+    <updated>2022-08-26T03:30:40.396Z</updated>
     
     
-    <summary type="html">Transformer的优势：并行计算；全局视野；灵活的堆叠能力；</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;初识-CV-Transformer-之Vision-Transformer-ViT&quot;&gt;&lt;a href=&quot;#初识-CV-Transformer-之Vision-Transformer-ViT&quot; class=&quot;headerlink&quot; title=&quot;初识 CV</summary>
+        
+      
     
     
     
     <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
     
     <category term="Transformer" scheme="http://wuliwuxin.github.io/tags/Transformer/"/>
     
@@ -363,17 +423,25 @@
     <link href="http://wuliwuxin.github.io/2021/08/08/deeplab/"/>
     <id>http://wuliwuxin.github.io/2021/08/08/deeplab/</id>
     <published>2021-08-08T12:50:39.000Z</published>
-    <updated>2021-09-12T02:57:49.161Z</updated>
+    <updated>2022-08-26T03:15:44.870Z</updated>
     
     
-    <summary type="html">DeepLab系列一共有四篇文章，分别对应DeepLab V1、DeepLab V2、DeepLab V3和eepLab V3+。</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;语义分割模型之DeepLab系列&quot;&gt;&lt;a href=&quot;#语义分割模型之DeepLab系列&quot; class=&quot;headerlink&quot; title=&quot;语义分割模型之DeepLab系列&quot;&gt;&lt;/a&gt;语义分割模型之DeepLab系列&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
     
     
     
-    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    <category term="论文笔记" scheme="http://wuliwuxin.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="计算机视觉" scheme="http://wuliwuxin.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
     
-    <category term="论文" scheme="http://wuliwuxin.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    <category term="经典论文" scheme="http://wuliwuxin.github.io/tags/%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/"/>
     
     <category term="语义分割" scheme="http://wuliwuxin.github.io/tags/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/"/>
     
@@ -384,19 +452,23 @@
     <link href="http://wuliwuxin.github.io/2021/07/20/jue-ce-shu/"/>
     <id>http://wuliwuxin.github.io/2021/07/20/jue-ce-shu/</id>
     <published>2021-07-20T04:43:36.000Z</published>
-    <updated>2021-07-20T05:05:00.334Z</updated>
+    <updated>2022-08-26T03:13:06.447Z</updated>
     
     
-    <summary type="html">机器学习、NLP面试中常考到的知识点和代码实现，也是作为一个算法工程师必会的理论基础知识。</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-什么是决策树&quot;&gt;&lt;a href=&quot;#1-什么是决策树&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是决策树&quot;&gt;&lt;/a&gt;1. 什么是决策树&lt;/h2&gt;&lt;h3 id=&quot;1-1-决策树的基本思想&quot;&gt;&lt;a href=&quot;#1-1-决策树的基本思想&quot;</summary>
+        
+      
     
     
     
-    <category term="机器学习" scheme="http://wuliwuxin.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="面试" scheme="http://wuliwuxin.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9D%A2%E8%AF%95/"/>
+    <category term="基础知识" scheme="http://wuliwuxin.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
     
-    <category term="基础知识" scheme="http://wuliwuxin.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <category term="决策树" scheme="http://wuliwuxin.github.io/tags/%E5%86%B3%E7%AD%96%E6%A0%91/"/>
     
   </entry>
   
