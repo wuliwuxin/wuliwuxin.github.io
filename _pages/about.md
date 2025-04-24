@@ -151,9 +151,9 @@ Journal of Frontiers of Computer Science & Technology, 2023.
 Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 
 [**Code**](https://github.com/wuliwuxin/CheXNet) | [**BibTeX**](https://citation-needed.springer.com/v2/references/10.1007/978-981-99-8558-6_7?format=bibtex&flavour=citation) 
+</div>
+</div>
 
-</div>
-</div>
 
 <!-- [//]: # (# 📖 Educations)
 
