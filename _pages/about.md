@@ -98,9 +98,9 @@ Juncheng Hu, **Ximing Xing**, Jing Zhang, Qian Yu
 <!-- [![project](https://img.shields.io/badge/%F0%9F%8F%A0%20Homepage-VectorPainter-orange.svg)](https://hjc-owo.github.io/VectorPainterProject/) -->
 
 <!-- <b><u>TL;DR:</u></b> VectorPainter synthesizes text-guided vector graphics by imitating strokes. -->
+Arxiv, 2025.
 
 [**Page**](https://tsood-generalization.com/) | [**Code**](https://github.com/tsood-generalization/tsood-generalization.github.io)
-
 </div>
 </div>
 
@@ -116,7 +116,7 @@ Juncheng Hu, **Ximing Xing**, Jing Zhang, Qian Yu
 
 <!-- <b><u>TL;DR:</u></b> DiffSketcher pioneered the use of diffusion models for text-to-vector sketch generation. -->
 
-Knowledge-Based Systems (KBS), 2023
+Knowledge-Based Systems (KBS), 2023.
 
 [**Project**](https://wuliwuxin.github.io/CTransCNN-project/) | [**Code**](https://github.com/wuliwuxin/CTransCNN) | [**BibTeX**](https://scholar.googleusercontent.com/scholar.bib?q=info:_o9ONaHFjEEJ:scholar.google.com/&output=citation&scisdr=ClHYkEj1EIPJvTogxbA:AFWwaeYAAAAAZZYm3bGMd9pFdweNG31xjHWQnP8&scisig=AFWwaeYAAAAAZZYm3VSfz0F7TZLxQfP4Th_3O9Q&scisf=4&ct=citation&cd=-1&hl=zh-CN)
 </div>
@@ -131,6 +131,8 @@ Knowledge-Based Systems (KBS), 2023
 [Review of Deep Learning in Classification of Tongue Image](https://kns.cnki.net/kcms2/article/abstract?v=vs6GoGUIqCNTlLRE8rAew89_2frASlqBYDW5yBqSuUsLAQGslZ-fE-4I3Qs7SDvrJgFdCKfZ0XAeWVrhW7XXKxFP3wzvJdNuRM3yDy2s6jC4IrWvfwBEVK3iQ8oGTMd9O-MWfwnRkxUpkdeylmPwyw==&uniplatform=NZKPT&language=CHS)
 
 **Xin Wu**, Hong Xu, Zhuosheng Lin, Shengke Li, Huilin Liu, Yue Feng (*).
+
+Journal of Frontiers of Computer Science & Technology, 2023.
 
 [**BibTeX**](http://fcst.ceaj.org/CN/article/getTxtFile.do?fileType=BibTeX&id=3181)
 </div>
