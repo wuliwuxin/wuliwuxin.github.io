@@ -125,7 +125,7 @@ Knowledge-Based Systems (KBS), 2023.
 <!-- paper 2 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">J. Front. Comput. Sci.</div><img src='images/Review.png' loading="lazy" alt="Inversion-By-Inversion"></div></div>
+<div class='paper-box-image'><div><div class="badge">Front. Comput. Sci.</div><img src='images/Review.png' loading="lazy" alt="Inversion-By-Inversion"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Review of Deep Learning in Classification of Tongue Image](https://kns.cnki.net/kcms2/article/abstract?v=vs6GoGUIqCNTlLRE8rAew89_2frASlqBYDW5yBqSuUsLAQGslZ-fE-4I3Qs7SDvrJgFdCKfZ0XAeWVrhW7XXKxFP3wzvJdNuRM3yDy2s6jC4IrWvfwBEVK3iQ8oGTMd9O-MWfwnRkxUpkdeylmPwyw==&uniplatform=NZKPT&language=CHS)
