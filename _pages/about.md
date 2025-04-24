@@ -185,10 +185,10 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 </div>
 </div> -->
 
-# 🎖 Honors and Awards
+<!-- # 🎖 Honors and Awards -->
 
 
-# 📑 Professional Activities
+<!-- # 📑 Professional Activities -->
 
 <!-- - Conference Reviewer
 
@@ -198,7 +198,7 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 
   IJCV, IEEE T-VCG -->
 
-# 💻 Internships
+<!-- # 💻 Internships -->
 <br>
 
 <p align="center">
