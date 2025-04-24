@@ -118,7 +118,7 @@ Arxiv, 2025.
 
 Knowledge-Based Systems (KBS), 2023.
 
-[**Project**](https://wuliwuxin.github.io/CTransCNN-project/) | [**Code**](https://github.com/wuliwuxin/CTransCNN) | [**BibTeX**](https://scholar.googleusercontent.com/scholar.bib?q=info:_o9ONaHFjEEJ:scholar.google.com/&output=citation&scisdr=ClHYkEj1EIPJvTogxbA:AFWwaeYAAAAAZZYm3bGMd9pFdweNG31xjHWQnP8&scisig=AFWwaeYAAAAAZZYm3VSfz0F7TZLxQfP4Th_3O9Q&scisf=4&ct=citation&cd=-1&hl=zh-CN)
+[**Project**](https://wuliwuxin.github.io/CTransCNNProject/) | [**Code**](https://github.com/wuliwuxin/CTransCNN) | [**BibTeX**](https://scholar.googleusercontent.com/scholar.bib?q=info:_o9ONaHFjEEJ:scholar.google.com/&output=citation&scisdr=ClHYkEj1EIPJvTogxbA:AFWwaeYAAAAAZZYm3bGMd9pFdweNG31xjHWQnP8&scisig=AFWwaeYAAAAAZZYm3VSfz0F7TZLxQfP4Th_3O9Q&scisf=4&ct=citation&cd=-1&hl=zh-CN)
 </div>
 </div>
 
