@@ -148,6 +148,10 @@
 .ai-orcid-square:before {
   content: "\e841";
 }
+.ai-cv-square:before {
+  content: "\f15c";
+  font-family: "Font Awesome 5 Free"; /* 确保使用 Font Awesome 字体 */
+}
 .ai-osf:before {
   content: "\e842";
 }
