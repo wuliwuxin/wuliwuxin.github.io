@@ -134,9 +134,8 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 </div>
 </div>
 
-
+<br>
 <!-- [//]: # (# 📖 Educations)
-
 [//]: # (- *2022.09 - &#40;now&#41;*, Phd student, Beihang University, Beijing. ) -->
 <!-- - *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
@@ -177,8 +176,8 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 
 # 💻 Internships
 - **Sep. 2022-July. 2023**, Intelligent TCM Research Intern,Jiangmen Central Hospital, Jiangmen, China.
-
 <br>
+
 
 # 🎖 Honors and Awards
 - **Sep. 2018:** Third Prize (Top 5%) in the 2018 Microsoft “Innovation Cup” Global College Student Technology Competition, China Region (Top 36 nationwide).				  
