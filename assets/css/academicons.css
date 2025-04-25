@@ -148,12 +148,6 @@
 .ai-orcid-square:before {
   content: "\e841";
 }
-.ai-cv:before {
-  content: "\f15c";
-}
-.ai-cv-square:before {
-  content: "\f007";
-}
 .ai-osf:before {
   content: "\e842";
 }
