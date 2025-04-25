@@ -35,8 +35,6 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 ## 🔥 News
-<!-- - **June 2024：** I will start my Ph.D. studies at Southwest Jiaotong University in the fall of 2024! 🎉
-- **April 2024：** I submitted a paper to the ACM MM conference and am keeping my fingers crossed for a favorable response (ACM MM2024). 🙏  -->
 - **Dec 2023:**One paper was published by KBS (Just over two months)! 🎉🎉🎉
 - **Aug 2023:**One paper accepted to PRCV 2023, see you in Xiamen! 🎉🎉🎉
 
@@ -44,26 +42,9 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
   <summary>Past News</summary>
     <li><strong>Oct 2022:</strong> One paper accepted to Journal of Frontiers of Computer Science and Technology. 🎉🎉🎉</li>
 </details>
-
+<br>
 
 # 📝 Publications
-
-<!-- paper 5 -->
-
-<!-- <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">ICME 2025</div><img src='images/vectorpainter-cover.png' loading="lazy" alt="VectorPainter"></div></div>
-<div class='paper-box-text' markdown="1">
-[VectorPainter: Advanced Stylized Vector Graphics Synthesis Using Stroke-Style Priors](https://arxiv.org/abs/2405.02962)
-
-Juncheng Hu, **Ximing Xing**, Jing Zhang, Qian Yu
-
-[![project](https://img.shields.io/badge/%F0%9F%8F%A0%20Homepage-VectorPainter-orange.svg)](https://hjc-owo.github.io/VectorPainterProject/)
-
-<b><u>TL;DR:</u></b> VectorPainter synthesizes text-guided vector graphics by imitating strokes.
-
-[**Project**](https://hjc-owo.github.io/VectorPainterProject/) | [**Code**](https://github.com/hjc-owo/VectorPainter)
-</div>
-</div> -->
 
 <!-- paper 4 -->
 
@@ -133,8 +114,22 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 [**Code**](https://github.com/wuliwuxin/CheXNet) | [**BibTeX**](https://citation-needed.springer.com/v2/references/10.1007/978-981-99-8558-6_7?format=bibtex&flavour=citation) 
 </div>
 </div>
-
 <br>
+
+# 💻 Internships
+- **Sep. 2022-July. 2023**, Intelligent TCM Research Intern,Jiangmen Central Hospital, Jiangmen, China.
+<br>
+
+# 🎖 Honors and Awards
+- **Sep. 2018:** Third Prize (Top 5%) in the 2018 Microsoft “Innovation Cup” Global College Student Technology Competition, China Region (Top 36 nationwide).				  
+- **Nov. 2018:** Outstanding Award (Top 10%) in the Fourth “Internet+” Innovation and Entrepreneurship Competition, Chongqing.
+<br>
+
+<p align="center">
+<a href="https://clustrmaps.com/site/1c5dz" title="ClustrMaps">
+  <img src="//www.clustrmaps.com/map_v2.png?d=6FW0QP0Be0BDSlZCNbTKuLsEaDGmvRe9Pwxt88fjUVI&cl=ffffff" />
+</a>
+</p>
 <!-- [//]: # (# 📖 Educations)
 [//]: # (- *2022.09 - &#40;now&#41;*, Phd student, Beihang University, Beijing. ) -->
 <!-- - *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
@@ -174,18 +169,3 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 
   IJCV, IEEE T-VCG -->
 
-# 💻 Internships
-- **Sep. 2022-July. 2023**, Intelligent TCM Research Intern,Jiangmen Central Hospital, Jiangmen, China.
-<br>
-
-
-# 🎖 Honors and Awards
-- **Sep. 2018:** Third Prize (Top 5%) in the 2018 Microsoft “Innovation Cup” Global College Student Technology Competition, China Region (Top 36 nationwide).				  
-- **Nov. 2018:** Outstanding Award (Top 10%) in the Fourth “Internet+” Innovation and Entrepreneurship Competition, Chongqing.
-<br>
-
-<p align="center">
-<a href="https://clustrmaps.com/site/1c5dz" title="ClustrMaps">
-  <img src="//www.clustrmaps.com/map_v2.png?d=6FW0QP0Be0BDSlZCNbTKuLsEaDGmvRe9Pwxt88fjUVI&cl=ffffff" />
-</a>
-</p>
