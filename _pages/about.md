@@ -80,7 +80,7 @@ Juncheng Hu, **Ximing Xing**, Jing Zhang, Qian Yu
 <!-- <b><u>TL;DR:</u></b> VectorPainter synthesizes text-guided vector graphics by imitating strokes. -->
 Arxiv, 2025.
 
-[**Page**](https://tsood-generalization.com/) | [**Code**](https://github.com/tsood-generalization/tsood-generalization.github.io)
+[**Project**](https://tsood-generalization.com/) | [**Code**](https://github.com/tsood-generalization/tsood-generalization.github.io)
 </div>
 </div>
 
