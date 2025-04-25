@@ -165,9 +165,6 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 </div>
 </div> -->
 
-<!-- # 🎖 Honors and Awards -->
-
-
 <!-- # 📑 Professional Activities -->
 
 <!-- - Conference Reviewer
@@ -178,7 +175,14 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 
   IJCV, IEEE T-VCG -->
 
-<!-- # 💻 Internships -->
+# 💻 Internships
+- **Sep. 2022-July. 2023**, Intelligent TCM Research Intern,Jiangmen Central Hospital, Jiangmen, China.
+
+<br>
+
+# 🎖 Honors and Awards
+- **Sep. 2018:** Third Prize (Top 5%) in the 2018 Microsoft “Innovation Cup” Global College Student Technology Competition, China Region (Top 36 nationwide).				  
+- **Nov. 2018:** Outstanding Award (Top 10%) in the Fourth “Internet+” Innovation and Entrepreneurship Competition, Chongqing.
 <br>
 
 <p align="center">
