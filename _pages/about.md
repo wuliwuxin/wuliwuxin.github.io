@@ -17,22 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<style>
-/* 去掉默认的小箭头 */
-details summary::-webkit-details-marker {
-  display: none;
-}
-
-/* 折叠时，用“▶”指示箭头 */
-details summary::before {
-  content: "▶ ";
-}
-
-/* 展开时，用“▼”指示箭头 */
-details[open] summary::before {
-  content: "▼ ";
-}
-</style>
+## 👋 Hi there!
 
 Here is **Xin Wu (Tina, 吴欣)**.
 
