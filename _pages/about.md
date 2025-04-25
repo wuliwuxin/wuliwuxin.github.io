@@ -17,13 +17,11 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-## 👋 Hi there!
-
-Here is **Xin Wu (Tina, 吴欣)**.
+## 👋 Hi there! Xin Wu (吴欣)
 
 <img align="right" alt="GIF" src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="100" title=" Say HI">
 
-📖 I am currently a PhD student 🔭. The main research directions of the master's degree are image processing, AI 💻 + medical 🏥, and the key research directions are imaging medicine and traditional Chinese medicine intelligent diagnosis. My current research interests lie in time series 📈, OOD Generalization, and reliable AI. I am committed to pushing the boundaries of these research areas and exploring the full potential of machine learning algorithms to contribute meaningfully to the world of technology.
+📖 I am currently a PhD student . I am currently pursuing my PhD 🔭 in Computer Science and Technology at Southwest Jiaotong University (SWJTU), under the mentorship of Prof. [Fei Teng](https://scholar.google.com.hk/citations?hl=zh-CN&user=5CVB6eYAAAAJ&view_op=list_works&sortby=pubdate). The main research directions of the master's degree are image processing, AI 💻 + medical 🏥, and the key research directions are imaging medicine and traditional Chinese medicine intelligent diagnosis. My current research interests lie in time series 📈, OOD Generalization, and reliable AI. I am committed to pushing the boundaries of these research areas and exploring the full potential of machine learning algorithms to contribute meaningfully to the world of technology.
 
 🤔 Only two things make me move.
 
@@ -33,8 +31,7 @@ ii. Life was like a box of chocolates 🍫. You never know what you're going to 
 
 iii. ❤️ I like running 🏃‍♀️, eating 🐮, traveling 🏝, and bicycling 🚴.
 
-
-If you are interested in any aspect of me, I would love to chat and collaborate, please email me.
+If you are interested in any aspect of me, I would love to chat and collaborate, please contact xinwu5386[<span style="color: red;">at</span>]gmail.com or wu1351658806[<span style="color: red;">at</span>]163.com.
 <br>
 
 ## 🔥 News
