@@ -23,6 +23,8 @@ redirect_from:
 
 I am currently pursuing my PhD 🔭 in Computer Science and Technology at Southwest Jiaotong University (SWJTU), under the mentorship of Prof. [Fei Teng](https://scholar.google.com.hk/citations?hl=zh-CN&user=5CVB6eYAAAAJ&view_op=list_works&sortby=pubdate). The main research directions of the master's degree are **image processing, AI 💻 + medical 🏥,** and the key research directions are imaging medicine and traditional Chinese medicine intelligent diagnosis. My current research interests lie in **time series 📈, OOD Generalization, and reliable AI**. I am committed to pushing the boundaries of these research areas and exploring the full potential of machine learning algorithms to contribute meaningfully to the world of technology.
 
+<span style="color: red;">XIN WU</span> (Towards e<span style="color: red;">X</span>treme-scale, <span style="color: red;">I</span>nterpretable, <span style="color: red;">N</span>ovelty-aware, <span style="color: red;">W</span>ide-domain, <span style="color: red;">U</span>ncertainty-aware AI) aims to develop trustworthy and generalizable AI systems by advancing large-scale data mining, interpretable modeling, OOD robustness, domain generalization, and uncertainty quantification.
+
 🤔 Only two things make me move.
 
 i. ⌨️ 🧱 Working with Attention. It's all I need.
