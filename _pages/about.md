@@ -31,7 +31,7 @@ i. ⌨️ 🧱 Working with Attention. It's all I need.
 
 ii. Life was like a box of chocolates 🍫. You never know what you're going to get.
 
-iii. ❤️ I like running 🏃‍♀️, eating 🐮, traveling 🏝, and bicycling 🚴.
+<!-- iii. ❤️ I like running 🏃‍♀️, eating 🐮, traveling 🏝, and bicycling 🚴. -->
 
 If you are interested in any aspect of me, I would love to chat and collaborate, please contact xinwu5386[<span style="color: red;">at</span>]gmail.com or wu1351658806[<span style="color: red;">at</span>]163.com.
 <br>
