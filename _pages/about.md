@@ -37,7 +37,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 ## 🔥 News
-- **Dec 2025:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been accepted with minor by TMM! 🎉🎉🎉
+- **May 2025:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been accepted with minor by TMM! 🎉🎉🎉
 - **Dec 2023:**One paper [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) was published by KBS (Just over two months)! 🎉🎉🎉
 
 <details>
