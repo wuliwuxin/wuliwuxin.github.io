@@ -37,7 +37,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 ## 🔥 News
-- **May 2025:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been conditionally accepted by TMM! 🎉🎉🎉
+<!-- - **May 2025:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been conditionally accepted by TMM! 🎉🎉🎉 -->
 - **Dec 2023:**One paper [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) was published by KBS (Just over two months)! 🎉🎉🎉
 
 <details>
@@ -58,10 +58,11 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 
 **Xin Wu**, Fei Teng (*), Yue Feng, Kaibo Shi, Zhuosheng Lin, Ji Zhang, James Wang.
 
+ArXiv, 2025.
 <!-- [![project](https://img.shields.io/badge/%F0%9F%8F%A0%20Homepage-VectorPainter-orange.svg)](https://hjc-owo.github.io/VectorPainterProject/) -->
 
 <!-- <b><u>TL;DR:</u></b> VectorPainter synthesizes text-guided vector graphics by imitating strokes. -->
-IEEE Transactions on Multimedia (TMM), 2025.
+<!-- IEEE Transactions on Multimedia (TMM), 2025. -->
 
 [**Project**](https://wuliwuxin.github.io/SCINetProject/) | [**Code**](https://github.com/wuliwuxin/SCINet)
 </div>
