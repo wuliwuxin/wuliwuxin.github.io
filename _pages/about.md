@@ -54,7 +54,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <div class='paper-box-image'><div><div class="badge">Under Review 2025</div><img src='images/SCINet.png' loading="lazy" alt="VectorPainter"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge]()
+[Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge](http://arxiv.org/abs/2507.05992)
 
 **Xin Wu**, Fei Teng (*), Yue Feng, Kaibo Shi, Zhuosheng Lin, Ji Zhang, James Wang.
 
