@@ -53,17 +53,15 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/EIRS.png' loading="lazy" alt="DualGraph"></div></div>
 <div class='paper-box-text' markdown="1">
 
-
 [ERIS: An Energy-Guided Feature Disentanglement Framework for Out-of-Distribution Time Series Classification](https://arxiv.org/abs/2508.14134)
 
 **Xin Wu**, Fei Teng (*), Ji Zhang, Xingwang Li, Yuxuan Liang.
 
 ArXiv, 2025.
 
-[**Project**]() | [**Code**]()
+[**Code**]() | [**Code**]()
 </div>
 </div>
-
 
 <!-- paper 5 -->
 
