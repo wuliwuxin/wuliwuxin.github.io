@@ -48,6 +48,27 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 # 📝 Publications
+<!-- paper 6 -->
+
+<div class='paper-box'>
+<div class='paper-box-image'><div><div class="badge">Under Review 2025</div><img src='images/EIRS.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[ERIS: An Energy-Guided Feature Disentanglement Framework for Out-of-Distribution Time Series Classification](https://arxiv.org/abs/2508.14134)
+
+**Xin Wu**, Fei Teng (*), Ji Zhang, Xingwang Li, Yuxuan Liang.
+
+ArXiv, 2025.
+<!-- [![project](https://img.shields.io/badge/%F0%9F%8F%A0%20Homepage-VectorPainter-orange.svg)](https://hjc-owo.github.io/VectorPainterProject/) -->
+
+<!-- <b><u>TL;DR:</u></b> VectorPainter synthesizes text-guided vector graphics by imitating strokes. -->
+<!-- IEEE Transactions on Multimedia (TMM), 2025. -->
+
+[**Project**]() | [**Code**]()
+</div>
+</div>
+
+
 <!-- paper 5 -->
 
 <div class='paper-box'>
