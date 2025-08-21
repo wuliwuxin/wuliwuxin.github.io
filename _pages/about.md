@@ -49,7 +49,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 # 📝 Publications
 <!-- paper 6 -->
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/ERIS.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-image'><div><div class="badge">Under Review 2025</div><img src='images/ERIS.png' loading="lazy" alt="VectorPainter"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [ERIS: An Energy-Guided Feature Disentanglement Framework for Out-of-Distribution Time Series Classification](https://arxiv.org/abs/2508.14134)
