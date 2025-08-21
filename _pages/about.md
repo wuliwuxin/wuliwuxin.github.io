@@ -49,6 +49,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 
 # 📝 Publications
 <!-- paper 6 -->
+
 <div class='paper-box'>
 <div class='paper-box-image'><div><div class="badge">Under Review 2025</div><img src="images/EIRS.png" alt="VectorPainter" style="max-width:100%; height:auto;"></div></div>
 <div class='paper-box-text' markdown="1">
