@@ -40,55 +40,6 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-// .paper-box {
-//     display: flex;
-//     justify-content: left;
-//     align-items: center;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     border-bottom: 1px #efefef solid;
-//     padding: 2em 0 2em 0;
-    
-// }
-//     .paper-box-image{
-//         justify-content: center;
-//         display: flex;
-//         width: 100%;
-//         order: 2;
-//         img {
-//             max-width: 400px;
-//             box-shadow: 3px 3px 6px #888;
-//             object-fit: cover;
-//         }
-    
-    
-//     .paper-box-text{
-//         max-width: 100%;
-//         order: 1;
-//     }
-    
-//     @include breakpoint($medium) {
-//         .paper-box-image{
-//             justify-content: left;
-//             min-width: 200px;
-//             max-width: 40%;
-//             //
-//             min-height: 100px;
-//             max-height: 80%;
-//             order: 1;
-//         }
-        
-//         .paper-box-text{
-//             justify-content: left;
-//             padding-left: 2em;
-//             max-width: 60%;
-//             order: 2;
-//         }
-
-//     }
-
-
-// }
 .paper-box {
     display: flex;
     justify-content: left;
@@ -96,48 +47,47 @@
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom: 1px #efefef solid;
-    padding: 2em 0;
-}
+    padding: 2em 0 2em 0;
+    
 
-/* 图片容器 */
-.paper-box-image {
-    justify-content: center;
-    display: flex;
-    width: 100%;
-    order: 2;
-}
-
-/* 图片 */
-.paper-box-image img {
-    max-width: 400px;   /* 最大宽度 */
-    width: 100%;        /* 在容器内自适应 */
-    height: auto;       /* 保持比例 */
-    box-shadow: 3px 3px 6px #888;
-    object-fit: cover;
-}
-
-/* 文字区域 */
-.paper-box-text {
-    max-width: 100%;
-    order: 1;
-}
-
-@media (min-width: 768px) {
-    .paper-box-image {
-        justify-content: left;
-        min-width: 200px;
-        max-width: 40%;
-        min-height: 100px;
-        max-height: 80%;
+    .paper-box-image{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        order: 2;
+        img {
+            max-width: 400px;
+            box-shadow: 3px 3px 6px #888;
+            object-fit: cover;
+        }
+    }
+    
+    .paper-box-text{
+        max-width: 100%;
         order: 1;
     }
+    
+    @include breakpoint($medium) {
+        .paper-box-image{
+            justify-content: left;
+            min-width: 200px;
+            max-width: 40%;
+            //
+            min-height: 100px;
+            max-height: 80%;
+            order: 1;
+        }
+        
+        .paper-box-text{
+            justify-content: left;
+            padding-left: 2em;
+            max-width: 60%;
+            order: 2;
+        }
 
-    .paper-box-text {
-        justify-content: left;
-        padding-left: 2em;
-        max-width: 60%;
-        order: 2;
     }
+
+
 }
 
 $scroll_offset : 2em;
