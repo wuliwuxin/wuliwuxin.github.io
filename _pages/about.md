@@ -59,7 +59,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 
 ArXiv, 2025.
 
-[**Project**](https://github.com/wuliwuxin/ERISProject) | [**Code**](https://github.com/wuliwuxin/ERIS)
+[**Project**](https://wuliwuxin.github.io/ERISProject) | [**Code**](https://github.com/wuliwuxin/ERIS)
 </div>
 </div>
 
