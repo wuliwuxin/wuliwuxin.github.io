@@ -37,13 +37,14 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 ## 🔥 News
+- **Nov. 2025:**One paper `Uncovering Hidden degeneration: A Physics-Guided Bidirectional Inference Framework forIndustrial Time Series Prediction` accepted to AAAI 2026! 🎉🎉🎉
 <!-- - **May 2025:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been conditionally accepted by TMM! 🎉🎉🎉 -->
-- **Dec 2023:**One paper [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) was published by KBS (Just over two months)! 🎉🎉🎉
+- **Dec. 2023:**One paper [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) was published by KBS (Just over two months)! 🎉🎉🎉
 
 <details>
   <summary>Past News</summary>
-    <li><strong>Aug 2023:</strong> One paper accepted to PRCV 2023, see you in Xiamen! 🎉🎉🎉</li>
-    <li><strong>Oct 2022:</strong> One paper accepted to Journal of Frontiers of Computer Science and Technology. 🎉🎉🎉</li>
+    <li><strong>Aug. 2023:</strong> One paper accepted to PRCV 2023, see you in Xiamen! 🎉🎉🎉</li>
+    <li><strong>Oct. 2022:</strong> One paper accepted to Journal of Frontiers of Computer Science and Technology. 🎉🎉🎉</li>
 </details>
 <br>
 
