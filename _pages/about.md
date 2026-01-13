@@ -44,7 +44,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 
 <details>
   <summary>Past News</summary>
-  <li><strong>Dec. 2023:</strong>  One paper [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) was published by KBS (Just over two months)! 🎉🎉🎉
+  <li><strong>Dec. 2023:</strong>  One paper [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) was published by KBS (Just over two months)! 🎉🎉🎉</li>
     <li><strong>Aug. 2023:</strong> One paper accepted to PRCV 2023, see you in Xiamen! 🎉🎉🎉</li>
     <li><strong>Oct. 2022:</strong> One paper accepted to Journal of Frontiers of Computer Science and Technology. 🎉🎉🎉</li>
 </details>
