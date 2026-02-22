@@ -37,6 +37,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 ## 🔥 News
+- **Feb 2026:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been conditionally accepted by TMM! 🎉🎉🎉
 - **Jan. 2026:** Our [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) paper has received more than **100** citations. 🎉🎉🎉
 - **Nov. 2025:** One paper accepted to AAAI 2026! 🎉🎉🎉
 <!-- - **May 2025:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been conditionally accepted by TMM! 🎉🎉🎉 -->
@@ -51,6 +52,28 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 # 📝 Publications
+
+<!-- paper 6 -->
+
+<div class='paper-box'>
+<div class='paper-box-image'><div><div class="badge">Accepted 2026</div><img src='images/SCINet.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge](http://arxiv.org/abs/2507.05992)
+
+**Xin Wu**, Fei Teng (*), Yue Feng, Kaibo Shi, Zhuosheng Lin, Ji Zhang, James Wang.
+
+IEEE Transactions on Multimedia (TMM), 2026.
+
+<!-- [![project](https://img.shields.io/badge/%F0%9F%8F%A0%20Homepage-VectorPainter-orange.svg)](https://hjc-owo.github.io/VectorPainterProject/) -->
+
+<!-- <b><u>TL;DR:</u></b> VectorPainter synthesizes text-guided vector graphics by imitating strokes. -->
+<!-- IEEE Transactions on Multimedia (TMM), 2025. -->
+
+[**Project**](https://wuliwuxin.github.io/SCINetProject/) | [**Code**](https://github.com/wuliwuxin/SCINet)
+</div>
+</div>
+
 <!-- paper 6 -->
 <div class='paper-box'>
 <div class='paper-box-image'><div><div class="badge">Under Review 2025</div><img src='images/ERIS.png' loading="lazy" alt="VectorPainter"></div></div>
@@ -66,25 +89,6 @@ ArXiv, 2025.
 </div>
 </div>
 
-<!-- paper 5 -->
-
-<div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">Under Review 2025</div><img src='images/SCINet.png' loading="lazy" alt="VectorPainter"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge](http://arxiv.org/abs/2507.05992)
-
-**Xin Wu**, Fei Teng (*), Yue Feng, Kaibo Shi, Zhuosheng Lin, Ji Zhang, James Wang.
-
-ArXiv, 2025.
-<!-- [![project](https://img.shields.io/badge/%F0%9F%8F%A0%20Homepage-VectorPainter-orange.svg)](https://hjc-owo.github.io/VectorPainterProject/) -->
-
-<!-- <b><u>TL;DR:</u></b> VectorPainter synthesizes text-guided vector graphics by imitating strokes. -->
-<!-- IEEE Transactions on Multimedia (TMM), 2025. -->
-
-[**Project**](https://wuliwuxin.github.io/SCINetProject/) | [**Code**](https://github.com/wuliwuxin/SCINet)
-</div>
-</div>
 
 <!-- paper 4 -->
 
