@@ -37,8 +37,8 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 ## 🔥 News
-- **Mar 2026:**One paper PRISM has been conditionally accepted by DAC! 🎉🎉🎉
-- **Feb 2026:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been conditionally accepted by TMM! 🎉🎉🎉
+- **Mar 2026:**One paper accepted to DAC 2026!O🎉🎉🎉
+- **Feb 2026:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been accepted by TMM! 🎉🎉🎉
 - **Jan 2026:** Our [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) paper has received more than **100** citations. 🎉🎉🎉
 - **Nov 2025:** One paper accepted to AAAI 2026! 🎉🎉🎉
 <!-- - **May 2025:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been conditionally accepted by TMM! 🎉🎉🎉 -->
