@@ -75,7 +75,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 </tr>
 <tr>
   <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#fef3e2; color:#e67e22; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Nov 2025</span>
+    <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Nov 2025</span>
   </td>
   <td style="padding: 6px 0; border: none;">
     📄 One paper accepted to <strong>AAAI 2026</strong>! 🎉
