@@ -40,68 +40,68 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 
 <div style="max-height: 280px; overflow-y: auto; padding-right: 8px;">
 
-<table style="width:100%; border-collapse: collapse;">
+<table style="width:100%; border-collapse: collapse; border: none;">
 <tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Mar 2026</span>
   </td>
-  <td style="padding: 6px 0;">
+  <td style="padding: 6px 0; border: none;">
     📄 A survey paper <em>Out-of-Distribution Generalization in Time Series</em> has been accepted by <strong>Inf. Fusion</strong>. 🎉
   </td>
 </tr>
 <tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Mar 2026</span>
   </td>
-  <td style="padding: 6px 0;">
+  <td style="padding: 6px 0; border: none;">
     📄 One paper accepted to <strong>DAC 2026</strong>! 🎉
   </td>
 </tr>
 <tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Feb 2026</span>
   </td>
-  <td style="padding: 6px 0;">
+  <td style="padding: 6px 0; border: none;">
     📄 One paper <a href="https://wuliwuxin.github.io/SCINetProject/"><strong>SCINet</strong></a> has been accepted by <strong>TMM</strong>! 🎉
   </td>
 </tr>
 <tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Jan 2026</span>
   </td>
-  <td style="padding: 6px 0;">
+  <td style="padding: 6px 0; border: none;">
     🏆 Our <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> paper has received more than <strong>100</strong> citations! 🎉
   </td>
 </tr>
 <tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#fef3e2; color:#e67e22; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Nov 2025</span>
   </td>
-  <td style="padding: 6px 0;">
+  <td style="padding: 6px 0; border: none;">
     📄 One paper accepted to <strong>AAAI 2026</strong>! 🎉
   </td>
 </tr>
 <tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Dec 2023</span>
   </td>
-  <td style="padding: 6px 0;">
+  <td style="padding: 6px 0; border: none;">
     📄 One paper <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> was published by <strong>KBS</strong> (just over two months)! 🎉
   </td>
 </tr>
 <tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Aug 2023</span>
   </td>
-  <td style="padding: 6px 0;">
+  <td style="padding: 6px 0; border: none;">
     📄 One paper accepted to <strong>PRCV 2023</strong>, see you in Xiamen! 🎉
   </td>
 </tr>
 <tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Oct 2022</span>
   </td>
-  <td style="padding: 6px 0;">
+  <td style="padding: 6px 0; border: none;">
     📄 One paper accepted to <strong>Frontiers of Computer Science and Technology</strong>. 🎉
   </td>
 </tr>
@@ -111,6 +111,22 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 # 📝 Publications
+<!-- paper 7 -->
+
+<div class='paper-box'>
+<div class='paper-box-image'><div><div class="badge">DAC 2026</div><img src='images/SCINet.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[PRISM: Dynamic Primitive-Based Forecasting for Large-Scale GPU Cluster Workloads](https://arxiv.org/abs/2603.25378)
+
+**Xin Wu**, Fei Teng (*), Xingwang Li, Bin Zheng, Qiang Duan
+
+Proceedings of the 63rd ACM/IEEE Design Automation Conference (DAC‘26), 2026.
+
+[**Code**](https://github.com/wuliwuxin/PRISM)
+</div>
+</div>
+
 
 <!-- paper 6 -->
 
@@ -133,7 +149,7 @@ IEEE Transactions on Multimedia (TMM), 2026.
 </div>
 </div>
 
-<!-- paper 6 -->
+<!-- paper 5 -->
 <div class='paper-box'>
 <div class='paper-box-image'><div><div class="badge">Under Review 2025</div><img src='images/ERIS.png' loading="lazy" alt="VectorPainter"></div></div>
 <div class='paper-box-text' markdown="1">
