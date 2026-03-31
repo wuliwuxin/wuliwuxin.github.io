@@ -37,18 +37,77 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 ## 🔥 News
-- **Mar 2026:**A survey paper has been accepted by Inf. Fusion. 🎉🎉🎉
-- **Mar 2026:**One paper accepted to DAC 2026! 🎉🎉🎉
-- **Feb 2026:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been accepted by TMM! 🎉🎉🎉
-- **Jan 2026:** Our [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) paper has received more than **100** citations. 🎉🎉🎉
 
-<details>
-  <summary>Past News</summary>
-<li><strong>Nov 2025:</strong> One paper accepted to AAAI 2026! 🎉🎉🎉 </li>
-  <li><strong>Dec. 2023:</strong>  One paper [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) was published by KBS (Just over two months)! 🎉🎉🎉</li>
-    <li><strong>Aug. 2023:</strong> One paper accepted to PRCV 2023, see you in Xiamen! 🎉🎉🎉</li>
-    <li><strong>Oct. 2022:</strong> One paper accepted to Journal of Frontiers of Computer Science and Technology. 🎉🎉🎉</li>
-</details>
+<div style="max-height: 280px; overflow-y: auto; padding-right: 8px;">
+
+<table style="width:100%; border-collapse: collapse;">
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Mar 2026</span>
+  </td>
+  <td style="padding: 6px 0;">
+    📄 A survey paper <em>Out-of-Distribution Generalization in Time Series</em> has been accepted by <strong>Inf. Fusion</strong>. 🎉
+  </td>
+</tr>
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Mar 2026</span>
+  </td>
+  <td style="padding: 6px 0;">
+    📄 One paper accepted to <strong>DAC 2026</strong>! 🎉
+  </td>
+</tr>
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Feb 2026</span>
+  </td>
+  <td style="padding: 6px 0;">
+    📄 One paper <a href="https://wuliwuxin.github.io/SCINetProject/"><strong>SCINet</strong></a> has been accepted by <strong>TMM</strong>! 🎉
+  </td>
+</tr>
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Jan 2026</span>
+  </td>
+  <td style="padding: 6px 0;">
+    🏆 Our <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> paper has received more than <strong>100</strong> citations! 🎉
+  </td>
+</tr>
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+    <span style="background:#fef3e2; color:#e67e22; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Nov 2025</span>
+  </td>
+  <td style="padding: 6px 0;">
+    📄 One paper accepted to <strong>AAAI 2026</strong>! 🎉
+  </td>
+</tr>
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+    <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Dec 2023</span>
+  </td>
+  <td style="padding: 6px 0;">
+    📄 One paper <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> was published by <strong>KBS</strong> (just over two months)! 🎉
+  </td>
+</tr>
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+    <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Aug 2023</span>
+  </td>
+  <td style="padding: 6px 0;">
+    📄 One paper accepted to <strong>PRCV 2023</strong>, see you in Xiamen! 🎉
+  </td>
+</tr>
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top;">
+    <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Oct 2022</span>
+  </td>
+  <td style="padding: 6px 0;">
+    📄 One paper accepted to <strong>Frontiers of Computer Science and Technology</strong>. 🎉
+  </td>
+</tr>
+</table>
+
+</div>
 <br>
 
 # 📝 Publications
