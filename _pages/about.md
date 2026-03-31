@@ -37,15 +37,14 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 ## 🔥 News
+- **Mar 2026:**A survey paper has been accepted by Inf. Fusion. 🎉🎉🎉
 - **Mar 2026:**One paper accepted to DAC 2026! 🎉🎉🎉
 - **Feb 2026:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been accepted by TMM! 🎉🎉🎉
 - **Jan 2026:** Our [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) paper has received more than **100** citations. 🎉🎉🎉
-- **Nov 2025:** One paper accepted to AAAI 2026! 🎉🎉🎉
-<!-- - **May 2025:**One paper [SCINet](https://wuliwuxin.github.io/SCINetProject/) has been conditionally accepted by TMM! 🎉🎉🎉 -->
-
 
 <details>
   <summary>Past News</summary>
+<li><strong>Nov 2025:</strong> One paper accepted to AAAI 2026! 🎉🎉🎉 </li>
   <li><strong>Dec. 2023:</strong>  One paper [CTransCNN](https://wuliwuxin.github.io/CTransCNNProject/) was published by KBS (Just over two months)! 🎉🎉🎉</li>
     <li><strong>Aug. 2023:</strong> One paper accepted to PRCV 2023, see you in Xiamen! 🎉🎉🎉</li>
     <li><strong>Oct. 2022:</strong> One paper accepted to Journal of Frontiers of Computer Science and Technology. 🎉🎉🎉</li>
@@ -94,19 +93,16 @@ ArXiv, 2025.
 <!-- paper 4 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">Under Review 2025</div><img src='images/TSOOG.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-image'><div><div class="badge">Inf. Fusion 2026</div><img src='images/TSOOG.png' loading="lazy" alt="VectorPainter"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Out-of-Distribution Generalization in Time Series: A Survey](https://arxiv.org/abs/2503.13868)
 
 **Xin Wu**, Fei Teng (*), Xingwang Li, Ji Zhang, Tianrui Li, Qiang Duan.
 
-<!-- [![project](https://img.shields.io/badge/%F0%9F%8F%A0%20Homepage-VectorPainter-orange.svg)](https://hjc-owo.github.io/VectorPainterProject/) -->
+Information Fusion, 2026.
 
-<!-- <b><u>TL;DR:</u></b> VectorPainter synthesizes text-guided vector graphics by imitating strokes. -->
-Arxiv, 2025.
-
-[**Project**](https://tsood-generalization.com/) | [**Code**](https://github.com/tsood-generalization/tsood-generalization.github.io)
+[**Project**](https://tsood-generalization.github.io/) | [**Code**](https://github.com/tsood-generalization/tsood-generalization.github.io)
 </div>
 </div>
 
