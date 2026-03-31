@@ -114,7 +114,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <!-- paper 7 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">DAC 2026</div><img src='images/SCINet.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-image'><div><div class="badge">DAC 2026</div><img src='images/PRISM.png' loading="lazy" alt="VectorPainter"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [PRISM: Dynamic Primitive-Based Forecasting for Large-Scale GPU Cluster Workloads](https://arxiv.org/abs/2603.25378)
