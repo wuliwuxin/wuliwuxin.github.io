@@ -17,112 +17,115 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-## 👋 Hi there! Xin Wu (吴欣)
-
-<!-- <img align="right" alt="GIF" src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="100" title=" Say HI"> -->
-<img align="right" alt="GIF" src="images/icon.gif" width="100" title=" Say HI">
-
-I am currently pursuing my PhD 🔭 in Computer Science and Technology at Southwest Jiaotong University (SWJTU), under the mentorship of Prof. [Fei Teng](https://faculty.swjtu.edu.cn/tengfei). The main research directions of the master's degree are **image processing, AI 💻 + medical 🏥,** and the key research directions are imaging medicine and traditional Chinese medicine intelligent diagnosis. My current research interests lie in **time series 📈, OOD Generalization, and reliable AI**. I am committed to pushing the boundaries of these research areas and exploring the full potential of machine learning algorithms to contribute meaningfully to the world of technology.
-
-<span style="color: red;">XIN WU</span> (Towards e<span style="color: red;">X</span>treme-scale, <span style="color: red;">I</span>nterpretable, <span style="color: red;">N</span>ovelty-aware, <span style="color: red;">W</span>ide-domain, <span style="color: red;">U</span>ncertainty-aware AI) aims to develop trustworthy and generalizable AI systems by advancing large-scale data mining, interpretable modeling, OOD robustness, domain generalization, and uncertainty quantification.
-
-🤔 Only two things make me move.
-
-i. ⌨️ 🧱 Working with Attention. It's all I need.
-
-ii. Life was like a box of chocolates 🍫. You never know what you're going to get.
-
-
-If you are interested in any aspect of me, I would love to chat and collaborate, please contact xinwu5386[<span style="color: red;">at</span>]gmail.com or wu1351658806[<span style="color: red;">at</span>]163.com.
-<br>
-
-## 🔥 News
-
-<div style="max-height: 280px; overflow-y: auto; padding-right: 8px;">
-
-<table style="width:100%; border-collapse: collapse; border: none;">
-<tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Apr 2026</span>
-  </td>
-  <td style="padding: 6px 0; border: none;">
-    📄 One paper <a href="https://wuliwuxin.github.io/ERISProject/"><strong>ERIS</strong></a> has been accepted by <strong>Inf. Fusion</strong>! 🎉
-  </td>
-</tr>
-<tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Mar 2026</span>
-  </td>
-  <td style="padding: 6px 0; border: none;">
-    📄 A survey paper <em>Out-of-Distribution Generalization in Time Series</em> has been accepted by <strong>Inf. Fusion</strong>. 🎉
-  </td>
-</tr>
-<tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Mar 2026</span>
-  </td>
-  <td style="padding: 6px 0; border: none;">
-    📄 One paper accepted to <strong>DAC 2026</strong>! 🎉
-  </td>
-</tr>
-<tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Feb 2026</span>
-  </td>
-  <td style="padding: 6px 0; border: none;">
-    📄 One paper <a href="https://wuliwuxin.github.io/SCINetProject/"><strong>SCINet</strong></a> has been accepted by <strong>TMM</strong>! 🎉
-  </td>
-</tr>
-<tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Jan 2026</span>
-  </td>
-  <td style="padding: 6px 0; border: none;">
-    🏆 Our <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> paper has received more than <strong>100</strong> citations! 🎉
-  </td>
-</tr>
-<tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Nov 2025</span>
-  </td>
-  <td style="padding: 6px 0; border: none;">
-    📄 One paper accepted to <strong>AAAI 2026</strong>! 🎉
-  </td>
-</tr>
-<tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Dec 2023</span>
-  </td>
-  <td style="padding: 6px 0; border: none;">
-    📄 One paper <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> was published by <strong>KBS</strong> (just over two months)! 🎉
-  </td>
-</tr>
-<tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Aug 2023</span>
-  </td>
-  <td style="padding: 6px 0; border: none;">
-    📄 One paper accepted to <strong>PRCV 2023</strong>, see you in Xiamen! 🎉
-  </td>
-</tr>
-<tr>
-  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
-    <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Oct 2022</span>
-  </td>
-  <td style="padding: 6px 0; border: none;">
-    📄 One paper accepted to <strong>Frontiers of Computer Science and Technology</strong>. 🎉
-  </td>
-</tr>
-</table>
-
+<div class="about-hero">
+  <div class="about-hero__content">
+    <p class="about-hero__eyebrow">PhD Student · Trustworthy AI · Time Series</p>
+    <h1 class="about-hero__title">Xin Wu <span>(吴欣)</span></h1>
+    <p class="about-hero__lead">
+      I am a PhD student in Computer Science and Technology at Southwest Jiaotong University (SWJTU), advised by
+      Prof. <a href="https://faculty.swjtu.edu.cn/tengfei">Fei Teng</a>. My current research focuses on
+      <strong>time series</strong>, <strong>out-of-distribution generalization</strong>, and <strong>reliable AI</strong>.
+    </p>
+    <p>
+      My earlier work centered on image processing and medical AI. I am broadly interested in building trustworthy
+      and generalizable learning systems through large-scale data mining, interpretable modeling, OOD robustness,
+      domain generalization, and uncertainty quantification.
+    </p>
+    <div class="tag-list">
+      <span>Time Series</span>
+      <span>OOD Generalization</span>
+      <span>Reliable AI</span>
+      <span>Medical AI</span>
+      <span>Interpretable Modeling</span>
+    </div>
+    <div class="contact-row">
+      <a class="contact-pill" href="mailto:xinwu5386@gmail.com">Email</a>
+      <a class="contact-pill secondary" href="mailto:wu1351658806@163.com">Backup Email</a>
+      <a class="contact-pill secondary" href="https://scholar.google.com/citations?user=1O2QQB8AAAAJ">Google Scholar</a>
+      <a class="contact-pill secondary" href="https://github.com/wuliwuxin">GitHub</a>
+    </div>
+  </div>
+  <div class="about-hero__visual">
+    <img src="images/icon.gif" alt="Animated icon for Xin Wu" width="120" title="Say HI">
+  </div>
 </div>
-<br>
 
-# 📝 Publications
+<div class="about-note">
+  <strong>XIN WU</strong> stands for Towards e<strong>X</strong>treme-scale, <strong>I</strong>nterpretable,
+  <strong>N</strong>ovelty-aware, <strong>W</strong>ide-domain, <strong>U</strong>ncertainty-aware AI.
+  The goal is to develop trustworthy and generalizable AI systems with both scientific rigor and engineering value.
+</div>
+
+<div class="focus-grid">
+  <div class="focus-card">
+    <h3>Research Themes</h3>
+    <ul>
+      <li>Time series analysis and forecasting</li>
+      <li>Out-of-distribution robustness and domain generalization</li>
+      <li>Reliable, interpretable, and uncertainty-aware AI</li>
+    </ul>
+  </div>
+  <div class="focus-card">
+    <h3>What Keeps Me Moving</h3>
+    <ol>
+      <li><strong>Working with attention.</strong> It is still the most exciting building block to me.</li>
+      <li><strong>Curiosity about uncertainty.</strong> Good research often starts where certainty ends.</li>
+    </ol>
+  </div>
+</div>
+
+<span class='anchor' id='news'></span>
+
+## News
+
+<div class="news-panel">
+  <ul class="news-list">
+    <li>
+      <span class="news-date">Apr 2026</span>
+      <div>📄 One paper <a href="https://wuliwuxin.github.io/ERISProject/"><strong>ERIS</strong></a> has been accepted by <strong>Information Fusion</strong>.</div>
+    </li>
+    <li>
+      <span class="news-date">Mar 2026</span>
+      <div>📄 A survey paper <em>Out-of-Distribution Generalization in Time Series</em> has been accepted by <strong>Information Fusion</strong>.</div>
+    </li>
+    <li>
+      <span class="news-date">Mar 2026</span>
+      <div>📄 One paper has been accepted to <strong>DAC 2026</strong>.</div>
+    </li>
+    <li>
+      <span class="news-date">Feb 2026</span>
+      <div>📄 One paper <a href="https://wuliwuxin.github.io/SCINetProject/"><strong>SCINet</strong></a> has been accepted by <strong>TMM</strong>.</div>
+    </li>
+    <li>
+      <span class="news-date">Jan 2026</span>
+      <div>🏆 Our <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> paper has received more than <strong>100</strong> citations.</div>
+    </li>
+    <li>
+      <span class="news-date news-date--muted">Nov 2025</span>
+      <div>📄 One paper has been accepted to <strong>AAAI 2026</strong>.</div>
+    </li>
+    <li>
+      <span class="news-date news-date--muted">Dec 2023</span>
+      <div>📄 One paper <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> was published by <strong>KBS</strong>.</div>
+    </li>
+    <li>
+      <span class="news-date news-date--muted">Aug 2023</span>
+      <div>📄 One paper was accepted to <strong>PRCV 2023</strong>. See you in Xiamen.</div>
+    </li>
+    <li>
+      <span class="news-date news-date--muted">Oct 2022</span>
+      <div>📄 One paper was accepted to <strong>Frontiers of Computer Science and Technology</strong>.</div>
+    </li>
+  </ul>
+</div>
+
+<span class='anchor' id='publications'></span>
+
+## Selected Publications
 <!-- paper 7 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">DAC 2026</div><img src='images/PRISM.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-image'><div><div class="badge">DAC 2026</div><img src='images/PRISM.png' loading="lazy" alt="PRISM paper preview"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [PRISM: Dynamic Primitive-Based Forecasting for Large-Scale GPU Cluster Workloads](https://arxiv.org/abs/2603.25378)
@@ -139,7 +142,7 @@ Proceedings of the 63rd ACM/IEEE Design Automation Conference (DAC‘26), 2026.
 <!-- paper 6 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">TMM 2026</div><img src='images/SCINet.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-image'><div><div class="badge">TMM 2026</div><img src='images/SCINet.png' loading="lazy" alt="SCINet paper preview"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge](http://arxiv.org/abs/2507.05992)
@@ -159,7 +162,7 @@ IEEE Transactions on Multimedia (TMM), 2026.
 
 <!-- paper 5 -->
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">Inf. Fusion 2026</div><img src='images/ERIS.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-image'><div><div class="badge">Inf. Fusion 2026</div><img src='images/ERIS.png' loading="lazy" alt="ERIS paper preview"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [ERIS: An Energy-Guided Feature Disentanglement Framework for Out-of-Distribution Time Series Classification](https://arxiv.org/abs/2508.14134v2)
@@ -176,7 +179,7 @@ Information Fusion, 2026.
 <!-- paper 4 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">Inf. Fusion 2026</div><img src='images/TSOOG.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-image'><div><div class="badge">Inf. Fusion 2026</div><img src='images/TSOOG.png' loading="lazy" alt="Time series OOD survey preview"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Out-of-Distribution Generalization in Time Series: A Survey](https://www.sciencedirect.com/science/article/abs/pii/S1566253526002150)
@@ -192,7 +195,7 @@ Information Fusion, 2026.
 <!-- paper 3 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">KBS 2023</div><img src='images/CTransCNN.png' loading="lazy" alt="DiffSketcher"></div></div>
+<div class='paper-box-image'><div><div class="badge">KBS 2023</div><img src='images/CTransCNN.png' loading="lazy" alt="CTransCNN paper preview"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [CTransCNN: Combining Transformer and CNN in Multilabel Medical Image Classification](https://www.sciencedirect.com/science/article/pii/S0950705123007803)
@@ -210,7 +213,7 @@ Knowledge-Based Systems (KBS), 2023.
 <!-- paper 2 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">Front. Comput. Sci.</div><img src='images/Review.png' loading="lazy" alt="Inversion-By-Inversion"></div></div>
+<div class='paper-box-image'><div><div class="badge">Front. Comput. Sci.</div><img src='images/Review.png' loading="lazy" alt="Tongue image review paper preview"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Review of Deep Learning in Classification of Tongue Image](https://kns.cnki.net/kcms2/article/abstract?v=vs6GoGUIqCNTlLRE8rAew89_2frASlqBYDW5yBqSuUsLAQGslZ-fE-4I3Qs7SDvrJgFdCKfZ0XAeWVrhW7XXKxFP3wzvJdNuRM3yDy2s6jC4IrWvfwBEVK3iQ8oGTMd9O-MWfwnRkxUpkdeylmPwyw==&uniplatform=NZKPT&language=CHS)
@@ -226,7 +229,7 @@ Journal of Frontiers of Computer Science & Technology, 2023.
 <!-- paper 1 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">PRCV 2023</div><img src='images/CheXNet.png' loading="lazy" alt="DualGraph"></div></div>
+<div class='paper-box-image'><div><div class="badge">PRCV 2023</div><img src='images/CheXNet.png' loading="lazy" alt="CheXNet paper preview"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [CheXNet: Combing Transformer and CNN for Thorax Disease Diagnosis from Chest X-ray Images](https://link.springer.com/chapter/10.1007/978-981-99-8558-6_7)
@@ -238,22 +241,47 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 [**Code**](https://github.com/wuliwuxin/CheXNet) | [**BibTeX**](https://citation-needed.springer.com/v2/references/10.1007/978-981-99-8558-6_7?format=bibtex&flavour=citation) 
 </div>
 </div>
-<br>
 
-# 💻 Internships
-- **Sep. 2022-July. 2023**, Intelligent TCM Research Intern,Jiangmen Central Hospital, Jiangmen, China.
-<br>
+<span class='anchor' id='internships'></span>
 
-# 🎖 Honors and Awards
-- **Sep. 2018:** Third Prize (Top 5%) in the 2018 Microsoft “Innovation Cup” Global College Student Technology Competition, China Region (Top 36 nationwide).				  
-- **Nov. 2018:** Outstanding Award (Top 10%) in the Fourth “Internet+” Innovation and Entrepreneurship Competition, Chongqing.
-<br>
+## Internships
 
-<p align="center">
-<a href="https://clustrmaps.com/site/1c5dz" title="ClustrMaps">
-  <img src="//www.clustrmaps.com/map_v2.png?d=6FW0QP0Be0BDSlZCNbTKuLsEaDGmvRe9Pwxt88fjUVI&cl=ffffff" />
-</a>
-</p>
+<ul class="timeline-list">
+  <li>
+    <span class="timeline-date">Sep 2022 - Jul 2023</span>
+    <div>
+      <strong>Intelligent TCM Research Intern</strong><br>
+      Jiangmen Central Hospital, Jiangmen, China
+    </div>
+  </li>
+</ul>
+
+<span class='anchor' id='honors'></span>
+
+## Honors and Awards
+
+<ul class="timeline-list">
+  <li>
+    <span class="timeline-date">Sep 2018</span>
+    <div>
+      <strong>Third Prize</strong><br>
+      Microsoft Innovation Cup Global College Student Technology Competition, China Region (Top 5%, Top 36 nationwide)
+    </div>
+  </li>
+  <li>
+    <span class="timeline-date">Nov 2018</span>
+    <div>
+      <strong>Outstanding Award</strong><br>
+      Fourth Internet+ Innovation and Entrepreneurship Competition, Chongqing (Top 10%)
+    </div>
+  </li>
+</ul>
+
+<div class="visitor-card">
+  <a href="https://clustrmaps.com/site/1c5dz" title="ClustrMaps">
+    <img src="//www.clustrmaps.com/map_v2.png?d=6FW0QP0Be0BDSlZCNbTKuLsEaDGmvRe9Pwxt88fjUVI&cl=ffffff" alt="Visitor map from ClustrMaps">
+  </a>
+</div>
 <!-- [//]: # (# 📖 Educations)
 [//]: # (- *2022.09 - &#40;now&#41;*, Phd student, Beihang University, Beijing. ) -->
 <!-- - *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
@@ -292,4 +320,3 @@ Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023.
 - Journal Reviewer
 
   IJCV, IEEE T-VCG -->
-
