@@ -43,6 +43,14 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <table style="width:100%; border-collapse: collapse; border: none;">
 <tr>
   <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
+    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Apr 2026</span>
+  </td>
+  <td style="padding: 6px 0; border: none;">
+    📄 One paper <a href="https://wuliwuxin.github.io/ERISProject/"><strong>ERIS</strong></a> has been accepted by <strong>Inf. Fusion</strong>! 🎉
+  </td>
+</tr>
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Mar 2026</span>
   </td>
   <td style="padding: 6px 0; border: none;">
@@ -131,7 +139,7 @@ Proceedings of the 63rd ACM/IEEE Design Automation Conference (DAC‘26), 2026.
 <!-- paper 6 -->
 
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">Accepted 2026</div><img src='images/SCINet.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-image'><div><div class="badge">TMM 2026</div><img src='images/SCINet.png' loading="lazy" alt="VectorPainter"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge](http://arxiv.org/abs/2507.05992)
@@ -151,14 +159,14 @@ IEEE Transactions on Multimedia (TMM), 2026.
 
 <!-- paper 5 -->
 <div class='paper-box'>
-<div class='paper-box-image'><div><div class="badge">Under Review 2025</div><img src='images/ERIS.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-image'><div><div class="badge">Inf. Fusion 2026</div><img src='images/ERIS.png' loading="lazy" alt="VectorPainter"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [ERIS: An Energy-Guided Feature Disentanglement Framework for Out-of-Distribution Time Series Classification](https://arxiv.org/abs/2508.14134v2)
 
 **Xin Wu**, Fei Teng (*), Ji Zhang, Xingwang Li, Yuxuan Liang.
 
-ArXiv, 2025.
+Information Fusion, 2026.
 
 [**Project**](https://wuliwuxin.github.io/ERISProject) | [**Code**](https://github.com/wuliwuxin/ERIS)
 </div>
@@ -171,7 +179,7 @@ ArXiv, 2025.
 <div class='paper-box-image'><div><div class="badge">Inf. Fusion 2026</div><img src='images/TSOOG.png' loading="lazy" alt="VectorPainter"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Out-of-Distribution Generalization in Time Series: A Survey](https://arxiv.org/abs/2503.13868)
+[Out-of-Distribution Generalization in Time Series: A Survey](https://www.sciencedirect.com/science/article/abs/pii/S1566253526002150)
 
 **Xin Wu**, Fei Teng (*), Xingwang Li, Ji Zhang, Tianrui Li, Qiang Duan.
 
