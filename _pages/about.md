@@ -45,8 +45,11 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
   <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">May 2026</span>
   </td>
-  <td style="padding: 6px 0; border: none;">
+  <!-- <td style="padding: 6px 0; border: none;">
     📄 One paper <a href="https://openreview.net/pdf?id=3ys8IheFKl"><strong>FTIF</strong></a> got accepted to <strong>KDD 2026</strong>! 🎉
+  </td> -->
+    <td style="padding: 6px 0; border: none;">
+    📄 One paper got accepted to <strong>KDD 2026</strong>! 🎉
   </td>
 </tr>
 <tr>
@@ -102,7 +105,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
     <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Dec 2023</span>
   </td>
   <td style="padding: 6px 0; border: none;">
-    📄 One paper <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> was published by <strong>KBS</strong> (just over two months)! 🎉
+    📄 One paper <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN </strong></a> was published by <strong>KBS</strong> (just over two months)! 🎉
   </td>
 </tr>
 <tr>
