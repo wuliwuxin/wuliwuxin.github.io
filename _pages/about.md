@@ -46,7 +46,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">May 2026</span>
   </td>
   <td style="padding: 6px 0; border: none;">
-    📄 One paper <a href="https://openreview.net/pdf?id=3ys8IheFKl"><strong>FTIF</strong></a> has been accepted by <strong>KDD 2026</strong>! 🎉
+    📄 One paper <a href="https://openreview.net/pdf?id=3ys8IheFKl"><strong>FTIF</strong></a> got accepted to <strong>KDD 2026</strong>! 🎉
   </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Apr 2026</span>
   </td>
   <td style="padding: 6px 0; border: none;">
-    📄 One paper <a href="https://wuliwuxin.github.io/ERISProject/"><strong>ERIS</strong></a> has been accepted by <strong>Inf. Fusion</strong>! 🎉
+    📄 One paper <a href="https://wuliwuxin.github.io/ERISProject/"><strong>ERIS</strong></a> got accepted to <strong>Inf. Fusion</strong>! 🎉
   </td>
 </tr>
 <tr>
@@ -62,7 +62,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Mar 2026</span>
   </td>
   <td style="padding: 6px 0; border: none;">
-    📄 A survey paper <em>Out-of-Distribution Generalization in Time Series</em> has been accepted by <strong>Inf. Fusion</strong>. 🎉
+    📄 A survey paper <em>Out-of-Distribution Generalization in Time Series</em> got accepted to <strong>Inf. Fusion</strong>. 🎉
   </td>
 </tr>
 <tr>
@@ -70,7 +70,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Mar 2026</span>
   </td>
   <td style="padding: 6px 0; border: none;">
-    📄 One paper accepted to <strong>DAC 2026</strong>! 🎉
+    📄 One paper got accepted to <strong>DAC 2026</strong>! 🎉
   </td>
 </tr>
 <tr>
@@ -78,7 +78,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Feb 2026</span>
   </td>
   <td style="padding: 6px 0; border: none;">
-    📄 One paper <a href="https://wuliwuxin.github.io/SCINetProject/"><strong>SCINet</strong></a> has been accepted by <strong>TMM</strong>! 🎉
+    📄 One paper <a href="https://wuliwuxin.github.io/SCINetProject/"><strong>SCINet</strong></a> got accepted to <strong>TMM</strong>! 🎉
   </td>
 </tr>
 <tr>
@@ -86,7 +86,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Jan 2026</span>
   </td>
   <td style="padding: 6px 0; border: none;">
-    🏆 Our <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> paper has received more than <strong>100</strong> citations! 🎉
+    🏆 Our <a href="https://wuliwuxin.github.io/CTransCNNProject/"><strong>CTransCNN</strong></a> paper has received more than <strong>120</strong> citations! 🎉
   </td>
 </tr>
 <tr>
@@ -94,7 +94,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
     <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Nov 2025</span>
   </td>
   <td style="padding: 6px 0; border: none;">
-    📄 One paper accepted to <strong>AAAI 2026</strong>! 🎉
+    📄 One paper got accepted to <strong>AAAI 2026</strong>! 🎉
   </td>
 </tr>
 <tr>
@@ -110,7 +110,7 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
     <span style="background:#f0f0f0; color:#666; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Aug 2023</span>
   </td>
   <td style="padding: 6px 0; border: none;">
-    📄 One paper accepted to <strong>PRCV 2023</strong>, see you in Xiamen! 🎉
+    📄 One paper got accepted to <strong>PRCV 2023</strong>! 🎉
   </td>
 </tr>
 <tr>
