@@ -188,7 +188,7 @@ IEEE Transactions on Multimedia (TMM), 2026.
 <div class='paper-box-image'><div><div class="badge">Inf. Fusion 2026</div><img src='images/ERIS.png' loading="lazy" alt="VectorPainter"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[ERIS: An Energy-Guided Feature Disentanglement Framework for Out-of-Distribution Time Series Classification](https://arxiv.org/abs/2508.14134v2)
+[ERIS: An Energy-Guided Feature Disentanglement Framework for Out-of-Distribution Time Series Classification](https://www.sciencedirect.com/science/article/pii/S1566253526002861)
 
 **Xin Wu**, Fei Teng (*), Ji Zhang, Xingwang Li, Yuxuan Liang.
 
