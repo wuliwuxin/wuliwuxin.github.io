@@ -43,6 +43,14 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <table style="width:100%; border-collapse: collapse; border: none;">
 <tr>
   <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
+    <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">May 2026</span>
+  </td>
+  <td style="padding: 6px 0; border: none;">
+    📄 One paper <a href="https://openreview.net/pdf?id=3ys8IheFKl"><strong>FTIF</strong></a> has been accepted by <strong>KDD 2026</strong>! 🎉
+  </td>
+</tr>
+<tr>
+  <td style="white-space:nowrap; padding: 6px 10px 6px 0; vertical-align:top; border: none;">
     <span style="background:#e8f4fd; color:#1a73e8; border-radius:4px; padding:2px 8px; font-size:0.85em; font-weight:600;">Apr 2026</span>
   </td>
   <td style="padding: 6px 0; border: none;">
@@ -119,6 +127,24 @@ If you are interested in any aspect of me, I would love to chat and collaborate,
 <br>
 
 # 📝 Publications
+
+<!-- paper 8 -->
+
+<div class='paper-box'>
+<div class='paper-box-image'><div><div class="badge">KDD 2026</div><img src='images/FTIF.png' loading="lazy" alt="VectorPainter"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Taming Multi-Dimensional Tail: A Factorized Tail-Interaction Framework for Hyperscale Cloud Workload Forecasting](https://openreview.net/pdf?id=3ys8IheFKl)
+
+**Xin Wu**, Fei Teng (*), Chen Yang, Tianrui Li
+
+Proceedings of the 32nd SIGKDD Conference on Knowledge Discovery and Data Mining V.2 (KDD‘26), 2026.
+
+[**Code**](https://github.com/wuliwuxin/FTIF)
+</div>
+</div>
+
+
 <!-- paper 7 -->
 
 <div class='paper-box'>
